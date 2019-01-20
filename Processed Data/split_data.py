@@ -32,7 +32,7 @@ f = create_textfile(death_year[year])
 
 for change in range(0, raw_length - 1):
     f.write(str(change_time[change]) + "\t" + str(int(node_id[change])) + "\t")
-    f.write(str(state[change]) + "\n")
+    f.write(str(int(state[change])) + "\n")
     if change_time[change + 1] - change_time[change] < 0:
         year += 1
         f.close()
@@ -40,5 +40,5 @@ for change in range(0, raw_length - 1):
 
 f.write(str(change_time[raw_length]) + "\t")
 f.write(str(int(node_id[raw_length])))
-f.write("\t" + str(state[raw_length]) + "\n")
+f.write("\t" + str(int(state[raw_length])) + "\n")
 f.close()
