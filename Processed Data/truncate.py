@@ -4,7 +4,7 @@ import numpy as np
 import os.path
 
 input_dir = 'death_80_90/'
-output_dir = 'death_80_90_truncated/'
+output_dir = '80-90 | 20 nodes/'
 
 def truncate_file(filename):
     deficits = np.loadtxt(input_dir + filename,
@@ -20,10 +20,8 @@ def truncate_file(filename):
 
     f.close()
 
-degrees = np.loadtxt("ten_most_connected.txt",
+degrees = np.loadtxt("20_most_connected.txt",
         usecols = (0,))
-
-#truncate_file('80.txt')
 
 for i in range(10):
     filename = "8" + str(i)

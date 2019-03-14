@@ -6,8 +6,10 @@ degrees = np.loadtxt("network_degrees.txt",
 
 degrees.sort(order = 'deg')
 
-#print(degrees)
 i = 9999
-while i > 9989:
-    print(degrees[i]['id'], degrees[i]['deg'], degrees[i]['ANND'])
+count = 1
+while i > 9979:
+    print(str(degrees[i]['id']) + "\t" + str(degrees[i]['deg'])
+            + "\t" + str(degrees[i]['ANND']) + "\t" + str(count))
     i -= 1
+    count += 1
