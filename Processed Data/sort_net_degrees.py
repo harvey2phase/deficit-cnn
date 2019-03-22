@@ -4,7 +4,8 @@ degrees = np.loadtxt("network_degrees.txt",
         dtype = {'names': ('id', 'deg', 'ANND'),
             'formats': (np.int, np.int, np.float)})
 
-degrees.sort(order = 'deg')
+#degrees.sort(order = 'deg')
+degrees.sort(order = 'ANND')
 
 i = 9999
 count = 1

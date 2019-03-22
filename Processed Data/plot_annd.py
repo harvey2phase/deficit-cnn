@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os.path
 
-death_decade = "4"
+death_decade = "9"
 
 input_dir = death_decade + '0_all/'
 output_dir = 'plot_' + death_decade + '0_20_nodes_rank/'
