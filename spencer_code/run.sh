@@ -8,7 +8,10 @@ nd=2                # number of mortality nodes
 alpha=2.27          # scale free exponent
 avgdeg=4            # average degree(must be even for scalefree and smallworld)
 Mortality="AND"     # mortality condition
-Topology="Single"   #"Single" #network topology, single creates one network for all runs, otherwise creates a new network for each run with a different seed
+Topology="Single"   # network topology, single creates one network for all runs,
+                    # otherwise creates a new network for each run with a
+                    # different seed
+
 Folder="Local"
 NetworkType="ScaleFree"
 SingleSeed=1
