@@ -39,6 +39,7 @@ def make_dot_matrix(filename, input_dir, output_dir):
             else:
                 matrix[rank][ind_time[i]] = 0
 
+
     print(matrix)
     #plt.imshow(matrix)
     #plt.show()
