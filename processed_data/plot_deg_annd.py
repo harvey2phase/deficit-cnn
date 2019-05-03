@@ -14,12 +14,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os.path
 
-degrees = np.loadtxt("20_most_connected.txt",
+degrees = np.loadtxt("20_most_connected.nodes",
         dtype = {'names': ('id', 'conn', 'ANNC', 'rank'),
             'formats': (np.int32, np.int32, np.int32, np.int32)})
 id_deg, rank_deg = degrees['id'], degrees['rank']
 
-degrees = np.loadtxt("highest_annd.txt",
+degrees = np.loadtxt("highest_annd.nodes",
         dtype = {'names': ('id', 'conn', 'ANNC', 'rank'),
             'formats': (np.int32, np.int32, np.int32, np.int32)})
 id_annd, rank_annd = degrees['id'], degrees['rank']
