@@ -9,18 +9,44 @@ There are two different types of representations:
        nodes
 '''
 
+#-------------------------------------------------------------------------------
+# Imports
+#-------------------------------------------------------------------------------
+
 import numpy as np
 import matplotlib.pyplot as plt
 import os
 import os.path
 
-# The information of the nodes of interest
-nodes = np.loadtxt("high_annd_20_most_connected.nodes",
-        dtype = {'names': ('id', 'conn', 'ANNC', 'rank'),
-            'formats': (np.int32, np.int32, np.int32, np.int32)})
-node_id, node_rank = nodes['id'], nodes['rank']
 
-node_count, year_count = 50, 120
+#-------------------------------------------------------------------------------
+# Constants
+#-------------------------------------------------------------------------------
+
+# The information of the nodes of interest
+NODES = np.loadtxt(
+    "high_annd_20_most_connected.nodes",
+    dtype = {
+        'names': ('id', 'conn', 'ANNC', 'rank'),
+        'formats': (np.int32, np.int32, np.int32, np.int32)
+    }
+)
+NODE_ID = NODES['id']
+NODE_RANK = NODES['rank']
+
+NODE_COUNT = 50
+YEAR_COUNT = 120
+
+DAMAGED = 1
+REPAIRED = -1
+
+DEATH_DECADE_RANGE = range(2, 12)
+DEATH_YEAR_RANGE = range(10)
+
+
+#-------------------------------------------------------------------------------
+# Functions
+#-------------------------------------------------------------------------------
 
 def create_textfile(filename):
 
@@ -35,36 +61,14 @@ def create_textfile(filename):
 
     return f
 
-def make_dot_matrix(filename, input_dir, output_dir):
 
-    # The deficit information of an individual
-    individual = np.loadtxt(input_dir + filename + '.txt',
-        dtype = {'names': ('time', 'id', 'state'),
-            'formats': (np.int32, np.int32, np.int32)})
-    ind_time = individual['time']
-    ind_node_id = individual['id']
-    ind_state = individual['state']
-
-    r = len(ind_node_id)
-
-    matrix = np.full((node_count, year_count), 0)
-
-    # Iterate through all damages/repairs in an individual
-    for i in range(r):
-
-        # Pick out the nodes of interest
-        if ind_node_id[i] in node_id:
-
-            rank = node_rank[np.where(node_id == ind_node_id[i])[0][0]] - 1
-
-            # Find the position in the matrix, based on time and node ID,
-            # and chage its value, based on damaged/repaired
-            if ind_state[i] == 1:
-                matrix[rank][ind_time[i]] = 1
-            else:
-                matrix[rank][ind_time[i]] = -1
+def write_dot_matrix(matrix, filename, death_decade):
 
     f = open(filename + '.txt', 'x')
+
+
+def write_image(matrix, filename, death_decade)
+    output_dir = 'deg_annd_' + death_decade + '0/'
 
     plt.imshow(matrix)
     plt.xlabel('Time (year)')
@@ -72,34 +76,75 @@ def make_dot_matrix(filename, input_dir, output_dir):
     plt.savefig(output_dir + filename)
     plt.clf()
 
-def plot_decade(death_decade):
 
-    input_dir = death_decade
-    input_dir += '0_all/'
+def make_dot_matrix(filename, death_decade):
 
-    output_dir = 'deg_annd_' + death_decade + '0/'
-    output_dir += death_decade
-    output_dir += '0/'
+    input_dir = death_decade + '0_all/'
 
-    for i in range(10):
-        filename = death_decade
-        filename += str(i)
+    # The deficit information of an individual
+    individual = np.loadtxt(
+        input_dir + filename + '.txt',
+        dtype = {
+            'names': ('time', 'id', 'state'),
+            'formats': (np.int32, np.int32, np.int32)
+        }
+    )
+    ind_time = individual['time']
+    ind_node_id = individual['id']
+    ind_state = individual['state']
 
-        count = 2
+    change_range = range(len(ind_node_id))
+
+    matrix = np.full((NODE_COUNT, YEAR_COUNT), 0)
+
+    # Iterate through all damages/repairs in an individual
+    for i in change_range:
+
+        # Pick out the nodes of interest
+        if ind_node_id[i] in NODE_ID:
+
+            rank = NODE_RANK[np.where(NODE_ID == ind_node_id[i])[0][0]] - 1
+
+            # Find the position in the matrix, based on time and node ID,
+            # and change its value, based on damaged/repaired
+            if ind_state[i] == 1:
+                matrix[rank][ind_time[i]] = DAMAGED
+            else:
+                matrix[rank][ind_time[i]] = REPAIRED
+
+    write_dot_matrix(matrix, filename)
+    write_image(matrix, filename, death_decade)
+
+# Takes in a String that is a digit that represents the decade (folder) to plot
+def make_decade_dot_matrices(death_decade):
+
+    input_dir = death_decade + '0_all/'
+
+    for death_year in DEATH_YEAR_RANGE:
+        death_year = str(death_year)
+        filename = death_decade + death_year
+
+        duplicate = 2
         while os.path.isfile(input_dir + filename + ".txt"):
             print(filename + ".txt")
-            plot(filename, input_dir, output_dir)
 
-            filename = death_decade
-            filename += str(i)
-            filename += '(' + str(count) + ')'
+            make_dot_matrix(filename, death_decade)
 
-            count += 1
+            filename = death_decade + death_year
+            filename += '(' + str(duplicate) + ')'
 
-def main():
+            duplicate += 1
 
-    for i in range(12):
-        plot_decade(str(i))
+def make_all_dot_matrices():
+
+    # Iterate through all 12 decades of death ages
+    for i in DEATH_DECADE_RANGE:
+        make_decade_dot_matrices(str(i))
+
+
+#-------------------------------------------------------------------------------
+# Function calls
+#-------------------------------------------------------------------------------
 
 #main()
 make_dot_matrix('80', '80_all/', 'hi')
