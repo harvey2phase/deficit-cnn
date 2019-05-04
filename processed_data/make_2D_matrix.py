@@ -68,7 +68,7 @@ def write_dot_matrix(matrix, filename, death_decade):
     f = open(output_dir + filename + '.txt', 'x')
 
     for m in matrix:
-        f.write("".join(map(str, m)))
+        f.write(' '.join(map(str, m)) + '\n')
 
     f.close()
 
@@ -119,7 +119,7 @@ def make_dot_matrix(filename, death_decade):
             else:
                 matrix[rank][time] = REPAIRED
 
-    write_dot_matrix(matrix, filename)
+    write_dot_matrix(matrix, filename, death_decade)
     write_image(matrix, filename, death_decade)
 
 # Takes in a String that is a digit that represents the decade (folder) to plot
