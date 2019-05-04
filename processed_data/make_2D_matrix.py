@@ -63,12 +63,18 @@ def create_textfile(filename):
 
 
 def write_dot_matrix(matrix, filename, death_decade):
+    output_dir = 'matrix_50nodes_' + death_decade + '0/'
 
-    f = open(filename + '.txt', 'x')
+    f = open(output_dir + filename + '.txt', 'x')
+
+    for m in matrix:
+        f.write("".join(map(str, m)))
+
+    f.close()
 
 
 def write_image(matrix, filename, death_decade)
-    output_dir = 'deg_annd_' + death_decade + '0/'
+    output_dir = 'image_50nodes_' + death_decade + '0/'
 
     plt.imshow(matrix)
     plt.xlabel('Time (year)')
@@ -103,14 +109,15 @@ def make_dot_matrix(filename, death_decade):
         # Pick out the nodes of interest
         if ind_node_id[i] in NODE_ID:
 
+            # Find the damaged/repaired index of the matrix
+            # (based on node ID and time)
             rank = NODE_RANK[np.where(NODE_ID == ind_node_id[i])[0][0]] - 1
+            time = ind_time[i]
 
-            # Find the position in the matrix, based on time and node ID,
-            # and change its value, based on damaged/repaired
             if ind_state[i] == 1:
-                matrix[rank][ind_time[i]] = DAMAGED
+                matrix[rank][time] = DAMAGED
             else:
-                matrix[rank][ind_time[i]] = REPAIRED
+                matrix[rank][time] = REPAIRED
 
     write_dot_matrix(matrix, filename)
     write_image(matrix, filename, death_decade)
