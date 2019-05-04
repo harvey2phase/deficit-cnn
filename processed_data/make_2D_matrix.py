@@ -73,7 +73,7 @@ def write_dot_matrix(matrix, filename, death_decade):
     f.close()
 
 
-def write_image(matrix, filename, death_decade)
+def write_image(matrix, filename, death_decade):
     output_dir = 'image_50nodes_' + death_decade + '0/'
 
     plt.imshow(matrix)
@@ -148,10 +148,3 @@ def make_all_dot_matrices():
     for i in DEATH_DECADE_RANGE:
         make_decade_dot_matrices(str(i))
 
-
-#-------------------------------------------------------------------------------
-# Function calls
-#-------------------------------------------------------------------------------
-
-#main()
-make_dot_matrix('80', '80_all/', 'hi')
