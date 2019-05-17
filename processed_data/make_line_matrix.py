@@ -8,7 +8,6 @@ This Python file reads the "dot matrices" and converts them to "lines matrices"
 import numpy as np
 import matplotlib.pyplot as plt
 import os
-import os.path
 
 
 #-------------------------------------------------------------------------------
@@ -60,11 +59,33 @@ def make_decade_line_matrices(death_decade):
 
             duplicate += 1
 
+# TODO
+# This function transforms all the data (.txt) in one directory to an another
+# Parameters:
+#   input_folder: specifies the directory that contains subdirectories of data;
+#     the subdirectories have names "X0", where X is the decade
+#     (e.g. "matrix_50nodes")
+#   output_folder: specifies the directory to output the data in subdirectories;
+#     the subdirectories have names "X0", where X is the decade
+#   function: specifies the transformation for the data
 def transform_data(input_folder, output_folder, function):
+    input_folder += "/"
+    output_folder += "/"
 
+    # Iterate through all "decade" folders
     for decade in DECADE_RANGE:
+        decade = str(decade)
+        input_dir = input_folder + decade + "0/"
+        output_dir = output_folder + decade + "0/"
+        if not os.path.exists(output_dir):
+            os.makdedirs(output_dir)
 
-
+        # Iterate through all the years in the decade folder
+        for
+        year = 0
+        filename = decade + str(year) + ".txt"
+        while os.path.isfile(input_dir + filename)
+            year += 1
 
 #-------------------------------------------------------------------------------
 # Scripts
