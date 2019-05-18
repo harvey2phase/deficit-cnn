@@ -90,7 +90,39 @@ def transform_data(input_folder, output_folder, transform_function):
                 filename = decade + year + "(" + str(duplicate) + ").txt"
                 duplicate += 1
 
-def plot_data()
+# TODO
+# This function takes in a data folder and plot the data inside it to a plot
+# folder
+# Parameter:
+#   data_folder: Specfifies the directory for the data
+#   plot_folder: Specfifies the directory for the plots
+#   plot_function: A function from plt to plot the data
+def plot_data(data_folder, plot_folder, plot_function):
+    data_folder += "/"
+    plot_folder += "/"
+
+    # Iterate through all decade folders
+    for decade in DECADE_RANGE:
+        decade = str(decade)
+        data_dir = data_folder + decade + "0/"
+        plot_dir = plot_folder + decade + "0/"
+        if not os.path.exists(plot_dir):
+            os.makedirs(plot_dir)
+
+        # Iterate through all the years in the decade folder
+        for year in YEAR_RANGE:
+            year = str(year)
+            filename = decade + year + ".txt"
+
+            # Iterate through all duplicates of the year
+            duplicate = 2
+            while os.path.isfile(data_dir + filename):
+                plot_function(data_dir + filename)
+                plt.savefig(str(plot_dir + filename))
+
+                filename = decade + year + "(" + str(duplicate) + ").txt"
+                duplicate += 1
+
 
 #-------------------------------------------------------------------------------
 # Scripts
