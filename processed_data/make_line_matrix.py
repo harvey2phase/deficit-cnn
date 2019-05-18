@@ -61,8 +61,10 @@ def make_decade_line_matrices(death_decade):
 # NOTE: Not yet tested
 def dot_to_line_matrix(input_folder, filename):
     matrix = np.loadtxt(input_folder + filename)
-    for l in range(LENGTH):
-        for w in range(1, WIDTH):
+    length_range = range(len(matrix))
+    width_range = range(len(matrix[0]))
+    for l in length_range:
+        for w in width_range:
             if (matrix[l][w] == 0):
                 matrix[l][w] = matrix[l][w-1]
             elif (matrix[l][w] == -1):
@@ -78,7 +80,7 @@ def dot_to_line_matrix(input_folder, filename):
 #   file_name: specifies the filename
 #   matrix: specifies the matrix to write
 def write_to_file(output_dir, filename, matrix):
-    f = open(filename + .txt, "w")
+    f = open(filename + ".txt", "w")
     for m in matrix:
         f.write(" ".join(map(str, m)) + "\n")
     f.close()
@@ -95,7 +97,7 @@ def write_to_file(output_dir, filename, matrix):
 #     the subdirectories have names "X0", where X is the decade
 #   function: specifies the transformation for the data,
 #     takes in the input directory and filename and returns the output data
-def transform_data(input_folder, output_folder, function):
+def transform_data(input_folder, output_folder, transform_function):
     input_folder += "/"
     output_folder += "/"
 
@@ -105,7 +107,7 @@ def transform_data(input_folder, output_folder, function):
         input_dir = input_folder + decade + "0/"
         output_dir = output_folder + decade + "0/"
         if not os.path.exists(output_dir):
-            os.makdedirs(output_dir)
+            os.makedirs(output_dir)
 
         # Iterate through all the years in the decade folder
         for year in YEAR_RANGE:
@@ -114,8 +116,8 @@ def transform_data(input_folder, output_folder, function):
 
             # Iterate through all duplicates of the year
             duplicate = 2
-            while os.path.isfile(input_dir + filename)
-                output = transform(input_dir, filename)
+            while os.path.isfile(input_dir + filename):
+                output = transform_function(input_dir, filename)
                 write_to_file(output_dir, filename, output)
 
                 filename = decade + year + "(" + str(duplicate) + ").txt"
@@ -125,4 +127,4 @@ def transform_data(input_folder, output_folder, function):
 # Scripts
 #-------------------------------------------------------------------------------
 
-transform_data(matrix_50nodes, line_matrix_50nodes, dot_to_line_matrix)
+transform_data("matrix_50nodes", "line_matrix_50nodes", dot_to_line_matrix)
