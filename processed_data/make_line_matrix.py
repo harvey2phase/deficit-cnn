@@ -80,7 +80,7 @@ def dot_to_line_matrix(input_folder, filename):
 #   file_name: specifies the filename
 #   matrix: specifies the matrix to write
 def write_to_file(output_dir, filename, matrix):
-    f = open(filename + ".txt", "w")
+    f = open(output_dir + filename, "w")
     for m in matrix:
         f.write(" ".join(map(str, m)) + "\n")
     f.close()
