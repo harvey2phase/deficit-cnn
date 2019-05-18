@@ -28,37 +28,6 @@ LENGTH = range(50)
 # Functions
 #-------------------------------------------------------------------------------
 
-def make_line_matrix(input_folder, filename, death_decade):
-    input_file = INPUT_FOLDER + death_decade + "0/" + filename
-    output_folder = OUTPUT_FOLDER + death_decade + "0/"
-
-    matrix = np.loadtxt(input_file)
-    for l in range(LENGTH):
-        for w in range(1, WIDTH):
-            if (matrix[l][w] == 0):
-                matrix[l][w] = matrix[l][w-1]
-            elif (matrix[l][w] == -1):
-                matrix[l][w] = 0
-
-# Takes in a String that is a digit that represents the decade (folder) to plot
-def make_decade_line_matrices(death_decade):
-    input_folder = INPUT_FOLDER + death_decade + "0/"
-
-    for death_year in DEATH_YEAR_RANGE:
-        death_year = str(death_year)
-        filename = death_decade + death_year + ".txt"
-
-        duplicate = 2
-        while os.path.isfile(input_folder + filename):
-            #print(filename)
-            make_line_matrix(input_folder, filename, death_decade)
-
-            filename = death_decade + death_year
-            filename += "(" + str(duplicate) + ").txt"
-
-            duplicate += 1
-
-# NOTE: Not yet tested
 def dot_to_line_matrix(input_folder, filename):
     matrix = np.loadtxt(input_folder + filename)
     length_range = range(len(matrix))
@@ -72,7 +41,6 @@ def dot_to_line_matrix(input_folder, filename):
 
     return matrix
 
-# NOTE: Not yet tested
 # This function takes in an output 2D matrix, then writes the matrix to the
 # file (creates the file if it does not exist).
 # Parameters:
@@ -87,7 +55,6 @@ def write_to_file(output_dir, filename, matrix):
 
 
 
-# NOTE: Not yet tested
 # This function transforms all the data (.txt) in one directory to an another
 # Parameters:
 #   input_folder: specifies the directory that contains subdirectories of data;
@@ -122,6 +89,8 @@ def transform_data(input_folder, output_folder, transform_function):
 
                 filename = decade + year + "(" + str(duplicate) + ").txt"
                 duplicate += 1
+
+def plot_data()
 
 #-------------------------------------------------------------------------------
 # Scripts
