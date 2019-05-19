@@ -20,8 +20,8 @@ OUTPUT_FOLDER = "line_matrix_50nodes/"
 DECADE_RANGE = range(2, 12)
 YEAR_RANGE = range(10)
 
-WIDTH_RANGE = range(1, 120) # Ignore t=1, since all nodes start at 0
-LENGTH = range(50)
+MATRIX_WIDTH_RANGE = range(1, 120) # Ignore t=1, since all nodes start at 0
+MATRIX_LENGTH_RANGE = range(50)
 
 
 #-------------------------------------------------------------------------------
@@ -31,9 +31,13 @@ LENGTH = range(50)
 def dot_to_line_matrix(input_folder, filename):
     matrix = np.loadtxt(input_folder + filename)
     length_range = range(len(matrix))
-    width_range = range(len(matrix[0]))
-    for l in length_range:
-        for w in width_range:
+    width_range = range(len(matrix[0]))     #range(0, 120)
+    for w in MATRIX_WIDTH_RANGE:
+        if w > int(filename[0] + filename[1], 10):
+            for l in MATRIX_LENGTH_RANGE:
+                matrix[l][w] = -2
+            break
+        for l in MATRIX_LENGTH_RANGE:
             if (matrix[l][w] == 0):
                 matrix[l][w] = matrix[l][w-1]
             elif (matrix[l][w] == -1):
@@ -90,7 +94,6 @@ def transform_data(input_folder, output_folder, transform_function):
                 filename = decade + year + "(" + str(duplicate) + ").txt"
                 duplicate += 1
 
-# TODO
 # This function takes in a data folder and plot the data inside it to a plot
 # folder
 # Parameter:
@@ -112,20 +115,26 @@ def plot_data(data_folder, plot_folder, plot_function):
         # Iterate through all the years in the decade folder
         for year in YEAR_RANGE:
             year = str(year)
-            filename = decade + year + ".txt"
+            filename = decade + year
 
             # Iterate through all duplicates of the year
             duplicate = 2
-            while os.path.isfile(data_dir + filename):
-                plot_function(data_dir + filename)
-                plt.savefig(str(plot_dir + filename))
+            while os.path.isfile(data_dir + filename + ".txt"):
+                data = np.loadtxt(data_dir + filename + ".txt")
+                plot_function(data)
+                plt.savefig(plot_dir + filename)
 
-                filename = decade + year + "(" + str(duplicate) + ").txt"
+                filename = decade + year + "(" + str(duplicate) + ")"
                 duplicate += 1
 
+# TODO
+# Truncate to line images to X year-period health state Y years before death
+# Somehow differentiate data for forty year olds and 80 year olds
+# (Maybe use 4 for damaged for age 40 and 8 for eighty instead of all 1)
 
 #-------------------------------------------------------------------------------
 # Scripts
 #-------------------------------------------------------------------------------
 
 transform_data("matrix_50nodes", "line_matrix_50nodes", dot_to_line_matrix)
+plot_data("line_matrix_50nodes", "line_image_50nodes", plt.imshow)
