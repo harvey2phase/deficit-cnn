@@ -29,7 +29,7 @@ MATRIX_LENGTH_RANGE = range(50)
 #-------------------------------------------------------------------------------
 
 # This function takes in an output 2D matrix, then writes the matrix to the
-#   file (creates the file if it does not exist).
+# file (creates the file if it does not exist).
 # Parameters:
 #   output_dir: specifies the directory to create the file in
 #   file_name: specifies the filename
@@ -50,11 +50,10 @@ def write_to_file(output_dir, filename, matrix):
 #   function: specifies the transformation for the data,
 #     takes in the input directory and filename and returns the output data
 def transform_data(
-    input_folder,
-    output_folder,
-    transform_function,
-    transform_param
-):
+        input_folder,
+        output_folder,
+        transform_function,
+        transform_param):
     input_folder += "/"
     output_folder += "/"
 
@@ -75,17 +74,16 @@ def transform_data(
             duplicate = 2
             while os.path.isfile(input_dir + filename):
                 output = transform_function(
-                    input_dir,
-                    filename,
-                    transform_param
-                )
+                        input_dir,
+                        filename,
+                        transform_param)
                 write_to_file(output_dir, filename, output)
 
                 filename = decade + year + "(" + str(duplicate) + ").txt"
                 duplicate += 1
 
 # This function takes in a data folder and plot the data inside it to a plot
-#   folder
+# folder
 # Parameter:
 #   data_folder: Specfifies the directory for the data
 #   plot_folder: Specfifies the directory for the plots
@@ -119,20 +117,12 @@ def plot_data(data_folder, plot_folder, plot_function):
 
 def dot_to_line_matrix(input_folder, filename, param):
     matrix = np.loadtxt(input_folder + filename)
-
-    if (str.isdigit(filename[2])):
-        death_age = int(filename[0] + filename[1] + filename[2], 10)
-    else:
-        death_age = int(filename[0] + filename[1], 10)
-
     for w in MATRIX_WIDTH_RANGE:
-
         # FIXME Does not work for decades >= 100
-        if (w > death_age):
+        if w > int(filename[0] + filename[1], 10):
             for l in MATRIX_LENGTH_RANGE:
                 matrix[l][w] = -2
             break
-
         for l in MATRIX_LENGTH_RANGE:
             if (matrix[l][w] == 0):
                 matrix[l][w] = matrix[l][w-1]
@@ -142,17 +132,16 @@ def dot_to_line_matrix(input_folder, filename, param):
     return matrix
 
 # TODO
-# This function truncates line images to x-year-period health state y years
-#   before death.
-# Healthy nodes are represented as zeros; damaged nodes are represented with an
-#   integer that corresponds to the decade in which the data is in.
-#   (e.g. 4 represents damaged nodes at age 40 and 8 at 80 instead of all 1)
+# Truncate to line images to X year-period health state Y years before death
+# Somehow differentiate data for forty year olds and 80 year olds
+# (Maybe use 4 for damaged for age 40 and 8 for eighty instead of all 1)
+
+# TODO
+# This function transforms line matrices to 5-year data of "dead in 5 years"
 # Parameters:
 #   input_folder: folder that contains line matrices
 #   filenmae: filename
-#   xy: int array that contains x and y at indices 0 and 1, repsectively
-def x_year_data_y_year_before_death(input_folder, filename, xy):
-    x, y = xy[0], xy[1]
+def dead_in_x_years(input_folder, filename, x):
     line_matrix = np.loadtxt(input_folder + filename)
     for w in MATRIX_WIDTH_RANGE:
         # FIXME Does not work for decades >= 100
@@ -173,9 +162,9 @@ def x_year_data_y_year_before_death(input_folder, filename, xy):
 #-------------------------------------------------------------------------------
 
 transform_data(
-    "matrix_50nodes",
-    "line_matrix_50nodes",
-    dot_to_line_matrix,
-    None
+        "matrix_50nodes",
+        "line_matrix_50nodes",
+        dot_to_line_matrix,
+        None
 )
 plot_data("line_matrix_50nodes", "line_image_50nodes", plt.imshow)
