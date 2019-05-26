@@ -17,7 +17,7 @@ import os
 INPUT_FOLDER = "dot_matrix_50nodes/"
 OUTPUT_FOLDER = "line_matrix_50nodes/"
 
-DECADE_RANGE = range(2, 12)
+DECADE_RANGE = range(8, 12)
 YEAR_RANGE = range(10)
 
 MATRIX_WIDTH_RANGE = range(1, 120) # Ignore t=1, since all nodes start at 0
@@ -173,8 +173,8 @@ def x_year_data_y_year_before_death(input_folder, filename, xy):
 #-------------------------------------------------------------------------------
 
 transform_data(
-    "matrix_50nodes",
-    "line_matrix_50nodes",
+    "50_nodes/dot_matrix",
+    "50_nodes/line_matrix",
     dot_to_line_matrix,
     None
 )
