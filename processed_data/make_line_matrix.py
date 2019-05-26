@@ -128,7 +128,7 @@ def dot_to_line_matrix(input_folder, filename, param):
     for w in MATRIX_WIDTH_RANGE:
 
         # NOTE - Not tested: Does not work for decades >= 100
-        if (w > death_age):
+        if w > death_age:
             for l in MATRIX_LENGTH_RANGE:
                 matrix[l][w] = -2
             break
@@ -154,8 +154,14 @@ def dot_to_line_matrix(input_folder, filename, param):
 def x_year_data_y_year_before_death(input_folder, filename, xy):
     x, y = xy[0], xy[1]
     line_matrix = np.loadtxt(input_folder + filename)
+
+    if (str.isdigit(filename[2])):
+        death_age = int(filename[0] + filename[1] + filename[2], 10)
+    else:
+        death_age = int(filename[0] + filename[1], 10)
+
     for w in MATRIX_WIDTH_RANGE:
-        # FIXME Does not work for decades >= 100
+        # NOTE - Not tested: Does not work for decades >= 100
         if w > int(filename[0] + filename[1], 10):
             for l in MATRIX_LENGTH_RANGE:
                 matrix[l][w] = -2
@@ -172,10 +178,13 @@ def x_year_data_y_year_before_death(input_folder, filename, xy):
 # Scripts
 #-------------------------------------------------------------------------------
 
+'''
 transform_data(
     "50_nodes/dot_matrix",
     "50_nodes/line_matrix",
     dot_to_line_matrix,
     None
 )
-plot_data("line_matrix_50nodes", "line_image_50nodes", plt.imshow)
+'''
+
+plot_data("50_nodes/line_matrix", "50_nodes/line_image", plt.imshow)
