@@ -17,7 +17,7 @@ import os
 INPUT_FOLDER = "dot_matrix_50nodes/"
 OUTPUT_FOLDER = "line_matrix_50nodes/"
 
-DECADE_RANGE = range(2, 12)
+DECADE_RANGE = range(8, 12)
 YEAR_RANGE = range(10)
 
 MATRIX_WIDTH_RANGE = range(1, 120) # Ignore t=1, since all nodes start at 0
@@ -185,9 +185,12 @@ transform_data(
 plot_data("50_nodes/line_matrix", "50_nodes/line_image", plt.imshow)
 '''
 
+'''
 transform_data(
     "50_nodes/line_matrix",
     "50_nodes/partial_line_matrix",
     x_year_data_y_year_before_death,
     [5, 5]
 )
+'''
+plot_data("50_nodes/5_death_in_5_years_matrix", "50_nodes/partial_line_image", plt.imshow)
