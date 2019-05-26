@@ -17,7 +17,7 @@ import os
 INPUT_FOLDER = "dot_matrix_50nodes/"
 OUTPUT_FOLDER = "line_matrix_50nodes/"
 
-DECADE_RANGE = range(8, 12)
+DECADE_RANGE = range(2, 12)
 YEAR_RANGE = range(10)
 
 MATRIX_WIDTH_RANGE = range(1, 120) # Ignore t=1, since all nodes start at 0
@@ -140,7 +140,7 @@ def dot_to_line_matrix(input_folder, filename, param):
 
     return matrix
 
-# TODO
+# NOTE - Not yet tested
 # This function truncates line images to x-year-period health state y years
 #   before death.
 # Healthy nodes are represented as zeros; damaged nodes are represented with an
@@ -152,24 +152,22 @@ def dot_to_line_matrix(input_folder, filename, param):
 #   xy: int array that contains x and y at indices 0 and 1, repsectively
 def x_year_data_y_year_before_death(input_folder, filename, xy):
     x, y = xy[0], xy[1]
-    line_matrix = np.loadtxt(input_folder + filename)
+    matrix = np.loadtxt(input_folder + filename)
 
     if (str.isdigit(filename[2])):
         death_age = int(filename[0] + filename[1] + filename[2], 10)
     else:
         death_age = int(filename[0] + filename[1], 10)
 
-    for w in MATRIX_WIDTH_RANGE:
-
-        if w > death_age - y - x:
-            for l in MATRIX_LENGTH_RANGE:
-                matrix[l][w] = -2
-            break
+    w = death_age - y - x
+    while w < death_age - y:
         for l in MATRIX_LENGTH_RANGE:
-            if (matrix[l][w] == 0):
-                matrix[l][w] = matrix[l][w-1]
-            elif (matrix[l][w] == -1):
-                matrix[l][w] = 0
+            if (matrix[l][w] == 1):
+                matrix[l][w] = int (w / 10)
+
+        w += 1
+
+    return matrix[:, death_age - y - x : death_age - y]
 
 
 
