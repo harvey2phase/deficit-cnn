@@ -140,7 +140,6 @@ def dot_to_line_matrix(input_folder, filename, param):
 
     return matrix
 
-# NOTE - Not yet tested
 # This function truncates line images to x-year-period health state y years
 #   before death.
 # Healthy nodes are represented as zeros; damaged nodes are represented with an
@@ -192,5 +191,9 @@ transform_data(
     x_year_data_y_year_before_death,
     [5, 5]
 )
+plot_data(
+    "50_nodes/5_death_in_5_years_matrix",
+    "50_nodes/partial_line_image",
+    plt.imshow
+)
 '''
-plot_data("50_nodes/5_death_in_5_years_matrix", "50_nodes/partial_line_image", plt.imshow)
