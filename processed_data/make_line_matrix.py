@@ -127,7 +127,6 @@ def dot_to_line_matrix(input_folder, filename, param):
 
     for w in MATRIX_WIDTH_RANGE:
 
-        # NOTE - Not tested: Does not work for decades >= 100
         if w > death_age:
             for l in MATRIX_LENGTH_RANGE:
                 matrix[l][w] = -2
@@ -161,8 +160,8 @@ def x_year_data_y_year_before_death(input_folder, filename, xy):
         death_age = int(filename[0] + filename[1], 10)
 
     for w in MATRIX_WIDTH_RANGE:
-        # NOTE - Not tested: Does not work for decades >= 100
-        if w > int(filename[0] + filename[1], 10):
+
+        if w > death_age - y - x:
             for l in MATRIX_LENGTH_RANGE:
                 matrix[l][w] = -2
             break
@@ -185,6 +184,12 @@ transform_data(
     dot_to_line_matrix,
     None
 )
+plot_data("50_nodes/line_matrix", "50_nodes/line_image", plt.imshow)
 '''
 
-plot_data("50_nodes/line_matrix", "50_nodes/line_image", plt.imshow)
+transform_data(
+    "50_nodes/line_matrix",
+    "50_nodes/partial_line_matrix",
+    x_year_data_y_year_before_death,
+    [5, 5]
+)
