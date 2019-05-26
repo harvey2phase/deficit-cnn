@@ -127,7 +127,7 @@ def dot_to_line_matrix(input_folder, filename, param):
 
     for w in MATRIX_WIDTH_RANGE:
 
-        # FIXME Does not work for decades >= 100
+        # NOTE - Not tested: Does not work for decades >= 100
         if (w > death_age):
             for l in MATRIX_LENGTH_RANGE:
                 matrix[l][w] = -2
