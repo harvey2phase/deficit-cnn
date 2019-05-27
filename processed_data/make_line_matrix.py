@@ -197,3 +197,15 @@ plot_data(
     plt.imshow
 )
 '''
+
+transform_data(
+    "50_nodes/line_matrix",
+    "50_nodes/5_death_in_10_years_matrix",
+    x_year_data_y_year_before_death,
+    [5, 10]
+)
+plot_data(
+    "50_nodes/5_death_in_10_years_matrix",
+    "50_nodes/5_death_in_10_years_image",
+    plt.imshow
+)
