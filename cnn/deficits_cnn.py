@@ -138,11 +138,10 @@ def deficit_cnn_model(features, labels, mode):
 
 # NOTE: Not yet tested
 train_data = np.loadtxt("training_data/training_set_80.txt")
-input_layer = tf.reshape(train_data, [-1, 50, 5, 1])
 train_labels = np.loadtxt("training_data/training_labels_80.txt")
 
+
 eval_data = np.loadtxt("training_data/training_set_80.txt")
-input_layer = tf.reshape(train_data, [-1, 50, 5, 1])
 eval_labels = np.loadtxt("training_data/training_labels_80.txt")
 
 # Create estimator
@@ -155,6 +154,7 @@ logging_hook = tf.train.LoggingTensorHook(
     every_n_iter = 50
 )
 
+input_layer = tf.reshape(train_data, [-1, 50, 5, 1])
 
 # Training
 train_input_fn = tf.estimator.inputs.numpy_input_fn(
