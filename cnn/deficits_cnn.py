@@ -137,21 +137,8 @@ import os
 
 
 # TODO Load training data
-train_data = [[]]
-directory = "training_data/5_death_in_10_years_matrix/80"
-count = 0
-for filename in os.listdir(directory):
-    print(filename)
-    train_data.append(np.loadtxt(directory + "/" +  filename))
-    count += 1
+train_data = np.loadtxt("training_data/training_set_80.txt")
 
-
-print(count)
-train_data = np.ndarray(train_data)
-print(train_data)
-print(train_data.shape)
-
-'''
 # Create estimator
 classifier = tf.estimator.Estimator(model_fn = deficit_cnn_model)
 
@@ -186,4 +173,3 @@ eval_input_fn = tf.estimator.inputs.numpy_input_fn(
 )
 eval_results = mnist_classifier.evaluate(input_fn = eval_input_fn)
 print(eval_results)
-'''
