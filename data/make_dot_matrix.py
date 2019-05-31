@@ -67,7 +67,7 @@ def create_textfile(filename):
 def write_dot_matrix(matrix, filename, death_decade):
     output_dir = 'matrices/e4/dot/50_annk/' + death_decade + '0/'
 
-    f = open(output_dir + filename + '.txt', 'x')
+    f = open(output_dir + filename + '.txt', "w+")
 
     for m in matrix:
         f.write(' '.join(map(str, m)) + '\n')
@@ -77,7 +77,6 @@ def write_dot_matrix(matrix, filename, death_decade):
 
 def write_image(matrix, filename, death_decade):
     output_dir = 'images/e4/dot/50_annk/' + death_decade + '0/'
-    output_dir = 'image_50nodes_' + death_decade + '0/'
 
     plt.imshow(matrix)
     plt.xlabel('Time (year)')
