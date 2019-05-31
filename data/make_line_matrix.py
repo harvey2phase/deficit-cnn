@@ -180,7 +180,6 @@ transform_data(
 )
 plot_data("50_nodes/line_matrix", "50_nodes/line_image", plt.imshow)
 '''
-
 '''
 transform_data(
     "50_nodes/line_matrix",
@@ -194,7 +193,7 @@ plot_data(
     plt.imshow
 )
 '''
-
+'''
 transform_data(
     "50_nodes/line_matrix",
     "50_nodes/5_death_in_10_years_matrix",
@@ -205,4 +204,12 @@ plot_data(
     "50_nodes/5_death_in_10_years_matrix",
     "50_nodes/5_death_in_10_years_image",
     plt.imshow
+)
+'''
+
+transform_data(
+    "matrices/e4/dot_50_annk",
+    "matrices/e4/line_50_annk",
+    dot_to_line_matrix,
+    None
 )
