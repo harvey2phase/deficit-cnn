@@ -215,7 +215,7 @@ transform_data(
 )
 '''
 transform_data(
-    "~/Desktop/Summer Research/cnn/data_sets/training_individuals"
+    "~/Desktop/Summer Research/cnn/data_sets/training_individuals",
     "~/Desktop/Summer Research/cnn/data_sets/training_individuals/" +
         "5_death_5_years",
     x_year_data_y_year_before_death,
@@ -223,7 +223,7 @@ transform_data(
 )
 '''
 transform_data(
-    "~/Desktop/Summer Research/cnn/data_sets/training_individuals"
+    "~/Desktop/Summer Research/cnn/data_sets/training_individuals",
     "~/Desktop/Summer Research/cnn/data_sets/training_individuals/" +
         "5_death_10_years",
     x_year_data_y_year_before_death,
