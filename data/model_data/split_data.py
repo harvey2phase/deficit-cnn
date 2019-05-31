@@ -1,8 +1,14 @@
 import numpy as np
 import os
 
+gamma_0 = 0.00183       # (unit: per year) divide to get year.
+
+output_folder = "e4_all"
+death_year = np.loadtxt("e4_death_year.txt")
+raw_deficits = np.loadtxt("e4_raw_deficits.0")
+
 def create_textfile(filename):
-    filename = "individual_data/" + str(int(filename))
+    filename = output_folder + str(int(filename))
     try:
         f = open(filename + ".txt", "x")
 
@@ -13,11 +19,6 @@ def create_textfile(filename):
         f = open(filename + "(" + str(count) + ").txt", "x")
 
     return f
-
-gamma_0 = 0.00183       # (unit: per year) divide to get year.
-
-death_year = np.loadtxt("death_year.txt")
-raw_deficits = np.loadtxt("raw_deficits.0")
 
 # The three columns in file "raw_deficits"
 change_time = raw_deficits[:, 0] / gamma_0
