@@ -25,7 +25,7 @@ import os.path
 
 # The information of the nodes of interest
 NODES = np.loadtxt(
-    "high_annd_20_most_connected.nodes",
+    "nodes/50_annk.txt",
     dtype = {
         'names': ('id', 'conn', 'ANNC', 'rank'),
         'formats': (np.int32, np.int32, np.int32, np.int32)
@@ -148,3 +148,4 @@ def make_all_dot_matrices():
     for i in DEATH_DECADE_RANGE:
         make_decade_dot_matrices(str(i))
 
+make_decade_dot_matrix(8)
