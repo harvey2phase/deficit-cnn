@@ -3,3 +3,8 @@ batch_size = 10
 steps = 10 ** 6
 dropout_rate = 0.6              # might cause underfitting
                                 # could prevent overfitting
+
+number_of_neurons
+number_of_filters
+filter_size
+
