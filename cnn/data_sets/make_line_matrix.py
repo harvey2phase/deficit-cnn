@@ -64,22 +64,13 @@ def transform_data(
             os.makedirs(output_dir)
 
         # Iterate through all the years in the decade folder
-        for year in YEAR_RANGE:
-            year = str(year)
-            filename = decade + year + ".txt"
-
-            # Iterate through all duplicates of the year
-            duplicate = 2
-            while os.path.isfile(input_dir + filename):
-                output = transform_function(
-                    input_dir,
-                    filename,
-                    transform_param
-                )
-                write_to_file(output_dir, filename, output)
-
-                filename = decade + year + "(" + str(duplicate) + ").txt"
-                duplicate += 1
+        for filename in os.listdir(input_dir):
+            output = transform_function(
+                input_dir,
+                filename,
+                transform_param
+            )
+            write_to_file(output_dir, filename, output)
 
 # This function takes in a data folder and plot the data inside it to a plot
 #   folder
