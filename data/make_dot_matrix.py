@@ -23,6 +23,8 @@ import os.path
 # Constants
 #-------------------------------------------------------------------------------
 
+DATA_DIR = "model_data/e4_by_decade/"
+
 # The information of the nodes of interest
 NODES = np.loadtxt(
     "nodes/50_annk.txt",
@@ -63,7 +65,7 @@ def create_textfile(filename):
 
 
 def write_dot_matrix(matrix, filename, death_decade):
-    output_dir = 'matrix_50nodes_' + death_decade + '0/'
+    output_dir = 'matrices/e4/dot/50_annk/' + death_decade + '0/'
 
     f = open(output_dir + filename + '.txt', 'x')
 
@@ -74,6 +76,7 @@ def write_dot_matrix(matrix, filename, death_decade):
 
 
 def write_image(matrix, filename, death_decade):
+    output_dir = 'images/e4/dot/50_annk/' + death_decade + '0/'
     output_dir = 'image_50nodes_' + death_decade + '0/'
 
     plt.imshow(matrix)
@@ -85,7 +88,7 @@ def write_image(matrix, filename, death_decade):
 
 def make_dot_matrix(filename, death_decade):
 
-    input_dir = death_decade + '0_all/'
+    input_dir = DATA_DIR + death_decade + '0/'
 
     # The deficit information of an individual
     individual = np.loadtxt(
@@ -125,7 +128,7 @@ def make_dot_matrix(filename, death_decade):
 # Takes in a String that is a digit that represents the decade (folder) to plot
 def make_decade_dot_matrices(death_decade):
 
-    input_dir = death_decade + '0_all/'
+    input_dir = DATA_DIR + death_decade + '0/'
 
     for death_year in DEATH_YEAR_RANGE:
         death_year = str(death_year)
@@ -148,4 +151,4 @@ def make_all_dot_matrices():
     for i in DEATH_DECADE_RANGE:
         make_decade_dot_matrices(str(i))
 
-make_decade_dot_matrix(8)
+make_decade_dot_matrices("8")
