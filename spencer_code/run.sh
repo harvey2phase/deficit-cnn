@@ -1,4 +1,4 @@
-number=1000         # number of runs
+number=10000        # number of runs
 R=3.0               # Gamma+/Gamma-
 gammap=7.5          # damage rate constant
 gamman=6.5          # repair rate constant
