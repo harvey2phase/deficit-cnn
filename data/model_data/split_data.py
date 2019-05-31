@@ -3,7 +3,7 @@ import os
 
 gamma_0 = 0.00183       # (unit: per year) divide to get year.
 
-output_folder = "e4_all"
+output_folder = "e4_all/"
 death_year = np.loadtxt("e4_death_year.txt")
 raw_deficits = np.loadtxt("e4_raw_deficits.0")
 
