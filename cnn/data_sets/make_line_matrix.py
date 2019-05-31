@@ -162,18 +162,29 @@ def x_year_data_y_year_before_death(input_folder, filename, xy):
 # Scripts
 #-------------------------------------------------------------------------------
 
+'''
 transform_data(
     "training_individuals",
     "training_individuals/5_death_5_years",
     x_year_data_y_year_before_death,
     [5, 5]
 )
-'''
 transform_data(
-    "~/Desktop/Summer Research/cnn/data_sets/training_individuals",
-    "~/Desktop/Summer Research/cnn/data_sets/training_individuals/" +
-        "5_death_10_years",
+    "training_individuals",
+    "training_individuals/5_death_10_years",
     x_year_data_y_year_before_death,
     [5, 10]
 )
 '''
+transform_data(
+    "eval_individuals",
+    "eval_individuals/5_death_5_years",
+    x_year_data_y_year_before_death,
+    [5, 5]
+)
+transform_data(
+    "eval_individuals",
+    "eval_individuals/5_death_10_years",
+    x_year_data_y_year_before_death,
+    [5, 10]
+)
