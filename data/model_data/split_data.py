@@ -1,11 +1,24 @@
+#-------------------------------------------------------------------------------
+# Imports and constants
+#-------------------------------------------------------------------------------
+
 import numpy as np
 import os
 
 gamma_0 = 0.00183       # (unit: per year) divide to get year.
 
-output_folder = "e4_all/"
-death_year = np.loadtxt("e4_death_year.txt")
-raw_deficits = np.loadtxt("e4_raw_deficits.0")
+#-------------------------------------------------------------------------------
+# File directories setup
+#-------------------------------------------------------------------------------
+
+output_folder = "e5_all/"
+death_year_filename = "e5_death_year.txt"
+raw_deficits_filename = "../../spencer_code/Data/"
+raw_deficits_filename += "RawDeficitsID1Gammap7.5Gamman6.5N10000Number10000"
+
+#-------------------------------------------------------------------------------
+# Supporting functions
+#-------------------------------------------------------------------------------
 
 def create_textfile(filename):
     filename = output_folder + str(int(filename))
@@ -19,6 +32,13 @@ def create_textfile(filename):
         f = open(filename + "(" + str(count) + ").txt", "x")
 
     return f
+
+#-------------------------------------------------------------------------------
+# Scripts to split raw deficits
+#-------------------------------------------------------------------------------
+
+death_year = np.loadtxt(death_year_filename)
+raw_deficits = np.loadtxt(raw_deficits_filename)
 
 # The three columns in file "raw_deficits"
 change_time = raw_deficits[:, 0] / gamma_0
