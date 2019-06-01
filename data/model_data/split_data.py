@@ -14,7 +14,9 @@ gamma_0 = 0.00183       # (unit: per year) divide to get year.
 output_folder = "e5_all/"
 death_year_filename = "e5_death_year.txt"
 raw_deficits_filename = "../../spencer_code/Data/"
-raw_deficits_filename += "RawDeficitsID1Gammap7.5Gamman6.5N10000Number10000"
+raw_deficits_filename += "RawDeficitsID1Gammap7.5Gamman6.5N10000Number100000R3."
+raw_deficits_filename += "0nd2Alpha2.27AvgDeg4ANDSingleSingleSeed1ScaleFreepA0"
+raw_deficits_filename += ".0"
 
 #-------------------------------------------------------------------------------
 # Supporting functions
