@@ -1,8 +1,5 @@
-'''
-This Python file reads the "dot matrices" and converts them to "lines matrices"
-'''
 #-------------------------------------------------------------------------------
-# Imports
+# Imports and constants
 #-------------------------------------------------------------------------------
 
 import numpy as np
@@ -10,16 +7,11 @@ import matplotlib.pyplot as plt
 import os
 
 
-#-------------------------------------------------------------------------------
-# Constants
-#-------------------------------------------------------------------------------
-
 DECADE_RANGE = range(8, 9)
 YEAR_RANGE = range(10)
 
 MATRIX_WIDTH_RANGE = range(1, 120) # Ignore t=1, since all nodes start at 0
 MATRIX_LENGTH_RANGE = range(50)
-
 
 #-------------------------------------------------------------------------------
 # Functions
@@ -105,6 +97,10 @@ def plot_data(data_folder, plot_folder, plot_function):
                 filename = decade + year + "(" + str(duplicate) + ")"
                 duplicate += 1
 
+#-------------------------------------------------------------------------------
+# Functions
+#-------------------------------------------------------------------------------
+
 def dot_to_line_matrix(input_folder, filename, param):
     matrix = np.loadtxt(input_folder + filename)
 
@@ -156,35 +152,31 @@ def x_year_data_y_year_before_death(input_folder, filename, xy):
 
     return matrix[:, death_age - y - x : death_age - y]
 
-
-
 #-------------------------------------------------------------------------------
 # Scripts
 #-------------------------------------------------------------------------------
 
-'''
 transform_data(
-    "training_individuals",
-    "training_individuals/5_death_5_years",
+    "e4_training_individuals",
+    "e4_training_individuals/7_death_5_years",
     x_year_data_y_year_before_death,
-    [5, 5]
+    [7, 5]
 )
 transform_data(
-    "training_individuals",
-    "training_individuals/5_death_10_years",
+    "e4_training_individuals",
+    "e4_training_individuals/7_death_12_years",
     x_year_data_y_year_before_death,
-    [5, 10]
-)
-'''
-transform_data(
-    "eval_individuals",
-    "eval_individuals/5_death_5_years",
-    x_year_data_y_year_before_death,
-    [5, 5]
+    [7, 12]
 )
 transform_data(
-    "eval_individuals",
-    "eval_individuals/5_death_10_years",
+    "e4_eval_individuals",
+    "e4_eval_individuals/7_death_5_years",
     x_year_data_y_year_before_death,
-    [5, 10]
+    [7, 5]
+)
+transform_data(
+    "e4_eval_individuals",
+    "e4_eval_individuals/7_death_12_years",
+    x_year_data_y_year_before_death,
+    [7, 12]
 )
