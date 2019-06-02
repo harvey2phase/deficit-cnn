@@ -1,10 +1,12 @@
 import numpy as np
 import os
 
-f = open("eval_set_80.txt", "w+")
+f = open("7_eval_80.txt", "w+")
 
-directory = "eval_individuals/5_death_5_years/80"
-for filename in os.listdir(directory):
+directory1 = "eval_individuals/7_death_5_years/80"
+directory2 = "eval_individuals/7_death_10_years/80"
+
+for filename in os.listdir(directory1):
     if filename[0] == '8':
         matrix = np.loadtxt(directory + "/" +  filename)
 
@@ -15,8 +17,7 @@ for filename in os.listdir(directory):
                 f.write(str(state) + " ")
         f.write("\n")
 
-directory = "eval_individuals/5_death_10_years/80"
-for filename in os.listdir(directory):
+for filename in os.listdir(directory2):
     if filename[0] == '8':
         matrix = np.loadtxt(directory + "/" +  filename)
 
