@@ -1,4 +1,5 @@
 # Ignore data sets
+_all_/
 *.0
 
 # Created by https://www.gitignore.io/api/c,vim,c++,java,xcode,macos,python,sublimetext,microsoftoffice
