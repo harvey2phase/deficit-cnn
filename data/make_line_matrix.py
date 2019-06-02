@@ -174,14 +174,16 @@ transform_data(
 )
 '''
 transform_data(
-    "../cnn/data_sets/training_individuals",
-    "../cnn/data_sets/training_individuals/7_death_5_years",
+    "../cnn/data_sets/e4_training_individuals",
+    "../cnn/data_sets/e4_training_individuals/7_death_5_years",
     x_year_data_y_year_before_death,
     [7, 5]
 )
+'''
 transform_data(
     "../cnn/data_sets/training_individuals",
     "../cnn/data_sets/training_individuals/7_death_12_years",
     x_year_data_y_year_before_death,
     [7, 12]
 )
+'''
