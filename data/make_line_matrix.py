@@ -1,8 +1,5 @@
-'''
-This Python file reads the "dot matrices" and converts them to "lines matrices"
-'''
 #-------------------------------------------------------------------------------
-# Imports
+# Imports and constants
 #-------------------------------------------------------------------------------
 
 import numpy as np
@@ -10,16 +7,11 @@ import matplotlib.pyplot as plt
 import os
 
 
-#-------------------------------------------------------------------------------
-# Constants
-#-------------------------------------------------------------------------------
-
 DECADE_RANGE = range(8, 9)
 YEAR_RANGE = range(10)
 
 MATRIX_WIDTH_RANGE = range(1, 120) # Ignore t=1, since all nodes start at 0
 MATRIX_LENGTH_RANGE = range(50)
-
 
 #-------------------------------------------------------------------------------
 # Functions
@@ -114,6 +106,10 @@ def plot_data(data_folder, plot_folder, plot_function):
                 filename = decade + year + "(" + str(duplicate) + ")"
                 duplicate += 1
 
+#-------------------------------------------------------------------------------
+# Transformations
+#-------------------------------------------------------------------------------
+
 def dot_to_line_matrix(input_folder, filename, param):
     matrix = np.loadtxt(input_folder + filename)
 
@@ -165,47 +161,10 @@ def x_year_data_y_year_before_death(input_folder, filename, xy):
 
     return matrix[:, death_age - y - x : death_age - y]
 
-
-
 #-------------------------------------------------------------------------------
 # Scripts
 #-------------------------------------------------------------------------------
 
-'''
-transform_data(
-    "50_nodes/dot_matrix",
-    "50_nodes/line_matrix",
-    dot_to_line_matrix,
-    None
-)
-plot_data("50_nodes/line_matrix", "50_nodes/line_image", plt.imshow)
-'''
-'''
-transform_data(
-    "50_nodes/line_matrix",
-    "50_nodes/partial_line_matrix",
-    x_year_data_y_year_before_death,
-    [5, 5]
-)
-plot_data(
-    "50_nodes/5_death_in_5_years_matrix",
-    "50_nodes/partial_line_image",
-    plt.imshow
-)
-'''
-'''
-transform_data(
-    "50_nodes/line_matrix",
-    "50_nodes/5_death_in_10_years_matrix",
-    x_year_data_y_year_before_death,
-    [5, 10]
-)
-plot_data(
-    "50_nodes/5_death_in_10_years_matrix",
-    "50_nodes/5_death_in_10_years_image",
-    plt.imshow
-)
-'''
 '''
 transform_data(
     "matrices/dot_50_annk",
@@ -215,18 +174,14 @@ transform_data(
 )
 '''
 transform_data(
-    "~/Desktop/Summer Research/cnn/data_sets/training_individuals",
-    "~/Desktop/Summer Research/cnn/data_sets/training_individuals/" +
-        "5_death_5_years",
+    "../cnn/data_sets/training_individuals",
+    "../cnn/data_sets/training_individuals/7_death_5_years",
     x_year_data_y_year_before_death,
-    [5, 5]
+    [7, 5]
 )
-'''
 transform_data(
-    "~/Desktop/Summer Research/cnn/data_sets/training_individuals",
-    "~/Desktop/Summer Research/cnn/data_sets/training_individuals/" +
-        "5_death_10_years",
+    "../cnn/data_sets/training_individuals",
+    "../cnn/data_sets/training_individuals/7_death_12_years",
     x_year_data_y_year_before_death,
-    [5, 10]
+    [7, 12]
 )
-'''
