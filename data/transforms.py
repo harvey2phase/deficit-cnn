@@ -57,6 +57,7 @@ def transform_data(
 
         # Iterate through all the years in the decade folder
         for filename in os.listdir(input_dir):
+            print(filename)
             output = transform_function(
                 input_dir,
                 filename,
@@ -157,6 +158,14 @@ def x_year_data_y_year_before_death(input_folder, filename, xy):
 #-------------------------------------------------------------------------------
 
 transform_data(
+    "matrices/e5/50_annk/dot",
+    "matrices/e5/50_annk/line",
+    dot_to_line_matrix,
+    None
+)
+
+'''
+transform_data(
     "e4_training_individuals",
     "e4_training_individuals/7_death_5_years",
     x_year_data_y_year_before_death,
@@ -180,3 +189,4 @@ transform_data(
     x_year_data_y_year_before_death,
     [7, 12]
 )
+'''
