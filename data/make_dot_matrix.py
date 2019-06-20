@@ -23,11 +23,15 @@ import os.path
 # Constants
 #-------------------------------------------------------------------------------
 
-DATA_DIR = "model_data/e4_by_decade/"
+DATA_DIR = "model_data/e5_by_decade/"
+NODE_FILE_DIR = "nodes/50_annk.txt"
+MATRIX_OUT_DIR = "matrices/e5/50_annk/dot/"
+#IMAGE_OUT_DIR = "images/e4/dot/50_annk/"
+
 
 # The information of the nodes of interest
 NODES = np.loadtxt(
-    "nodes/50_annk.txt",
+    NODE_FILE_DIR,
     dtype = {
         'names': ('id', 'conn', 'ANNC', 'rank'),
         'formats': (np.int32, np.int32, np.int32, np.int32)
@@ -65,7 +69,7 @@ def create_textfile(filename):
 
 
 def write_dot_matrix(matrix, filename, death_decade):
-    output_dir = 'matrices/e4/dot/50_annk/' + death_decade + '0/'
+    output_dir = MATRIX_OUT_DIR + death_decade + '0/'
 
     f = open(output_dir + filename + '.txt', "w+")
 
@@ -76,7 +80,7 @@ def write_dot_matrix(matrix, filename, death_decade):
 
 
 def write_image(matrix, filename, death_decade):
-    output_dir = 'images/e4/dot/50_annk/' + death_decade + '0/'
+    output_dir = IMAGE_OUT_DIR + death_decade + '0/'
 
     plt.imshow(matrix)
     plt.xlabel('Time (year)')
@@ -122,7 +126,7 @@ def make_dot_matrix(filename, death_decade):
                 matrix[rank][time] = REPAIRED
 
     write_dot_matrix(matrix, filename, death_decade)
-    write_image(matrix, filename, death_decade)
+    #write_image(matrix, filename, death_decade)
 
 # Takes in a String that is a digit that represents the decade (folder) to plot
 def make_decade_dot_matrices(death_decade):
