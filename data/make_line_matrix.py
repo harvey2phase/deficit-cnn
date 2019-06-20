@@ -56,22 +56,13 @@ def transform_data(
             os.makedirs(output_dir)
 
         # Iterate through all the years in the decade folder
-        for year in YEAR_RANGE:
-            year = str(year)
-            filename = decade + year + ".txt"
-
-            # Iterate through all duplicates of the year
-            duplicate = 2
-            while os.path.isfile(input_dir + filename):
-                output = transform_function(
-                    input_dir,
-                    filename,
-                    transform_param
-                )
-                write_to_file(output_dir, filename, output)
-
-                filename = decade + year + "(" + str(duplicate) + ").txt"
-                duplicate += 1
+        for filename in os.listdir(input_dir):
+            output = transform_function(
+                input_dir,
+                filename,
+                transform_param
+            )
+            write_to_file(output_dir, filename, output)
 
 # This function takes in a data folder and plot the data inside it to a plot
 #   folder
@@ -107,7 +98,7 @@ def plot_data(data_folder, plot_folder, plot_function):
                 duplicate += 1
 
 #-------------------------------------------------------------------------------
-# Transformations
+# Functions
 #-------------------------------------------------------------------------------
 
 def dot_to_line_matrix(input_folder, filename, param):
@@ -165,25 +156,27 @@ def x_year_data_y_year_before_death(input_folder, filename, xy):
 # Scripts
 #-------------------------------------------------------------------------------
 
-'''
 transform_data(
-    "matrices/dot_50_annk",
-    "matrices/line_50_annk",
-    dot_to_line_matrix,
-    None
-)
-'''
-transform_data(
-    "../cnn/data_sets/e4_training_individuals",
-    "../cnn/data_sets/e4_training_individuals/7_death_5_years",
+    "e4_training_individuals",
+    "e4_training_individuals/7_death_5_years",
     x_year_data_y_year_before_death,
     [7, 5]
 )
-'''
 transform_data(
-    "../cnn/data_sets/training_individuals",
-    "../cnn/data_sets/training_individuals/7_death_12_years",
+    "e4_training_individuals",
+    "e4_training_individuals/7_death_12_years",
     x_year_data_y_year_before_death,
     [7, 12]
 )
-'''
+transform_data(
+    "e4_eval_individuals",
+    "e4_eval_individuals/7_death_5_years",
+    x_year_data_y_year_before_death,
+    [7, 5]
+)
+transform_data(
+    "e4_eval_individuals",
+    "e4_eval_individuals/7_death_12_years",
+    x_year_data_y_year_before_death,
+    [7, 12]
+)
