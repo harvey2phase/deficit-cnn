@@ -153,6 +153,27 @@ def x_year_data_y_year_before_death(input_folder, filename, xy):
 
     return matrix[:, death_age - y - x : death_age - y]
 
+# This function truncates line matrices of 80+ year-olds to matrices that
+#   include the health states between 80 and 80-x years, and assigns labels
+#   based whether the individual is dead y years after age 80.
+# The function appends the truncated matrices in a training file and the labels
+#   in a label file. Inidividuals are labeled 1 if they die within y years after
+#   age 80, and labeled 0 otherwise
+# Parameters:
+#   input_folder: folder that contains line matrices
+#   filenmae: filename
+#   params: string array that contains the following
+#     matrix_file: the path to the matrix data file to be written
+#     label_file: the path to the label file to be written
+#     x: the number of years before 80 to record
+#     y: if the individual is dead before age 80+y, it is given a label 1
+def x_years_before_80_dead_in_y_years(input_folder, filename, params):
+    matrix_file = params[0]
+    label_file = params[1]
+    x = int(params[2])
+    y = int(params[3])
+
+
 #-------------------------------------------------------------------------------
 # Scripts
 #-------------------------------------------------------------------------------
