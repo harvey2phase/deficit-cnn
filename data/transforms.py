@@ -232,12 +232,23 @@ transform_and_write(
 )
 '''
 
+tests_80 = "../cnn/data_sets/e4/tests_age_80/"
+transform(
+    tests_80 + "train_individuals",
+    x_years_before_80_dead_in_y_years,
+    [tests_80 + "prob_of_death_at_80/train_set.txt",
+        tests_80 + "prob_of_death_at_80/train_labels.txt",
+        "5", "5"]
+)
+
+'''
 transform(
     "../cnn/data_sets/e5/prob_of_death_at_80/train_individuals",
     x_years_before_80_dead_in_y_years,
     ["../cnn/data_sets/e5/prob_of_death_at_80/train_set.txt",
         "../cnn/data_sets/e5/prob_of_death_at_80/train_labels.txt", "5", "5"]
 )
+'''
 
 '''
 transform_and_write(
