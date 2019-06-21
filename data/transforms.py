@@ -234,10 +234,10 @@ transform_and_write(
 
 tests_80 = "../cnn/data_sets/e4/tests_age_80/"
 transform(
-    tests_80 + "train_individuals",
+    tests_80 + "eval_individuals",
     x_years_before_80_dead_in_y_years,
-    [tests_80 + "prob_of_death_at_80/train_set.txt",
-        tests_80 + "prob_of_death_at_80/train_labels.txt",
+    [tests_80 + "prob_of_death_at_80/eval_set.txt",
+        tests_80 + "prob_of_death_at_80/eval_labels.txt",
         "5", "5"]
 )
 
