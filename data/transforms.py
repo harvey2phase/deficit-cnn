@@ -213,9 +213,9 @@ def x_years_before_80_dead_in_y_years(input_folder, filename, params):
 
     label_file = open(label_filename, "a+")
     if (death_age <= 80 + y):
-        label_file.write(1)
+        label_file.write("1\n")
     else:
-        label_file.write(0)
+        label_file.write("0\n")
     label_file.close()
 
 
