@@ -14,7 +14,7 @@ MATRIX_WIDTH_RANGE = range(1, 120) # Ignore t=1, since all nodes start at 0
 MATRIX_LENGTH_RANGE = range(50)
 
 #-------------------------------------------------------------------------------
-# Functions
+# Generic Transform and Writing Functions
 #-------------------------------------------------------------------------------
 
 # This function takes in an output 2D matrix, then writes the matrix to the
@@ -29,7 +29,7 @@ def write_to_file(output_dir, filename, matrix):
         f.write(" ".join(map(str, m)) + "\n")
     f.close()
 
-# This function transforms all the data (.txt) in one directory to an another
+# This function transforms all the data (.txt) in one directory
 # Parameters:
 #   input_folder: specifies the directory that contains subdirectories of data;
 #     the subdirectories have names "X0", where X is the decade
@@ -38,7 +38,38 @@ def write_to_file(output_dir, filename, matrix):
 #     the subdirectories have names "X0", where X is the decade
 #   function: specifies the transformation for the data,
 #     takes in the input directory and filename and returns the output data
-def transform_data(
+def transform(
+    input_folder,
+    transform_function,
+    transform_param
+):
+    input_folder += "/"
+
+    # Iterate through all decade folders
+    for decade in DECADE_RANGE:
+        decade = str(decade)
+        input_dir = input_folder + decade + "0/"
+
+        # Iterate through all the years in the decade folder
+        for filename in os.listdir(input_dir):
+            print(filename)
+            output = transform_function(
+                input_dir,
+                filename,
+                transform_param
+            )
+
+# This function transforms all the data (.txt) in one directory and writes it in
+#   another
+# Parameters:
+#   input_folder: specifies the directory that contains subdirectories of data;
+#     the subdirectories have names "X0", where X is the decade
+#     (e.g. "matrix_50nodes")
+#   output_folder: specifies the directory to output the data in subdirectories;
+#     the subdirectories have names "X0", where X is the decade
+#   function: specifies the transformation for the data,
+#     takes in the input directory and filename and returns the output data
+def transform_and_write(
     input_folder,
     output_folder,
     transform_function,
@@ -99,7 +130,7 @@ def plot_data(data_folder, plot_folder, plot_function):
                 duplicate += 1
 
 #-------------------------------------------------------------------------------
-# Functions
+# Transformations
 #-------------------------------------------------------------------------------
 
 def dot_to_line_matrix(input_folder, filename, param):
@@ -166,19 +197,34 @@ def x_year_data_y_year_before_death(input_folder, filename, xy):
 #     matrix_file: the path to the matrix data file to be written
 #     label_file: the path to the label file to be written
 #     x: the number of years before 80 to record
-#     y: if the individual is dead before age 80+y, it is given a label 1
+#     y: if the individual is dead at/before age 80+y, it is given a label 1
 def x_years_before_80_dead_in_y_years(input_folder, filename, params):
-    matrix_file = params[0]
-    label_file = params[1]
+    matrix_filename = params[0]
+    label_filename = params[1]
     x = int(params[2])
     y = int(params[3])
+
+    matrix = np.loadtxt(input_folder + filename)
+
+    death_age = int(filename[0] + filename[1], 10)
+
+    matrix_file = open(matrix_filename, "a+")
+    matrix_file.write(matrix[:, 80 - x : 80])
+    matrix_file.close()
+
+    label_file = open(label_filename, "a+")
+    if (death_age <= 80 + y):
+        label_file.write(1)
+    else:
+        label_file.write(0)
+    label_file.close()
 
 
 #-------------------------------------------------------------------------------
 # Scripts
 #-------------------------------------------------------------------------------
 
-transform_data(
+transform_and_write(
     "matrices/e5/50_annk/dot",
     "matrices/e5/50_annk/line",
     dot_to_line_matrix,
@@ -186,25 +232,25 @@ transform_data(
 )
 
 '''
-transform_data(
+transform_and_write(
     "e4_training_individuals",
     "e4_training_individuals/7_death_5_years",
     x_year_data_y_year_before_death,
     [7, 5]
 )
-transform_data(
+transform_and_write(
     "e4_training_individuals",
     "e4_training_individuals/7_death_12_years",
     x_year_data_y_year_before_death,
     [7, 12]
 )
-transform_data(
+transform_and_write(
     "e4_eval_individuals",
     "e4_eval_individuals/7_death_5_years",
     x_year_data_y_year_before_death,
     [7, 5]
 )
-transform_data(
+transform_and_write(
     "e4_eval_individuals",
     "e4_eval_individuals/7_death_12_years",
     x_year_data_y_year_before_death,
