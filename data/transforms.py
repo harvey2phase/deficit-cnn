@@ -224,11 +224,20 @@ def x_years_before_80_dead_in_y_years(input_folder, filename, params):
 # Scripts
 #-------------------------------------------------------------------------------
 
+'''
 transform_and_write(
     "matrices/e5/50_annk/dot",
     "matrices/e5/50_annk/line",
     dot_to_line_matrix,
     None
+)
+'''
+
+transform(
+    "../cnn/data_sets/e5/prob_of_death_at_80/train_individuals",
+    x_years_before_80_dead_in_y_years,
+    ["../cnn/data_sets/e5/prob_of_death_at_80/train_set.txt",
+        "../cnn/data_sets/e5/prob_of_death_at_80/train_labels.txt", "5", "5"]
 )
 
 '''
