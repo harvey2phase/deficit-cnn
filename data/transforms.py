@@ -45,19 +45,14 @@ def transform(
 ):
     input_folder += "/"
 
-    # Iterate through all decade folders
-    for decade in DECADE_RANGE:
-        decade = str(decade)
-        input_dir = input_folder + decade + "0/"
-
-        # Iterate through all the years in the decade folder
-        for filename in os.listdir(input_dir):
-            print(filename)
-            output = transform_function(
-                input_dir,
-                filename,
-                transform_param
-            )
+    # Iterate through all the files in the input folder
+    for filename in os.listdir(input_folder):
+        print(filename)
+        output = transform_function(
+            input_folder,
+            filename,
+            transform_param
+        )
 
 # This function transforms all the data (.txt) in one directory and writes it in
 #   another
@@ -206,10 +201,14 @@ def x_years_before_80_dead_in_y_years(input_folder, filename, params):
 
     matrix = np.loadtxt(input_folder + filename)
 
+    truncated = matrix[:, 80 - x : 80]
     death_age = int(filename[0] + filename[1], 10)
 
     matrix_file = open(matrix_filename, "a+")
-    matrix_file.write(matrix[:, 80 - x : 80])
+    for row in truncated:
+        for state in row:
+            matrix_file.write(str(state) + " ")
+    matrix_file.write("\n")
     matrix_file.close()
 
     label_file = open(label_filename, "a+")
