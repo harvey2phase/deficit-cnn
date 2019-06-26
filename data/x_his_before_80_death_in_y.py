@@ -52,38 +52,10 @@ def x_years_before_80_dead_in_y_years(input_folder, filename, params):
 test = "../cnn/data_sets/e5/tests_age_80/"
 subtest = "prob_of_death_at_80/"
 kind = "train"
-x = "4"
+x = "6"
 y = "5"
 
 xy = x + "x" + y + "y"
-transform(
-    test + kind + "_individuals",
-    x_years_before_80_dead_in_y_years,
-    [test + subtest + xy + "_" + kind + "_set.txt",
-        test + subtest + xy + "_" + kind + "_labels.txt",
-        x, y]
-)
-kind = "eval"
-transform(
-    test + kind + "_individuals",
-    x_years_before_80_dead_in_y_years,
-    [test + subtest + xy + "_" + kind + "_set.txt",
-        test + subtest + xy + "_" + kind + "_labels.txt",
-        x, y]
-)
-
-
-x = "6"
-
-xy = x + "x" + y + "y"
-transform(
-    test + kind + "_individuals",
-    x_years_before_80_dead_in_y_years,
-    [test + subtest + xy + "_" + kind + "_set.txt",
-        test + subtest + xy + "_" + kind + "_labels.txt",
-        x, y]
-)
-kind = "eval"
 transform(
     test + kind + "_individuals",
     x_years_before_80_dead_in_y_years,
