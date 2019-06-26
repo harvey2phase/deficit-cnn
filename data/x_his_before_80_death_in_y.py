@@ -1,3 +1,5 @@
+import numpy as np
+
 from transforms import transform
 
 #-------------------------------------------------------------------------------
@@ -47,11 +49,17 @@ def x_years_before_80_dead_in_y_years(input_folder, filename, params):
 # Scripts
 #-------------------------------------------------------------------------------
 
-tests_80 = "../cnn/data_sets/e5/tests_age_80/"
+test = "../cnn/data_sets/e4/tests_age_80/"
+subtest = "prob_of_death_at_80/"
+kind = "train"
+x = "4"
+y = "5"
+
+xy = x + "x" + y + "y"
 transform(
-    tests_80 + "train_individuals",
+    test + kind + "_individuals",
     x_years_before_80_dead_in_y_years,
-    [tests_80 + "prob_of_death_at_80/train_set.txt",
-        tests_80 + "prob_of_death_at_80/train_labels.txt",
-        "5", "5"]
+    [test + subtest + xy + kind + "_set.txt",
+        test + subtest + xy + kind + "_labels.txt",
+        x, y]
 )
