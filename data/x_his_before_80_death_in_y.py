@@ -63,3 +63,31 @@ transform(
         test + subtest + xy + "_" + kind + "_labels.txt",
         x, y]
 )
+kind = "eval"
+transform(
+    test + kind + "_individuals",
+    x_years_before_80_dead_in_y_years,
+    [test + subtest + xy + "_" + kind + "_set.txt",
+        test + subtest + xy + "_" + kind + "_labels.txt",
+        x, y]
+)
+
+
+x = "6"
+
+xy = x + "x" + y + "y"
+transform(
+    test + kind + "_individuals",
+    x_years_before_80_dead_in_y_years,
+    [test + subtest + xy + "_" + kind + "_set.txt",
+        test + subtest + xy + "_" + kind + "_labels.txt",
+        x, y]
+)
+kind = "eval"
+transform(
+    test + kind + "_individuals",
+    x_years_before_80_dead_in_y_years,
+    [test + subtest + xy + "_" + kind + "_set.txt",
+        test + subtest + xy + "_" + kind + "_labels.txt",
+        x, y]
+)
