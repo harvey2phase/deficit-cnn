@@ -26,7 +26,7 @@ def x_years_before_80_dead_in_y_years(input_folder, filename, params):
     x = int(params[2])
     y = int(params[3])
 
-    matrix = np.loadtxt(input_folder + filename)
+    matrix = np.loadtxt(input_folder + filename, dtype = np.int32)
 
     truncated = matrix[:, 80 - x : 80]
     death_age = int(filename[0] + filename[1], 10)
@@ -49,7 +49,7 @@ def x_years_before_80_dead_in_y_years(input_folder, filename, params):
 # Scripts
 #-------------------------------------------------------------------------------
 
-test = "../cnn/data_sets/e4/tests_age_80/"
+test = "../cnn/data_sets/e5/tests_age_80/"
 subtest = "prob_of_death_at_80/"
 y = "5"
 
