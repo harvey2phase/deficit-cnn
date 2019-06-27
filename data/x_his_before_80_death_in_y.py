@@ -50,26 +50,26 @@ def x_years_before_80_dead_in_y_years(input_folder, filename, params):
 # Scripts
 #-------------------------------------------------------------------------------
 
-test = "../cnn/data_sets/e4/tests_age_80/"
+test = "../cnn/data_sets/e5/tests_age_80/"
 subtest = "prob_of_death_at_80/"
-y = "6"
+y = "5"
 
-x = "5"
+x = "20"
 xy = x + "x" + y + "y"
 
 kind = "train"
 transform(
     test + kind + "_individuals",
     x_years_before_80_dead_in_y_years,
-    [test + subtest + xy + "_" + kind + "_set_NEW.txt",
-        test + subtest + xy + "_" + kind + "_labels_NEW.txt",
+    [test + subtest + xy + "_" + kind + "_set.txt",
+        test + subtest + xy + "_" + kind + "_labels.txt",
         x, y]
 )
 kind = "eval"
 transform(
     test + kind + "_individuals",
     x_years_before_80_dead_in_y_years,
-    [test + subtest + xy + "_" + kind + "_set_NEW.txt",
-        test + subtest + xy + "_" + kind + "_labels_NEW.txt",
+    [test + subtest + xy + "_" + kind + "_set.txt",
+        test + subtest + xy + "_" + kind + "_labels.txt",
         x, y]
 )
