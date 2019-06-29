@@ -1,7 +1,6 @@
 from __future__ import absolute_import, division, print_function
 
 import numpy as np
-import os
 import tensorflow as tf
 
 from cnn_model import deficit_cnn_model
@@ -10,36 +9,38 @@ from cnn_model import deficit_cnn_model
 # Data paths and constants
 #-------------------------------------------------------------------------------
 
-PATH = "data_sets/e4/tests_age_80/prob_of_death_at_80/"
+def set_data(history, node_count):
 
-# Shape: [training_size, 50 * HISTORY]
-HISTORY = 15
-NODE_COUNT = 50
+    global HISTORY
+    global NODE_COUNT
+    global TRAIN_SET
+    global TRAIN_LABELS
+    global EVAL_SET
+    global EVAL_LABELS
 
-TRAIN_SET = str(HISTORY) + "x5y_train_set.txt"
-TRAIN_LABELS = str(HISTORY) + "x5y_train_labels.txt"
-EVAL_SET = str(HISTORY) + "x5y_eval_set.txt"
-EVAL_LABELS = str(HISTORY) + "x5y_eval_labels.txt"
+    HISTORY = history
+    NODE_COUNT = node_count
+
+    # Shape: [training_size, NODE_COUNT * HISTORY]
+    TRAIN_SET = str(HISTORY) + "x5y_train_set.txt"
+    TRAIN_LABELS = str(HISTORY) + "x5y_train_labels.txt"
+    EVAL_SET = str(HISTORY) + "x5y_eval_set.txt"
+    EVAL_LABELS = str(HISTORY) + "x5y_eval_labels.txt"
 
 #-------------------------------------------------------------------------------
 # Hyperparameters
 #-------------------------------------------------------------------------------
 
-STEPS = 1 * 10 ** 5
-LEARNING_RATE = 10 ** -4
-DROPOUT_RATE = 0.4
-BATCH_SIZE = 10
+def set_hype(filters, sizes):
+    global CONV_FILTERS
+    global CONV_SIZES
+    global CONV_COUNT
 
-CONV_FILTERS = [32, 64, 128]
-CONV_SIZES = [[5, 5], [5, 5], [5, 5]]
+    CONV_FILTERS = [32, 64, 128]
+    CONV_SIZES = [[5, 5], [5, 5], [5, 5]]
 
-CONV_COUNT = len(CONV_FILTERS)
+    CONV_COUNT = len(CONV_FILTERS)
 
-POOL_SIZE = [2, 2]
-POOL_STRIDE = 2
-
-DENSE_UNITS = 1024
-LOGITS_UNITS = 10
 
 #-------------------------------------------------------------------------------
 # Load data and setup logging
@@ -63,6 +64,7 @@ logging_hook = tf.train.LoggingTensorHook(
     every_n_iter = 50
 )
 
+
 #-------------------------------------------------------------------------------
 # Create classifier, train, and evaluate
 #-------------------------------------------------------------------------------
@@ -70,7 +72,7 @@ logging_hook = tf.train.LoggingTensorHook(
 classifier = tf.estimator.Estimator(model_fn = deficit_cnn_model)
 
 train_input_fn = tf.estimator.inputs.numpy_input_fn(
-    x = train_data,
+    x = {'x': train_data},
     y = train_labels,
     batch_size = BATCH_SIZE,
     num_epochs = None,
@@ -80,9 +82,10 @@ train_input_fn = tf.estimator.inputs.numpy_input_fn(
 classifier.train(
     input_fn = train_input_fn,
     steps = STEPS,
-    #hooks = [logging_hook]
+    hooks = [logging_hook]
 )
 
+'''
 eval_input_fn = tf.estimator.inputs.numpy_input_fn(
     x = eval_data,
     y = eval_labels,
@@ -91,3 +94,6 @@ eval_input_fn = tf.estimator.inputs.numpy_input_fn(
 )
 eval_results = classifier.evaluate(input_fn = eval_input_fn)
 print(eval_results)
+
+'''
+print("DONE")

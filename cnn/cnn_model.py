@@ -1,14 +1,38 @@
 from __future__ import absolute_import, division, print_function
 
-import numpy as np
+#import numpy as np
 import tensorflow as tf
+
+PATH = "data_sets/e4/tests_age_80/prob_of_death_at_80/"
+
+STEPS = 1 * 10 ** 5
+LEARNING_RATE = 10 ** -4
+DROPOUT_RATE = 0.4
+BATCH_SIZE = 10
+
+POOL_SIZE = [2, 2]
+POOL_STRIDE = 2
+
+DENSE_UNITS = 1024
+LOGITS_UNITS = 10
+
+HISTORY = 0
+NODE_COUNT = 0
+TRAIN_SET = 0
+TRAIN_LABELS = 0
+EVAL_SET = 0
+EVAL_LABELS = 0
+
+CONV_FILTERS = 0
+CONV_SIZES = 0
+CONV_COUNT = 0
 
 def deficit_cnn_model(features, labels, mode):
 
     ''' Input Layer '''
     # Reshape X to 4-D tensor: [batch_size, width, height, channels]
-    layer = tf.reshape(features, [-1, NODE_COUNT, HISTORY, 1])
-    
+    layer = tf.reshape(features['x'], [-1, NODE_COUNT, HISTORY, 1])
+
     # Image length and width
     length = NODE_COUNT
     width = HISTORY
@@ -25,7 +49,7 @@ def deficit_cnn_model(features, labels, mode):
             padding = "same",
             activation = tf.nn.relu
         )
-    
+
         ''' Pooling Layer '''
         # Max pooling layer with a 2x2 filter and stride of 2
         # Output Tensor Shape: [batch_size, length / 2, width / 2 , filter size]
@@ -34,11 +58,11 @@ def deficit_cnn_model(features, labels, mode):
             pool_size = POOL_SIZE,
             strides = POOL_STRIDE
         )
-        
+
         length = int(length / 2)
         width = int(width / 2)
 
-    
+
     ''' Flatten tensor into a batch of vectors '''
     pool2_flat = tf.reshape(layer, [-1, CONV_FILTERS[i] * length * width])
 
@@ -50,7 +74,7 @@ def deficit_cnn_model(features, labels, mode):
         units = DENSE_UNITS,
         activation = tf.nn.relu
     )
-    
+
     ''' Add dropout operation '''
     # 0.6 probability that element will be kept
     # Tensor Shape: [batch_size, 1024]
