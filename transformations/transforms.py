@@ -46,12 +46,13 @@ def transform(
 
     # Iterate through all the files in the input folder
     for filename in os.listdir(input_folder):
-        print(filename)
-        output = transform_function(
-            input_folder,
-            filename,
-            transform_param
-        )
+        if filename[0].isdigit():
+            print(filename)
+            output = transform_function(
+                input_folder,
+                filename,
+                transform_param
+            )
 
 # This function transforms all the data (.txt) in one directory and writes it in
 #   another
