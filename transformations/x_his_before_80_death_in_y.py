@@ -56,7 +56,7 @@ y = "5"
 x = "5"
 xy = x + "x" + y + "y"
 
-kind = "train"
+kind = "eval"
 transform(
     test + "unbiased_" + kind + "_ind",
     x_years_before_80_dead_in_y_years,
