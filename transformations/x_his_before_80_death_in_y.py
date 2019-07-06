@@ -26,7 +26,6 @@ def x_years_before_80_dead_in_y_years(input_folder, filename, params):
     x = int(params[2])
     y = int(params[3])
 
-    #matrix = np.loadtxt(input_folder + filename, dtype = np.int32)
     matrix = np.loadtxt(input_folder + filename)
 
     truncated = matrix[:, 80 - x : 80]
