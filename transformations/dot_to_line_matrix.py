@@ -31,11 +31,9 @@ def dot_to_line_matrix(input_folder, filename, param):
 # Scripts
 #-------------------------------------------------------------------------------
 
-'''
 transform_and_write(
-    "matrices/e5/50_annk/dot",
-    "matrices/e5/50_annk/line",
+    "../raw_data/matrices/e4/50_annk/dot",
+    "../raw_data/matrices/e4/50_annk/line",
     dot_to_line_matrix,
     None
 )
-'''
