@@ -1,0 +1,320 @@
+from __future__ import absolute_import, division, print_function
+from google.colab import drive
+
+import numpy as np
+import os
+import tensorflow as tf
+
+#-------------------------------------------------------------------------------
+# Data
+#-------------------------------------------------------------------------------
+
+HISTORY = None
+NODE_COUNT = 50
+
+TRAIN_SET = None
+TRAIN_LABELS = None
+EVAL_SET = None
+EVAL_LABELS = None
+
+def set_data(data_folder, history):
+    global DATA_FOLDER
+    global HISTORY
+    global TRAIN_SET
+    global TRAIN_LABELS
+    global EVAL_SET
+    global EVAL_LABELS
+    
+    DATA_FOLDER = data_folder
+    HISTORY = history
+    history = str(history)
+
+    # Shape: [training_size, NODE_COUNT * HISTORY]
+    TRAIN_SET = DATA_FOLDER + "unbiased_" + str(HISTORY) + "x5y_train_set.txt"
+    TRAIN_LABELS = DATA_FOLDER + "unbiased_" + str(HISTORY) + "x5y_train_labels.txt"
+    EVAL_SET = DATA_FOLDER + "unbiased_" + str(HISTORY) + "x5y_eval_set.txt"
+    EVAL_LABELS = DATA_FOLDER + "unbiased_" + str(HISTORY) + "x5y_eval_labels.txt"
+
+#-------------------------------------------------------------------------------
+# 
+#-------------------------------------------------------------------------------
+
+CONV_FILTERS = None
+CONV_SIZES = None
+CONV_COUNT = None
+
+POOL_SIZE = [2, 2]
+POOL_STRIDE = 2
+
+DENSE_UNITS = None
+LOGITS_UNITS = None
+
+STEPS = None
+LEARNING_RATE = 10 ** -4
+DROPOUT_RATE = 0.4
+BATCH_SIZE = 100
+
+def set_hype(filters, sizes, steps, dense, logits):
+    global CONV_FILTERS
+    global CONV_SIZES
+    global CONV_COUNT
+    global STEPS
+    global DENSE_UNITS
+    global LOGITS_UNITS
+    
+    CONV_FILTERS = filters
+    CONV_SIZES = sizes
+    CONV_COUNT = len(CONV_FILTERS)
+    STEPS = steps
+    DENSE_UNITS = dense
+    LOGITS_UNITS = logits
+
+#-------------------------------------------------------------------------------
+# CNN Model
+#-------------------------------------------------------------------------------
+
+def deficit_cnn_model(features, labels, mode):
+
+    ''' Input Layer '''
+    # Reshape X to 4-D tensor: [batch_size, width, height, channels]
+    layer = tf.reshape(features, [-1, NODE_COUNT, HISTORY, 1])
+    
+    # Image length and width
+    length = NODE_COUNT
+    width = HISTORY
+    for i in range(CONV_COUNT):
+
+        ''' Convolutional Layer '''
+        # Computes 32 features using a 5x5 filter with ReLU activation.
+        #   Padding is added to preserve width and height.
+        # Output Tensor Shape: [batch_size, length, width, filter size]
+        layer = tf.layers.conv2d(
+            inputs = layer,
+            filters = CONV_FILTERS[i],
+            kernel_size = CONV_SIZES[i],
+            padding = "same",
+            activation = tf.nn.relu
+        )
+    
+        ''' Pooling Layer '''
+        # Max pooling layer with a 2x2 filter and stride of 2
+        # Output Tensor Shape: [batch_size, length / 2, width / 2 , filter size]
+        layer = tf.layers.max_pooling2d(
+            inputs = layer,
+            pool_size = POOL_SIZE,
+            strides = POOL_STRIDE
+        )
+        
+        length = int(length / 2)
+        width = int(width / 2)
+
+    
+    ''' Flatten tensor into a batch of vectors '''
+    pool2_flat = tf.reshape(layer, [-1, CONV_FILTERS[i] * length * width])
+
+    ''' Dense Layer '''
+    # Densely connected layer with 1024 neurons
+    # Tensor Shape: [batch_size, 1024]
+    dense = tf.layers.dense(
+        inputs = pool2_flat,
+        units = DENSE_UNITS,
+        activation = tf.nn.relu
+    )
+    
+    ''' Add dropout operation '''
+    # 0.6 probability that element will be kept
+    # Tensor Shape: [batch_size, 1024]
+    dropout = tf.layers.dropout(
+        inputs = dense,
+        rate = DROPOUT_RATE,
+        training = mode == tf.estimator.ModeKeys.TRAIN
+    )
+
+
+    ''' Logits layer '''
+    # Input Tensor Shape: [batch_size, 1024]
+    # Tensor Shape: [batch_size, 1024]
+    logits = tf.layers.dense(
+        inputs = dropout,
+        units = LOGITS_UNITS
+    )
+
+    predictions = {
+        # Generate predictions (for PREDICT and EVAL mode)
+        "classes": tf.argmax(input = logits, axis = 1),
+
+        # Add `softmax_tensor` to the graph.
+        # It is used for PREDICT and by the `logging_hook`.
+        "probabilities": tf.nn.softmax(logits, name = "softmax_tensor")
+    }
+
+    if mode == tf.estimator.ModeKeys.PREDICT:
+        return tf.estimator.EstimatorSpec(
+            mode = mode,
+            predictions = predictions
+        )
+
+    # Calculate Loss (for both TRAIN and EVAL modes)
+    loss = tf.losses.sparse_softmax_cross_entropy(
+        labels = labels,
+        logits = logits
+    )
+
+    # Configure the Training Op (for TRAIN mode)
+    if mode == tf.estimator.ModeKeys.TRAIN:
+
+        optimizer = tf.train.GradientDescentOptimizer(
+            learning_rate = LEARNING_RATE
+        )
+        train_op = optimizer.minimize(
+            loss = loss,
+            global_step = tf.train.get_global_step()
+        )
+
+        return tf.estimator.EstimatorSpec(
+            mode = mode,
+            loss = loss,
+            train_op = train_op
+        )
+
+    # Add evaluation metrics (for EVAL mode)
+    eval_metric_ops = {
+        "accuracy": tf.metrics.accuracy(
+            labels = labels,
+            predictions = predictions["classes"]
+        ),
+        "false negatives": tf.metrics.false_negatives(
+            labels = labels,
+            predictions = predictions["classes"]
+        ),
+        "false positives": tf.metrics.false_positives(
+            labels = labels,
+            predictions = predictions["classes"]
+        ),
+        "true positives": tf.metrics.true_positives(
+            labels = labels,
+            predictions = predictions["classes"]
+        ),
+        "true negatives": tf.metrics.true_negatives(
+            labels = labels,
+            predictions = predictions["classes"]
+        )
+    }
+
+    return tf.estimator.EstimatorSpec(
+        mode = mode,
+        loss = loss,
+        eval_metric_ops = eval_metric_ops
+    )
+
+#-------------------------------------------------------------------------------
+# Run Function
+#-------------------------------------------------------------------------------
+
+def run(filename):
+    
+    ''' Logging '''
+    #tensors_to_log = {"probabilities": "softmax_tensor"}
+    #logging_hook = tf.train.LoggingTensorHook(
+    #    tensors = tensors_to_log,
+    #    every_n_iter = 50
+    #)
+
+    ''' Data '''
+    train_data = np.loadtxt(PATH + TRAIN_SET)
+    eval_data = np.loadtxt(PATH + EVAL_SET)
+    
+    train_labels = np.loadtxt(
+        PATH + TRAIN_LABELS,
+        dtype = np.int32
+    )
+    
+    eval_labels = np.loadtxt(
+        PATH + EVAL_LABELS,
+        dtype = np.int32
+    )
+    
+    ''' Classifier'''
+    classifier = tf.estimator.Estimator(model_fn = deficit_cnn_model)
+    
+    ''' Training '''
+    train_input_fn = tf.estimator.inputs.numpy_input_fn(
+        x = train_data,
+        y = train_labels,
+        batch_size = BATCH_SIZE,
+        num_epochs = None,
+        shuffle = True
+    )
+    
+    classifier.train(
+        input_fn = train_input_fn,
+        steps = STEPS,
+        #hooks = [logging_hook]
+    )
+    
+    ''' Evaluation '''
+    eval_input_fn = tf.estimator.inputs.numpy_input_fn(
+        x = eval_data,
+        y = eval_labels,
+        num_epochs = 1,
+        shuffle = False
+    )
+    eval_results = classifier.evaluate(input_fn = eval_input_fn)
+    
+    ''' Record results '''
+    results = open(PATH + filename, "a+")
+    
+    results.write("Data: " + DATA_FOLDER + "\n")
+    results.write("HISTORY: " + str(HISTORY) + "\n")
+    results.write("Filters: " + str(CONV_FILTERS) + "\n")
+    results.write("Sizes: " + str(CONV_SIZES) + "\n")
+    results.write("Dense: " + str(DENSE_UNITS) + "\n")
+    results.write("Logits: " + str(LOGITS_UNITS)  + "\n")
+    results.write(str(eval_results))
+    results.write("\n\n --- \n\n")
+    
+    results.close()
+
+#-------------------------------------------------------------------------------
+# 
+#-------------------------------------------------------------------------------
+
+PATH = "/content/gdrive/My Drive/"
+
+data_folder = "e4_prob_of_death_at_80/"
+histories = [
+    5,
+    10,
+    20,
+]
+filters = [
+    [32, 64],
+    [64, 64],
+    [64, 128],
+]
+sizes = [
+    [[5, 5], [5, 5]]
+]
+steps = [
+    1 * 10 ** 5,
+    2 * 10 ** 5
+]
+denses = [
+    256,
+    512
+]
+logits = [
+    2,
+    5
+]
+
+for dense in denses:
+    for logit in logits:
+        for f in filters:
+            for size in sizes:
+                for step in steps:
+                    for history in histories:
+                        for _ in range(100):
+                            set_data(data_folder, history)
+                            set_hype(f, size, step, dense, logit)
+                            run("mass_results.txt")
