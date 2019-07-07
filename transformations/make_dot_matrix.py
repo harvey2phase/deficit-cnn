@@ -23,9 +23,9 @@ import os.path
 # Constants
 #-------------------------------------------------------------------------------
 
-DATA_DIR = "model_data/e5_by_decade/"
-NODE_FILE_DIR = "nodes/50_annk.txt"
-MATRIX_OUT_DIR = "matrices/e5/50_annk/dot/"
+DATA_DIR = "../raw_data/model_data/e4_by_decade/"
+NODE_FILE_DIR = "../raw_data/nodes/50_annk.txt"
+MATRIX_OUT_DIR = "../raw_data/matrices/e4/50_annk/dot/"
 #IMAGE_OUT_DIR = "images/e4/dot/50_annk/"
 
 
@@ -154,4 +154,4 @@ def make_all_dot_matrices():
     for i in DEATH_DECADE_RANGE:
         make_decade_dot_matrices(str(i))
 
-make_decade_dot_matrices("8")
+make_decade_dot_matrices("9")
