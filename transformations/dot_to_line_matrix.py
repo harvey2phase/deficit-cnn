@@ -1,8 +1,9 @@
 from transforms import transform_and_write
 
-#-------------------------------------------------------------------------------
-# Transformations
-#-------------------------------------------------------------------------------
+import numpy as np
+
+MATRIX_WIDTH_RANGE = range(1, 120) # Ignore t=1, since all nodes start at 0
+MATRIX_LENGTH_RANGE = range(50)
 
 def dot_to_line_matrix(input_folder, filename, param):
     matrix = np.loadtxt(input_folder + filename)

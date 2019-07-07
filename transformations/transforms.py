@@ -9,9 +9,6 @@ import os
 DECADE_RANGE = range(9, 10)
 YEAR_RANGE = range(10)
 
-MATRIX_WIDTH_RANGE = range(1, 120) # Ignore t=1, since all nodes start at 0
-MATRIX_LENGTH_RANGE = range(50)
-
 #-------------------------------------------------------------------------------
 # Generic Transform and Writing Functions
 #-------------------------------------------------------------------------------
