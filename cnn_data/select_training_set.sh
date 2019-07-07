@@ -1,5 +1,5 @@
-ls e5/prob_of_death_at_80/train_individuals | sort -R | tail -10000 | while read file; do
+ls e4_age80_90/eval_individuals | sort -R | tail -27 | while read file; do
 
-    mv e5/prob_of_death_at_80/train_individuals/$file e5/prob_of_death_at_80/eval_individuals/
+    mv e4_age80_90/eval_individuals/$file e4_age80_90/train_individuals/
 
 done
