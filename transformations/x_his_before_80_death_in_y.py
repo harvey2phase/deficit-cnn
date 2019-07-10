@@ -53,7 +53,7 @@ folder = "../cnn_data/e4_age80_90/"
 subfolder = "prob_of_death_at_80/"
 y = "5"
 
-x = "10"
+x = "25"
 xy = x + "x" + y + "y"
 
 kind = "train"
@@ -73,7 +73,7 @@ transform(
         x, y]
 )
 
-x = "20"
+x = "30"
 xy = x + "x" + y + "y"
 
 kind = "train"
