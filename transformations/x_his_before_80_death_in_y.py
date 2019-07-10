@@ -49,46 +49,65 @@ def x_years_before_80_dead_in_y_years(input_folder, filename, params):
 # Scripts
 #-------------------------------------------------------------------------------
 
-folder = "../cnn_data/e4_age80_90/"
-subfolder = "prob_of_death_at_80/"
+folder = "../cnn_data/e4_age80/prob_of_death_at_80/"
 y = "5"
 
-x = "25"
+x = "3"
 xy = x + "x" + y + "y"
 
 kind = "train"
 transform(
     folder + y + "y_unbiased_" + kind + "_ind",
     x_years_before_80_dead_in_y_years,
-    [folder + subfolder + "unbiased_" + xy + "_" + kind + "_set.txt",
-        folder + subfolder + "unbiased_" + xy + "_" + kind + "_labels.txt",
+    [folder + "unbiased_" + xy + "_" + kind + "_set.txt",
+        folder + "unbiased_" + xy + "_" + kind + "_labels.txt",
         x, y]
 )
 kind = "eval"
 transform(
     folder + y + "y_unbiased_" + kind + "_ind",
     x_years_before_80_dead_in_y_years,
-    [folder + subfolder + "unbiased_" + xy + "_" + kind + "_set.txt",
-        folder + subfolder + "unbiased_" + xy + "_" + kind + "_labels.txt",
+    [folder + "unbiased_" + xy + "_" + kind + "_set.txt",
+        folder + "unbiased_" + xy + "_" + kind + "_labels.txt",
         x, y]
 )
 
-x = "30"
+x = "2"
 xy = x + "x" + y + "y"
 
 kind = "train"
 transform(
     folder + y + "y_unbiased_" + kind + "_ind",
     x_years_before_80_dead_in_y_years,
-    [folder + subfolder + "unbiased_" + xy + "_" + kind + "_set.txt",
-        folder + subfolder + "unbiased_" + xy + "_" + kind + "_labels.txt",
+    [folder + "unbiased_" + xy + "_" + kind + "_set.txt",
+        folder + "unbiased_" + xy + "_" + kind + "_labels.txt",
         x, y]
 )
 kind = "eval"
 transform(
     folder + y + "y_unbiased_" + kind + "_ind",
     x_years_before_80_dead_in_y_years,
-    [folder + subfolder + "unbiased_" + xy + "_" + kind + "_set.txt",
-        folder + subfolder + "unbiased_" + xy + "_" + kind + "_labels.txt",
+    [folder + "unbiased_" + xy + "_" + kind + "_set.txt",
+        folder + "unbiased_" + xy + "_" + kind + "_labels.txt",
+        x, y]
+)
+
+x = "1"
+xy = x + "x" + y + "y"
+
+kind = "train"
+transform(
+    folder + y + "y_unbiased_" + kind + "_ind",
+    x_years_before_80_dead_in_y_years,
+    [folder + "unbiased_" + xy + "_" + kind + "_set.txt",
+        folder + "unbiased_" + xy + "_" + kind + "_labels.txt",
+        x, y]
+)
+kind = "eval"
+transform(
+    folder + y + "y_unbiased_" + kind + "_ind",
+    x_years_before_80_dead_in_y_years,
+    [folder + "unbiased_" + xy + "_" + kind + "_set.txt",
+        folder + "unbiased_" + xy + "_" + kind + "_labels.txt",
         x, y]
 )
