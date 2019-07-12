@@ -1,10 +1,18 @@
 import numpy as np
 
-degrees = np.loadtxt("network_degrees.txt",
-        dtype = {'names': ('id', 'deg', 'ANND'),
-            'formats': (np.int, np.int, np.float)})
+deg = np.loadtxt(
+    "network_degrees.txt",
+    dtype = {
+        'names': ('id', 'deg', 'ANND'),
+        'formats': (np.int, np.int, np.float)}
+).sort(order = 'deg')
 
-degrees.sort(order = 'deg')
+annd = np.loadtxt(
+    "network_degrees.txt",
+    dtype = {
+        'names': ('id', 'deg', 'ANND'),
+        'formats': (np.int, np.int, np.float)}
+).sort(order = 'ANND')
 
 i = 9999
 count = 1
