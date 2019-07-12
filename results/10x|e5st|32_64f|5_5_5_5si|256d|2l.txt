@@ -1,0 +1,100 @@
+Data: e4_prob_of_death_at_80/
+HISTORY: 10
+Filters: [32, 64]
+Sizes: [[5, 5], [5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5710843, 'false negatives': 177.0, 'false positives': 179.0, 'loss': 0.6773167, 'true negatives': 236.0, 'true positives': 238.0, 'global_step': 100000}
+
+ --- 
+
+Data: e4_prob_of_death_at_80/
+HISTORY: 10
+Filters: [32, 64]
+Sizes: [[5, 5], [5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.58554214, 'false negatives': 165.0, 'false positives': 179.0, 'loss': 0.67363787, 'true negatives': 236.0, 'true positives': 250.0, 'global_step': 100000}
+
+ --- 
+
+Data: e4_prob_of_death_at_80/
+HISTORY: 10
+Filters: [32, 64]
+Sizes: [[5, 5], [5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5686747, 'false negatives': 177.0, 'false positives': 181.0, 'loss': 0.67844677, 'true negatives': 234.0, 'true positives': 238.0, 'global_step': 100000}
+
+ --- 
+
+Data: e4_prob_of_death_at_80/
+HISTORY: 10
+Filters: [32, 64]
+Sizes: [[5, 5], [5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.57831323, 'false negatives': 181.0, 'false positives': 169.0, 'loss': 0.67992246, 'true negatives': 246.0, 'true positives': 234.0, 'global_step': 100000}
+
+ --- 
+
+Data: e4_prob_of_death_at_80/
+HISTORY: 10
+Filters: [32, 64]
+Sizes: [[5, 5], [5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5686747, 'false negatives': 182.0, 'false positives': 176.0, 'loss': 0.6734296, 'true negatives': 239.0, 'true positives': 233.0, 'global_step': 100000}
+
+ --- 
+
+Data: e4_prob_of_death_at_80/
+HISTORY: 10
+Filters: [32, 64]
+Sizes: [[5, 5], [5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5759036, 'false negatives': 176.0, 'false positives': 176.0, 'loss': 0.67454344, 'true negatives': 239.0, 'true positives': 239.0, 'global_step': 100000}
+
+ --- 
+
+Data: e4_prob_of_death_at_80/
+HISTORY: 10
+Filters: [32, 64]
+Sizes: [[5, 5], [5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5903614, 'false negatives': 166.0, 'false positives': 174.0, 'loss': 0.6793914, 'true negatives': 241.0, 'true positives': 249.0, 'global_step': 100000}
+
+ --- 
+
+Data: e4_prob_of_death_at_80/
+HISTORY: 10
+Filters: [32, 64]
+Sizes: [[5, 5], [5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5891566, 'false negatives': 165.0, 'false positives': 176.0, 'loss': 0.67172515, 'true negatives': 239.0, 'true positives': 250.0, 'global_step': 100000}
+
+ --- 
+
+Data: e4_prob_of_death_at_80/
+HISTORY: 10
+Filters: [32, 64]
+Sizes: [[5, 5], [5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.57710844, 'false negatives': 174.0, 'false positives': 177.0, 'loss': 0.6748405, 'true negatives': 238.0, 'true positives': 241.0, 'global_step': 100000}
+
+ --- 
+
+Data: e4_prob_of_death_at_80/
+HISTORY: 10
+Filters: [32, 64]
+Sizes: [[5, 5], [5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5686747, 'false negatives': 179.0, 'false positives': 179.0, 'loss': 0.6743496, 'true negatives': 236.0, 'true positives': 236.0, 'global_step': 100000}
+
+ --- 
+

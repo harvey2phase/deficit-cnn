@@ -1,0 +1,10 @@
+Data: e4_prob_of_death_at_80/
+HISTORY: 20
+Filters: [32]
+Sizes: [[5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.56506026, 'false negatives': 181.0, 'false positives': 180.0, 'loss': 0.6766473, 'true negatives': 235.0, 'true positives': 234.0, 'global_step': 50000}
+
+ --- 
+
