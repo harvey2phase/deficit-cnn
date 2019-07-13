@@ -61,5 +61,7 @@ def make_decreasing_annk_list(output_filename, deg_count, annk_count):
 #-------------------------------------------------------------------------------
 
 make_decreasing_annk_list("60_annk.txt", 30, 30)
+COUNT = 1
 make_decreasing_annk_list("80_annk.txt", 40, 40)
+COUNT = 1
 make_decreasing_annk_list("100_annk.txt", 50, 50)
