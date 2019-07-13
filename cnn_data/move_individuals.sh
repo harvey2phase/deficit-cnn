@@ -1,5 +1,9 @@
-ls e4_age80_90/90s | sort -R | tail -527 | while read file; do
+in_dir="e4_age80/100_annk/cohort2/train_ind"
+out_dir="e4_age80/100_annk/cohort2/eval_ind"
+num_to_move=1000
 
-    mv e4_age80_90/90s/$file e4_age80_90/eval_individuals/
+ls $in_dir | sort -R | tail -$num_to_move | while read file; do
+
+    mv $in_dir/$file $out_dir/
 
 done
