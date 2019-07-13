@@ -2,8 +2,28 @@ from transforms import transform_and_write
 
 import numpy as np
 
+#-------------------------------------------------------------------------------
+# Constants
+#-------------------------------------------------------------------------------
+
 MATRIX_WIDTH_RANGE = range(1, 120) # Ignore t=1, since all nodes start at 0
-MATRIX_LENGTH_RANGE = range(50)
+MATRIX_LENGTH_RANGE = range(100)
+
+#-------------------------------------------------------------------------------
+# main
+#-------------------------------------------------------------------------------
+
+def main():
+    transform_and_write(
+        "../raw_data/matrices/e4/100_annk/dot",
+        "../raw_data/matrices/e4/100_annk/line",
+        dot_to_line_matrix,
+        None
+    )
+
+#-------------------------------------------------------------------------------
+# Dot to line matrix function
+#-------------------------------------------------------------------------------
 
 def dot_to_line_matrix(input_folder, filename, param):
     matrix = np.loadtxt(input_folder + filename)
@@ -29,12 +49,7 @@ def dot_to_line_matrix(input_folder, filename, param):
     return matrix
 
 #-------------------------------------------------------------------------------
-# Scripts
+# Call main
 #-------------------------------------------------------------------------------
 
-transform_and_write(
-    "../raw_data/matrices/e4/50_annk/dot",
-    "../raw_data/matrices/e4/50_annk/line",
-    dot_to_line_matrix,
-    None
-)
+main()
