@@ -9,46 +9,46 @@ There are two different types of representations:
        nodes
 '''
 
-#-------------------------------------------------------------------------------
-# Imports
-#-------------------------------------------------------------------------------
-
 import numpy as np
 import matplotlib.pyplot as plt
 import os
 import os.path
 
-
 #-------------------------------------------------------------------------------
 # Constants
 #-------------------------------------------------------------------------------
 
+NODE_COUNT = 100
+YEAR_COUNT = 120
+
+DAMAGED = 1
+REPAIRED = -1
+
 DATA_DIR = "../raw_data/model_data/e4_by_decade/"
-NODE_FILE_DIR = "../raw_data/nodes/50_annk.txt"
-MATRIX_OUT_DIR = "../raw_data/matrices/e4/50_annk/dot/"
+NODE_FILE_DIR = "../raw_data/nodes/100_annk.txt"
+MATRIX_OUT_DIR = "../raw_data/matrices/e4/0_annk/dot/"
 #IMAGE_OUT_DIR = "images/e4/dot/50_annk/"
 
+DEATH_DECADE_RANGE = range(2, 12)
+DEATH_YEAR_RANGE = range(10)
 
 # The information of the nodes of interest
 NODES = np.loadtxt(
     NODE_FILE_DIR,
     dtype = {
-        'names': ('id', 'conn', 'ANNC', 'rank'),
+        'names': ('id', 'deg', 'annk', 'rank'),
         'formats': (np.int32, np.int32, np.int32, np.int32)
     }
 )
 NODE_ID = NODES['id']
 NODE_RANK = NODES['rank']
 
-NODE_COUNT = 50
-YEAR_COUNT = 120
+#-------------------------------------------------------------------------------
+# main
+#-------------------------------------------------------------------------------
 
-DAMAGED = 1
-REPAIRED = -1
-
-DEATH_DECADE_RANGE = range(2, 12)
-DEATH_YEAR_RANGE = range(10)
-
+def main():
+    make_decade_dot_matrices("8")
 
 #-------------------------------------------------------------------------------
 # Functions
@@ -153,5 +153,8 @@ def make_all_dot_matrices():
     # Iterate through all 12 decades of death ages
     for i in DEATH_DECADE_RANGE:
         make_decade_dot_matrices(str(i))
+#-------------------------------------------------------------------------------
+# Call main
+#-------------------------------------------------------------------------------
 
-make_decade_dot_matrices("9")
+main()
