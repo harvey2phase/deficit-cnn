@@ -46,13 +46,17 @@ def write_line(output_file, line):
 # Script
 #-------------------------------------------------------------------------------
 
-highest_deg = load_net_deg(deg_filename)[-10000 + deg_count :]
+highest_deg = load_net_deg(deg_filename)[: -10000 + deg_count]
 highest_annk = load_net_deg(annk_filename)[-10000 + deg_count :]
 
-output_file = open(out_filename, "w+")
 for line in highest_deg:
-    write_line(output_file, line)
-output_file.close()
+    print_line(line)
+
+
+#output_file = open(out_filename, "w+")
+#for line in highest_deg:
+#    write_line(output_file, line)
+#output_file.close()
 
 '''
 highest_deg.sort(order = "annk")
