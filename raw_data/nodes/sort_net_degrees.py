@@ -1,23 +1,43 @@
 import numpy as np
 
-deg = np.loadtxt(
-    "network_degrees.txt",
+#-------------------------------------------------------------------------------
+# Constants
+#-------------------------------------------------------------------------------
+
+deg_filename = "network_degrees.txt"
+deg_count = 30
+annd_count = 30
+output_filename = "60_annk_nodes.txt"
+
+#-------------------------------------------------------------------------------
+# Script
+#-------------------------------------------------------------------------------
+
+degrees = np.loadtxt(
+    deg_filename,
     dtype = {
         'names': ('id', 'deg', 'ANND'),
         'formats': (np.int, np.int, np.float)}
-).sort(order = 'deg')
+)
+degrees.sort(order = ['deg', 'ANND'])
 
-annd = np.loadtxt(
-    "network_degrees.txt",
-    dtype = {
-        'names': ('id', 'deg', 'ANND'),
-        'formats': (np.int, np.int, np.float)}
-).sort(order = 'ANND')
-
-i = 9999
 count = 1
-while i > 9979:
-    print(str(degrees[i]['id']) + "\t" + str(degrees[i]['deg'])
-            + "\t" + str(degrees[i]['ANND']) + "\t" + str(count))
-    i -= 1
+output = open(output_filename, "w+")
+for line in degrees[: -10000 + deg_count]:
+    print(
+        line['id'] + "\t" + str(line['deg']) + "\t" + str(line['ANND']) + "\t" + str(count)
+    )
     count += 1
+output.close()
+
+output = open(output_filename, "a")
+for line in degrees[10000 - deg_count:]:
+    print(
+        line['id'] + "\t"
+        + str(line['deg']) + "\t"
+        + str(line['ANND']) + "\t"
+        + str(count)
+    )
+    count += 1
+
+output.close()
