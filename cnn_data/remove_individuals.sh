@@ -1,7 +1,7 @@
-dir="e5/tests_age_80/prob_of_death_at_80/5y_unbiased_eval_ind/dead"
-num_to_move=1890
+dir="e4_age80/100_annk/cohort1/5y_unbiased_train_ind/dead"
+num_to_move=147
 
-ls $dir | sort -R | tail -num_to_move | while read file; do
+ls $dir | sort -R | tail -$num_to_move | while read file; do
 
     rm $dir/$file
 
