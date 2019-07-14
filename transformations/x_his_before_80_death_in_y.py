@@ -8,9 +8,9 @@ from transforms import transform
 
 def main():
     get_one_data_set(
-        "../cnn_data/e4_age80/prob_of_death_at_80/100_annk/cohort1",
+        "../cnn_data/e4_age80/prob_of_death_at_80/100_annk/cohort1/",
         "5",
-        "3"
+        "5"
     )
 
 def get_one_data_set(folder, x, y):
