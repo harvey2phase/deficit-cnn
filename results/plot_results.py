@@ -1,12 +1,44 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
-def avg(x):
-    return sum(x) / len(x)
+#-------------------------------------------------------------------------------
+# Global variables
+#-------------------------------------------------------------------------------
+
+HIS = []
+AC = []
+LAB = []
+
+#-------------------------------------------------------------------------------
+# main
+#-------------------------------------------------------------------------------
+
+def main():
+    for filename in os.listdir("."):
+        if filename[-4:] == ".txt":
+            filename = filename[:-4]
+            i = 0
+            his = ""
+            while filename[i].isdigit():
+                his += filename[i]
+                i += 1
+            plot_file(filename, int(his))
+
+    fig, ax = plt.subplots()
+    ax.scatter(HIS, AC)
+    for i, lab in enumerate(LAB):
+        ax.annotate(lab, (HIS[i], AC[i]))
+
+    plt.show()
+
+#-------------------------------------------------------------------------------
+# Plot function
+#-------------------------------------------------------------------------------
 
 def plot_file(results_name, his):
 
-    results_file = open(results_name, "r")
+    results_file = open(results_name + ".txt", "r")
     results_list = []
 
     for word in results_file.read().split():
@@ -52,7 +84,10 @@ def plot_file(results_name, his):
 
     HIS.append(his)
     AC.append(avg(accuracy))
-    LAB.append(results_name[:-3])
+
+    while results_name[0] != "|":
+        results_name = results_name[1:]
+    LAB.append(str(len(accuracy)) + results_name)
 
     #print("accuracy: ", accuracy)
     #print("true positive: ", true_positive)
@@ -62,22 +97,15 @@ def plot_file(results_name, his):
     #print("Sanity check: ", true_positive + false_negative)
     #print("Sanity check: ", true_negative + false_positive)
 
-HIS = []
-AC = []
-LAB = []
+#-------------------------------------------------------------------------------
+# Supporting functions
+#-------------------------------------------------------------------------------
 
-plot_file("10x|e5st|32_64f|5_5_5_5si|256d|2l.txt", 10)
-plot_file("20x|5e4st|32f|5_5si|256d|2l.txt", 20)
-plot_file("20x|5e4st|64f|5_5si|256d|2l.txt", 20)
-plot_file("20x|e5st|32f|5_5si|256d|2l.txt", 20)
-plot_file("20x|e5st|64f|5_5si|256d|2l.txt", 20)
-plot_file("2x|5e4st|32f|5_5si|256d|2l.txt", 2)
-plot_file("2x|5e4st|64f|5_5si|256d|2l.txt", 2)
-plot_file("5x|e5st|32_64f|5_5_5_5si|256d|2l.txt", 5)
+def avg(x):
+    return sum(x) / len(x)
 
-fig, ax = plt.subplots()
-ax.scatter(HIS, AC)
-for i, lab in enumerate(LAB):
-    ax.annotate(lab, (HIS[i], AC[i]))
+#-------------------------------------------------------------------------------
+# Call main
+#-------------------------------------------------------------------------------
 
-plt.show()
+main()
