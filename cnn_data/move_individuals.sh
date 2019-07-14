@@ -1,9 +1,9 @@
-in_dir="e4_age80/100_annk/cohort2/train_ind"
-out_dir="e4_age80/100_annk/cohort2/eval_ind"
-num_to_move=1000
+in_dir="e4_age80/100_annk/cohort1/train_ind/5y_dead"
+out_dir="e4_age80/100_annk/cohort1/5y_unbiased_train_ind"
+num_to_move=878
 
 ls $in_dir | sort -R | tail -$num_to_move | while read file; do
 
-    mv $in_dir/$file $out_dir/
+    cp $in_dir/$file $out_dir/
 
 done
