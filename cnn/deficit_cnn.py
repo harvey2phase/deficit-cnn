@@ -6,9 +6,51 @@ import os
 import tensorflow as tf
 
 #-------------------------------------------------------------------------------
-# Data
+# main
 #-------------------------------------------------------------------------------
 
+def main():
+    PATH = "/content/gdrive/My Drive/"
+
+    data_folder = "e4_prob_of_death_at_80/"
+    output_filename = "mass_results.txt"
+    bias = "unbiased_"
+    histories = [
+        5,
+        10,
+        20,
+    ]
+    filters = [
+        [32, 64],
+        [64, 64],
+        [64, 128],
+    ]
+    sizes = [[5, 5], [5, 5]]
+    steps = 1 * 10 ** 5
+    denses = 256
+    logits = 2
+
+    for _ in range(100):
+        for f in filters:
+            for size in sizes:
+                for history in histories:
+                    set_data(data_folder, history, bias)
+                    set_hype(
+                        f,
+                        size,
+                        pool_size,
+                        pool_stride,
+                        step,
+                        dense,
+                        logit
+                    )
+                    run(output_filename)
+
+#-------------------------------------------------------------------------------
+# Global variables
+#-------------------------------------------------------------------------------
+
+''' Data  '''
 HISTORY = None
 NODE_COUNT = 50
 
@@ -17,34 +59,13 @@ TRAIN_LABELS = None
 EVAL_SET = None
 EVAL_LABELS = None
 
-def set_data(data_folder, history):
-    global DATA_FOLDER
-    global HISTORY
-    global TRAIN_SET
-    global TRAIN_LABELS
-    global EVAL_SET
-    global EVAL_LABELS
-    
-    DATA_FOLDER = data_folder
-    HISTORY = history
-    history = str(history)
-
-    # Shape: [training_size, NODE_COUNT * HISTORY]
-    TRAIN_SET = DATA_FOLDER + "unbiased_" + str(HISTORY) + "x5y_train_set.txt"
-    TRAIN_LABELS = DATA_FOLDER + "unbiased_" + str(HISTORY) + "x5y_train_labels.txt"
-    EVAL_SET = DATA_FOLDER + "unbiased_" + str(HISTORY) + "x5y_eval_set.txt"
-    EVAL_LABELS = DATA_FOLDER + "unbiased_" + str(HISTORY) + "x5y_eval_labels.txt"
-
-#-------------------------------------------------------------------------------
-# 
-#-------------------------------------------------------------------------------
-
+''' Hyperparameters '''
 CONV_FILTERS = None
 CONV_SIZES = None
 CONV_COUNT = None
 
-POOL_SIZE = [2, 2]
-POOL_STRIDE = 2
+POOL_SIZE = None
+POOL_STRIDE = None
 
 DENSE_UNITS = None
 LOGITS_UNITS = None
@@ -54,17 +75,43 @@ LEARNING_RATE = 10 ** -4
 DROPOUT_RATE = 0.4
 BATCH_SIZE = 100
 
-def set_hype(filters, sizes, steps, dense, logits):
+#-------------------------------------------------------------------------------
+# Setters for global variables
+#-------------------------------------------------------------------------------
+
+def set_data(data_folder, history, bias):
+    global DATA_FOLDER
+    global HISTORY
+    global TRAIN_SET
+    global TRAIN_LABELS
+    global EVAL_SET
+    global EVAL_LABELS
+
+    DATA_FOLDER = data_folder
+    HISTORY = history
+    history = str(history)
+
+    # Shape: [training_size, NODE_COUNT * HISTORY]
+    TRAIN_SET = DATA_FOLDER + bias + history + "x5y_train_set.txt"
+    TRAIN_LABELS = DATA_FOLDER + bias + history + "x5y_train_labels.txt"
+    EVAL_SET = DATA_FOLDER + bias + history + "x5y_eval_set.txt"
+    EVAL_LABELS = DATA_FOLDER + bias + history + "x5y_eval_labels.txt"
+
+def set_hype(filters, filter_sizes, pool, pool_stride, steps, dense, logits):
     global CONV_FILTERS
     global CONV_SIZES
     global CONV_COUNT
+    global POOL_SIZE
+    global POOL_STRIDE
     global STEPS
     global DENSE_UNITS
     global LOGITS_UNITS
-    
+
     CONV_FILTERS = filters
-    CONV_SIZES = sizes
+    CONV_SIZES = filter_sizes
     CONV_COUNT = len(CONV_FILTERS)
+    POOL_SIZE = pool
+    POOL_STRIDE = pool_stride
     STEPS = steps
     DENSE_UNITS = dense
     LOGITS_UNITS = logits
@@ -78,7 +125,7 @@ def deficit_cnn_model(features, labels, mode):
     ''' Input Layer '''
     # Reshape X to 4-D tensor: [batch_size, width, height, channels]
     layer = tf.reshape(features, [-1, NODE_COUNT, HISTORY, 1])
-    
+
     # Image length and width
     length = NODE_COUNT
     width = HISTORY
@@ -95,7 +142,7 @@ def deficit_cnn_model(features, labels, mode):
             padding = "same",
             activation = tf.nn.relu
         )
-    
+
         ''' Pooling Layer '''
         # Max pooling layer with a 2x2 filter and stride of 2
         # Output Tensor Shape: [batch_size, length / 2, width / 2 , filter size]
@@ -104,11 +151,11 @@ def deficit_cnn_model(features, labels, mode):
             pool_size = POOL_SIZE,
             strides = POOL_STRIDE
         )
-        
+
         length = int(length / 2)
         width = int(width / 2)
 
-    
+
     ''' Flatten tensor into a batch of vectors '''
     pool2_flat = tf.reshape(layer, [-1, CONV_FILTERS[i] * length * width])
 
@@ -120,7 +167,7 @@ def deficit_cnn_model(features, labels, mode):
         units = DENSE_UNITS,
         activation = tf.nn.relu
     )
-    
+
     ''' Add dropout operation '''
     # 0.6 probability that element will be kept
     # Tensor Shape: [batch_size, 1024]
@@ -212,7 +259,7 @@ def deficit_cnn_model(features, labels, mode):
 #-------------------------------------------------------------------------------
 
 def run(filename):
-    
+
     ''' Logging '''
     #tensors_to_log = {"probabilities": "softmax_tensor"}
     #logging_hook = tf.train.LoggingTensorHook(
@@ -223,20 +270,20 @@ def run(filename):
     ''' Data '''
     train_data = np.loadtxt(PATH + TRAIN_SET)
     eval_data = np.loadtxt(PATH + EVAL_SET)
-    
+
     train_labels = np.loadtxt(
         PATH + TRAIN_LABELS,
         dtype = np.int32
     )
-    
+
     eval_labels = np.loadtxt(
         PATH + EVAL_LABELS,
         dtype = np.int32
     )
-    
+
     ''' Classifier'''
     classifier = tf.estimator.Estimator(model_fn = deficit_cnn_model)
-    
+
     ''' Training '''
     train_input_fn = tf.estimator.inputs.numpy_input_fn(
         x = train_data,
@@ -245,13 +292,13 @@ def run(filename):
         num_epochs = None,
         shuffle = True
     )
-    
+
     classifier.train(
         input_fn = train_input_fn,
         steps = STEPS,
         #hooks = [logging_hook]
     )
-    
+
     ''' Evaluation '''
     eval_input_fn = tf.estimator.inputs.numpy_input_fn(
         x = eval_data,
@@ -260,10 +307,10 @@ def run(filename):
         shuffle = False
     )
     eval_results = classifier.evaluate(input_fn = eval_input_fn)
-    
+
     ''' Record results '''
     results = open(PATH + filename, "a+")
-    
+
     results.write("Data: " + DATA_FOLDER + "\n")
     results.write("HISTORY: " + str(HISTORY) + "\n")
     results.write("Filters: " + str(CONV_FILTERS) + "\n")
@@ -272,49 +319,8 @@ def run(filename):
     results.write("Logits: " + str(LOGITS_UNITS)  + "\n")
     results.write(str(eval_results))
     results.write("\n\n --- \n\n")
-    
+
     results.close()
 
-#-------------------------------------------------------------------------------
-# 
-#-------------------------------------------------------------------------------
 
-PATH = "/content/gdrive/My Drive/"
-
-data_folder = "e4_prob_of_death_at_80/"
-histories = [
-    5,
-    10,
-    20,
-]
-filters = [
-    [32, 64],
-    [64, 64],
-    [64, 128],
-]
-sizes = [
-    [[5, 5], [5, 5]]
-]
-steps = [
-    1 * 10 ** 5,
-    2 * 10 ** 5
-]
-denses = [
-    256,
-    512
-]
-logits = [
-    2,
-    5
-]
-
-for dense in denses:
-    for logit in logits:
-        for f in filters:
-            for size in sizes:
-                for step in steps:
-                    for history in histories:
-                        for _ in range(100):
-                            set_data(data_folder, history)
-                            set_hype(f, size, step, dense, logit)
-                            run("mass_results.txt")
+main()
