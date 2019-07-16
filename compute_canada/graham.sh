@@ -4,11 +4,9 @@
 #SBATCH --mem=1G
 #SBATCH --time=0-03:00
 
-module load python/3.7
+module load python/3.6
+source tensorflow/bin/activate
 
-seff #find mem utilized
-salloc --time=15 # gives interactive session
-nvidia-smi
 module list
 sbatch NAME_OF_SCRIPT # runs when has resources
 

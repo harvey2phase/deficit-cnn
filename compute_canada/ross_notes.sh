@@ -1,5 +1,5 @@
 seff #find mem utilized
-module load python/3.6
+module load python/3.7
 salloc --time=15 # gives interactive session
 nvidia-smi
 module list
