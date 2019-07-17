@@ -1,19 +1,25 @@
 from __future__ import absolute_import, division, print_function
-from google.colab import drive
 
 import numpy as np
 import os
 import tensorflow as tf
+
+# 0: all messages are logged (default behavior)
+# 1: INFO messages are not printed
+# 2: INFO and WARNING messages are not printed
+# 3: INFO, WARNING, and ERROR messages are not printed
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
+PROJECT_PATH = "/project/def-arutenbe/harveyw/summer-research/"
 
 #-------------------------------------------------------------------------------
 # main
 #-------------------------------------------------------------------------------
 
 def main():
-    PATH = "/content/gdrive/My Drive/"
 
-    data_folder = "e4_prob_of_death_at_80/"
-    output_filename = "mass_results.txt"
+    data_folder = "cnn_data/e4_age80/50_annk/prob_of_death_at_80/"
+    output_filename = "results/graham_mass_results.txt"
     bias = "unbiased_"
     histories = [
         5,
@@ -25,22 +31,24 @@ def main():
         [64, 64],
         [64, 128],
     ]
+    pool_size = [2, 2]
+    pool_stride = 2
     sizes = [[5, 5], [5, 5]]
     steps = 1 * 10 ** 5
-    denses = 256
-    logits = 2
+    dense = 256
+    logit = 2
 
     for _ in range(100):
-        for f in filters:
+        for filt in filters:
             for size in sizes:
                 for history in histories:
                     set_data(data_folder, history, bias)
                     set_hype(
-                        f,
+                        filt,
                         size,
                         pool_size,
                         pool_stride,
-                        step,
+                        steps,
                         dense,
                         logit
                     )
@@ -268,16 +276,16 @@ def run(filename):
     #)
 
     ''' Data '''
-    train_data = np.loadtxt(PATH + TRAIN_SET)
-    eval_data = np.loadtxt(PATH + EVAL_SET)
+    train_data = np.loadtxt(PROJECT_PATH + TRAIN_SET)
+    eval_data = np.loadtxt(PROJECT_PATH + EVAL_SET)
 
     train_labels = np.loadtxt(
-        PATH + TRAIN_LABELS,
+        PROJECT_PATH + TRAIN_LABELS,
         dtype = np.int32
     )
 
     eval_labels = np.loadtxt(
-        PATH + EVAL_LABELS,
+        PROJECT_PATH + EVAL_LABELS,
         dtype = np.int32
     )
 
@@ -309,7 +317,7 @@ def run(filename):
     eval_results = classifier.evaluate(input_fn = eval_input_fn)
 
     ''' Record results '''
-    results = open(PATH + filename, "a+")
+    results = open(PROJECT_PATH + filename, "a+")
 
     results.write("Data: " + DATA_FOLDER + "\n")
     results.write("HISTORY: " + str(HISTORY) + "\n")
