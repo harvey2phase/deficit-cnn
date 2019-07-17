@@ -1,4 +1,6 @@
 # Ignore data sets
+graham/tensorflow
+cedar/tensorflow
 _all_/
 *.0
 
