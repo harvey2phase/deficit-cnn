@@ -56,42 +56,78 @@ def plot_file(results_name, his):
     for r in results:
         print(r)
 
-    indices = len(results)
     accuracy = []
     true_positive = []
     false_negative = []
     true_negative = []
     false_positive = []
 
+    dataSet_table = [[]]
+
     i = 0
+    indices = len(results)
     while i < indices:
         if results[i] == "data":
+            for dataSet_list in dataSet_table:
+                #TODO
             i += 1
             dataSet = DataSet(results[i])
 
-            while not results[i] == "history": i += 1
+        elif results[i] == "history":
             i += 1
             dataSet.history = int(results[i])
 
-            while not results[i] == "accuracy": i += 1
+        elif results[i] == "global_step":
+            i += 1
+            dataSet.steps = int(results[i])
+
+        elif results[i] == "filters":
+            i += 1
+            dataSet.filters = [int(results[i])]
+            i += 1
+            while results[i].isdigit():
+                dataSet.filters.append(int(results[i]))
+                i += 1
+            i -= 1
+
+        elif results[i] == "sizes":
+            i += 1
+            dataSet.filt_sizes = int(results[i])
+            i += 1
+            while results[i].isdigit():
+                dataSet.filt_sizes.append(int(results[i]))
+                i += 1
+            i -= 1
+
+        elif results[i] == "dense":
+            i += 1
+            dataSet.dense = int(results[i])
+
+        elif results[i] == "logits":
+            i += 1
+            dataSet.logits = int(results[i])
+
+        elif results[i] == "accuracy":
             i += 1
             dataSet.accuracy = float(results[i])
 
-            while not results[i] == "false": i += 1
-            while not results[i] == "negatives": i += 1
+        elif results[i] == "false":
             i += 1
-            dataSet.false_negative = int(float(results[i]))
-            while not results[i] == "positives": i += 1
-            i += 1
-            dataSet.false_positive = int(float(results[i]))
+            if results[i] == "negatives":
+                i += 1
+                dataSet.false_negative = int(float(results[i]))
+            elif results[i] == "positives":
+                i += 1
+                dataSet.false_positive = int(float(results[i]))
 
-            while not results[i] == "true": i += 1
-            while not results[i] == "positives": i += 1
+        elif results[i] == "true":
             i += 1
-            dataSet.true_positive = int(float(results[i]))
-            while not results[i] == "negatives": i += 1
-            i += 1
-            dataSet.true_negative = int(float(results[i]))
+            if results[i] == "positives":
+                i += 1
+                dataSet.true_positive = int(float(results[i]))
+            elif results[i] == "negatives":
+                i += 1
+                dataSet.true_negative = int(float(results[i]))
         i += 1
 
     accuracy = np.array(accuracy)
