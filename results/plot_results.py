@@ -17,7 +17,7 @@ LAB = []
 #-------------------------------------------------------------------------------
 
 def main():
-    plot_file("\'10x|e5st|32_64f|5_5_5_5si|256d|2l.txt\'")
+    plot_file("10x|e5st|32_64f|5_5_5_5si|256d|2l", 10)
     '''
     for filename in os.listdir("."):
         if filename[-4:] == ".txt":
@@ -44,42 +44,55 @@ def main():
 def plot_file(results_name, his):
 
     results_file = open(results_name + ".txt", "r")
-    results_list = []
+    results = []
 
     for word in results_file.read().split():
         word = word.replace(",", "").replace("[", "").replace("\'", "")
         word = word.replace("]", "").replace("{", "").replace("}", "")
-        word = word.replace(":", "").replace("-", "")
+        word = word.replace(":", "").replace("-", "").replace("/", "")
         if not word == "":
-            results_list.append(word)
+            results.append(word.lower())
 
-    indices = range(len(results_list))
+    for r in results:
+        print(r)
+
+    indices = len(results)
     accuracy = []
     true_positive = []
     false_negative = []
     true_negative = []
     false_positive = []
 
-    for i in indices:
-        if results_list[i] == "accuracy":
+    i = 0
+    while i < indices:
+        if results[i] == "data":
             i += 1
-            accuracy.append(float(results_list[i]))
-        elif results_list[i] == "true":
+            dataSet = DataSet(results[i])
+
+            while not results[i] == "history": i += 1
             i += 1
-            if results_list[i] == "positives":
-                i += 1
-                true_positive.append(int(float(results_list[i])))
-            elif results_list[i] == "negatives":
-                i += 1
-                true_negative.append(int(float(results_list[i])))
-        elif results_list[i] == "false":
+            dataSet.history = int(results[i])
+
+            while not results[i] == "accuracy": i += 1
             i += 1
-            if results_list[i] == "positives":
-                i += 1
-                false_positive.append(int(float(results_list[i])))
-            elif results_list[i] == "negatives":
-                i += 1
-                false_negative.append(int(float(results_list[i])))
+            dataSet.accuracy = float(results[i])
+
+            while not results[i] == "false": i += 1
+            while not results[i] == "negatives": i += 1
+            i += 1
+            dataSet.false_negative = int(float(results[i]))
+            while not results[i] == "positives": i += 1
+            i += 1
+            dataSet.false_positive = int(float(results[i]))
+
+            while not results[i] == "true": i += 1
+            while not results[i] == "positives": i += 1
+            i += 1
+            dataSet.true_positive = int(float(results[i]))
+            while not results[i] == "negatives": i += 1
+            i += 1
+            dataSet.true_negative = int(float(results[i]))
+        i += 1
 
     accuracy = np.array(accuracy)
     true_positive = np.array(true_positive)
@@ -88,7 +101,7 @@ def plot_file(results_name, his):
     false_positive = np.array(false_positive)
 
     HIS.append(his)
-    AC.append(avg(accuracy))
+    #AC.append(avg(accuracy))
 
     while results_name[0] != "|":
         results_name = results_name[1:]

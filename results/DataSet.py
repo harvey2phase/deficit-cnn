@@ -3,6 +3,7 @@ class DataSet:
 
     def __init__(
         self,
+        data,
         history,
         steps,
         filters,
@@ -15,6 +16,7 @@ class DataSet:
         true_negative,
         false_positive
     ):
+        self.data = data
         self.history = history
         self.steps = steps
         self.filters = filters
@@ -27,12 +29,13 @@ class DataSet:
         self.true_negative = true_negative
         self.false_positiv = false_positive
 
-    def __init__(self, history):
-        self.history = history
+    def __init__(self, data):
+        self.data = data
 
     def equals(self, dataSet):
         if (
-            self.history == dataSet.history
+            self.data == dataSet.data
+            or self.history == dataSet.history
             or self.steps == dataSet.steps
             or self.filters == dataSet.filters
             or self.filt_sizes == dataSet.filt_sizes
