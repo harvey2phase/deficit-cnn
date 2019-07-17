@@ -1,3 +1,5 @@
+from DataSet import DataSet
+
 import numpy as np
 import matplotlib.pyplot as plt
 import os
@@ -15,6 +17,8 @@ LAB = []
 #-------------------------------------------------------------------------------
 
 def main():
+    plot_file("\'10x|e5st|32_64f|5_5_5_5si|256d|2l.txt\'")
+    '''
     for filename in os.listdir("."):
         if filename[-4:] == ".txt":
             filename = filename[:-4]
@@ -31,6 +35,7 @@ def main():
         ax.annotate(lab, (HIS[i], AC[i]))
 
     plt.show()
+    '''
 
 #-------------------------------------------------------------------------------
 # Plot function
