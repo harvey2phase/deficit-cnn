@@ -13,34 +13,60 @@ PROJECT_PATH = "/project/def-arutenbe/harveyw/summer-research/"
 def main():
 
     data_folder = "cnn_data/e4_age80/50_annk/prob_of_death_at_80/"
-    output_filename = "results/graham_mass_results_2.txt"
+    output_filename = "results/graham_3.txt"
     bias = "unbiased_"
-    history = 20
+
+    '''
+    history = 5
     filters = [
-        [32, 64, 128, 256],
-        [32, 64, 64, 128],
-        [16, 32, 64, 128],
+        [16, 32],
+        [32, 32],
+        [64, 32],
     ]
     pool_size = [2, 2]
     pool_stride = 2
-    size = [[5, 5], [5, 5], [5, 5], [5, 5]]
+    sizes = [
+        [[2, 2], [2, 2]],
+        [[5, 5], [5, 5]],
+        [[10, 10], [10, 10]]
+    ]
+    steps = 1 * 10 ** 5
+    dense = 256
+    logit = 2
+    '''
+    history = 2
+    filters = [
+        [16],
+        [32],
+        [64],
+    ]
+    #pool_size = [1, 2]
+    #pool_size = [1, 1]
+    pool_size = [2, 2]
+    pool_stride = 2
+    sizes = [
+        [[2, 2]],
+        [[5, 5]],
+        [[10, 10]]
+    ]
     steps = 1 * 10 ** 5
     dense = 256
     logit = 2
 
     for _ in range(100):
-        for filt in filters:
-            set_data(data_folder, history, bias)
-            set_hype(
-                filt,
-                size,
-                pool_size,
-                pool_stride,
-                steps,
-                dense,
-                logit
-            )
-            run(output_filename)
+        for size in sizes:
+            for filt in filters:
+                set_data(data_folder, history, bias)
+                set_hype(
+                    filt,
+                    size,
+                    pool_size,
+                    pool_stride,
+                    steps,
+                    dense,
+                    logit
+                )
+                run(output_filename)
 
 #-------------------------------------------------------------------------------
 # Global variables
