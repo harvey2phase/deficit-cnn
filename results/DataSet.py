@@ -41,8 +41,3 @@ class DataSet:
         ):
             return False
         return True
-
-d1 = DataSet(2)
-d1.accuracy = 3
-print(d1.history)
-print(d1.accuracy)
