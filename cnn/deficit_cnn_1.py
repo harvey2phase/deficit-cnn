@@ -23,7 +23,7 @@ def main():
     ]
     pool_size = [2, 2]
     pool_stride = 2
-    size = [[5, 5], [5, 5]]
+    size = [[5, 5], [5, 5], [5, 5], [5, 5]]
     steps = 1 * 10 ** 5
     dense = 256
     logit = 2
