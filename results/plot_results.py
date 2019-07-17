@@ -53,8 +53,8 @@ def plot_file(results_name, his):
         if not word == "":
             results.append(word.lower())
 
-    for r in results:
-        print(r)
+    #for r in results:
+    #    print(r)
 
     accuracy = []
     true_positive = []
@@ -62,14 +62,21 @@ def plot_file(results_name, his):
     true_negative = []
     false_positive = []
 
+    dataSet = None
     dataSet_table = [[]]
 
     i = 0
     indices = len(results)
     while i < indices:
         if results[i] == "data":
-            for dataSet_list in dataSet_table:
+            if not dataSet == None:
                 #TODO
+                for i in range(len(dataSet_table)):
+                    if dataSet.isSameType(dataSet_table[i][0]):
+                        dataSet_table[i].append(dataSet)
+                        dataSet = None
+                if not dataSet == None:
+                    dataSet_Table.append([dataSet])
             i += 1
             dataSet = DataSet(results[i])
 
@@ -129,6 +136,9 @@ def plot_file(results_name, his):
                 i += 1
                 dataSet.true_negative = int(float(results[i]))
         i += 1
+
+    print(len(dataSet_table))
+    print(len(dataSet_table[0]))
 
     accuracy = np.array(accuracy)
     true_positive = np.array(true_positive)

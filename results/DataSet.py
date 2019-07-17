@@ -32,15 +32,15 @@ class DataSet:
     def __init__(self, data):
         self.data = data
 
-    def equals(self, dataSet):
+    def isSameType(self, dataSet):
         if (
-            self.data == dataSet.data
-            or self.history == dataSet.history
-            or self.steps == dataSet.steps
-            or self.filters == dataSet.filters
-            or self.filt_sizes == dataSet.filt_sizes
-            or self.dense == dataSet.dense
-            or self.logits == dataSet.logits
+            not self.data == dataSet.data
+            or not self.history == dataSet.history
+            or not self.steps == dataSet.steps
+            or not self.filters == dataSet.filters
+            or not self.filt_sizes == dataSet.filt_sizes
+            or not self.dense == dataSet.dense
+            or not self.logits == dataSet.logits
         ):
             return False
         return True
