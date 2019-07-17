@@ -1,0 +1,580 @@
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [16]
+Sizes: [[2, 2]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.57349396, 'false negatives': 154.0, 'false positives': 200.0, 'loss': 0.67576694, 'true negatives': 215.0, 'true positives': 261.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [32]
+Sizes: [[2, 2]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.57228917, 'false negatives': 163.0, 'false positives': 192.0, 'loss': 0.6778859, 'true negatives': 223.0, 'true positives': 252.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [16]
+Sizes: [[2, 2]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5710843, 'false negatives': 155.0, 'false positives': 201.0, 'loss': 0.6784654, 'true negatives': 214.0, 'true positives': 260.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [64]
+Sizes: [[2, 2]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.59156626, 'false negatives': 155.0, 'false positives': 184.0, 'loss': 0.6730673, 'true negatives': 231.0, 'true positives': 260.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [32]
+Sizes: [[2, 2]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.586747, 'false negatives': 142.0, 'false positives': 201.0, 'loss': 0.6731134, 'true negatives': 214.0, 'true positives': 273.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [16]
+Sizes: [[5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.57349396, 'false negatives': 175.0, 'false positives': 179.0, 'loss': 0.67715424, 'true negatives': 236.0, 'true positives': 240.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [64]
+Sizes: [[2, 2]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5795181, 'false negatives': 146.0, 'false positives': 203.0, 'loss': 0.6731903, 'true negatives': 212.0, 'true positives': 269.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [16]
+Sizes: [[5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5927711, 'false negatives': 145.0, 'false positives': 193.0, 'loss': 0.6715508, 'true negatives': 222.0, 'true positives': 270.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [32]
+Sizes: [[5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5939759, 'false negatives': 160.0, 'false positives': 177.0, 'loss': 0.6743973, 'true negatives': 238.0, 'true positives': 255.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [64]
+Sizes: [[5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.59518075, 'false negatives': 144.0, 'false positives': 192.0, 'loss': 0.672143, 'true negatives': 223.0, 'true positives': 271.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [16]
+Sizes: [[10, 10]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.58554214, 'false negatives': 165.0, 'false positives': 179.0, 'loss': 0.67390484, 'true negatives': 236.0, 'true positives': 250.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [32]
+Sizes: [[10, 10]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5891566, 'false negatives': 160.0, 'false positives': 181.0, 'loss': 0.6720648, 'true negatives': 234.0, 'true positives': 255.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [64]
+Sizes: [[10, 10]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.586747, 'false negatives': 160.0, 'false positives': 183.0, 'loss': 0.6744953, 'true negatives': 232.0, 'true positives': 255.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [16]
+Sizes: [[2, 2]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.58554214, 'false negatives': 148.0, 'false positives': 196.0, 'loss': 0.6758183, 'true negatives': 219.0, 'true positives': 267.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [32]
+Sizes: [[2, 2]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5710843, 'false negatives': 150.0, 'false positives': 206.0, 'loss': 0.6744729, 'true negatives': 209.0, 'true positives': 265.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [64]
+Sizes: [[2, 2]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.59156626, 'false negatives': 148.0, 'false positives': 191.0, 'loss': 0.67855275, 'true negatives': 224.0, 'true positives': 267.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [16]
+Sizes: [[5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.57710844, 'false negatives': 159.0, 'false positives': 192.0, 'loss': 0.67653126, 'true negatives': 223.0, 'true positives': 256.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [32]
+Sizes: [[5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.586747, 'false negatives': 159.0, 'false positives': 184.0, 'loss': 0.67466784, 'true negatives': 231.0, 'true positives': 256.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [64]
+Sizes: [[5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5903614, 'false negatives': 158.0, 'false positives': 182.0, 'loss': 0.67348677, 'true negatives': 233.0, 'true positives': 257.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [16]
+Sizes: [[10, 10]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.58433735, 'false negatives': 157.0, 'false positives': 188.0, 'loss': 0.6733771, 'true negatives': 227.0, 'true positives': 258.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [32]
+Sizes: [[10, 10]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.58433735, 'false negatives': 164.0, 'false positives': 181.0, 'loss': 0.67484415, 'true negatives': 234.0, 'true positives': 251.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [64]
+Sizes: [[10, 10]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5831325, 'false negatives': 168.0, 'false positives': 178.0, 'loss': 0.67226565, 'true negatives': 237.0, 'true positives': 247.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [16]
+Sizes: [[2, 2]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5759036, 'false negatives': 154.0, 'false positives': 198.0, 'loss': 0.67776185, 'true negatives': 217.0, 'true positives': 261.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [32]
+Sizes: [[2, 2]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.58433735, 'false negatives': 148.0, 'false positives': 197.0, 'loss': 0.6763261, 'true negatives': 218.0, 'true positives': 267.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [64]
+Sizes: [[2, 2]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5831325, 'false negatives': 146.0, 'false positives': 200.0, 'loss': 0.6765646, 'true negatives': 215.0, 'true positives': 269.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [16]
+Sizes: [[5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.58072287, 'false negatives': 148.0, 'false positives': 200.0, 'loss': 0.67349803, 'true negatives': 215.0, 'true positives': 267.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [32]
+Sizes: [[5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5879518, 'false negatives': 166.0, 'false positives': 176.0, 'loss': 0.67342705, 'true negatives': 239.0, 'true positives': 249.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [64]
+Sizes: [[5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5891566, 'false negatives': 163.0, 'false positives': 178.0, 'loss': 0.6727255, 'true negatives': 237.0, 'true positives': 252.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [16]
+Sizes: [[10, 10]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5759036, 'false negatives': 170.0, 'false positives': 182.0, 'loss': 0.674553, 'true negatives': 233.0, 'true positives': 245.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [32]
+Sizes: [[10, 10]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5795181, 'false negatives': 170.0, 'false positives': 179.0, 'loss': 0.6744299, 'true negatives': 236.0, 'true positives': 245.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [64]
+Sizes: [[10, 10]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.58433735, 'false negatives': 161.0, 'false positives': 184.0, 'loss': 0.67402184, 'true negatives': 231.0, 'true positives': 254.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [16]
+Sizes: [[2, 2]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5746988, 'false negatives': 133.0, 'false positives': 220.0, 'loss': 0.6776017, 'true negatives': 195.0, 'true positives': 282.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [32]
+Sizes: [[2, 2]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5759036, 'false negatives': 145.0, 'false positives': 207.0, 'loss': 0.67674744, 'true negatives': 208.0, 'true positives': 270.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [64]
+Sizes: [[2, 2]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.586747, 'false negatives': 144.0, 'false positives': 199.0, 'loss': 0.673262, 'true negatives': 216.0, 'true positives': 271.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [16]
+Sizes: [[5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.58554214, 'false negatives': 162.0, 'false positives': 182.0, 'loss': 0.6732663, 'true negatives': 233.0, 'true positives': 253.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [32]
+Sizes: [[5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5927711, 'false negatives': 153.0, 'false positives': 185.0, 'loss': 0.67602557, 'true negatives': 230.0, 'true positives': 262.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [64]
+Sizes: [[5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5939759, 'false negatives': 155.0, 'false positives': 182.0, 'loss': 0.6744159, 'true negatives': 233.0, 'true positives': 260.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [16]
+Sizes: [[10, 10]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5795181, 'false negatives': 159.0, 'false positives': 190.0, 'loss': 0.6762953, 'true negatives': 225.0, 'true positives': 256.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [32]
+Sizes: [[10, 10]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.58072287, 'false negatives': 164.0, 'false positives': 184.0, 'loss': 0.6739721, 'true negatives': 231.0, 'true positives': 251.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [64]
+Sizes: [[10, 10]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5831325, 'false negatives': 171.0, 'false positives': 175.0, 'loss': 0.6741934, 'true negatives': 240.0, 'true positives': 244.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [16]
+Sizes: [[2, 2]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.58554214, 'false negatives': 156.0, 'false positives': 188.0, 'loss': 0.6764415, 'true negatives': 227.0, 'true positives': 259.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [32]
+Sizes: [[2, 2]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.56987953, 'false negatives': 147.0, 'false positives': 210.0, 'loss': 0.6751157, 'true negatives': 205.0, 'true positives': 268.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [64]
+Sizes: [[2, 2]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5795181, 'false negatives': 155.0, 'false positives': 194.0, 'loss': 0.6754571, 'true negatives': 221.0, 'true positives': 260.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [16]
+Sizes: [[5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.59638554, 'false negatives': 157.0, 'false positives': 178.0, 'loss': 0.6746141, 'true negatives': 237.0, 'true positives': 258.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [32]
+Sizes: [[5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5795181, 'false negatives': 159.0, 'false positives': 190.0, 'loss': 0.6761178, 'true negatives': 225.0, 'true positives': 256.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [64]
+Sizes: [[5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.58554214, 'false negatives': 153.0, 'false positives': 191.0, 'loss': 0.6720824, 'true negatives': 224.0, 'true positives': 262.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [16]
+Sizes: [[10, 10]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5759036, 'false negatives': 163.0, 'false positives': 189.0, 'loss': 0.6715686, 'true negatives': 226.0, 'true positives': 252.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [32]
+Sizes: [[10, 10]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.58072287, 'false negatives': 168.0, 'false positives': 180.0, 'loss': 0.67355573, 'true negatives': 235.0, 'true positives': 247.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [64]
+Sizes: [[10, 10]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.58072287, 'false negatives': 168.0, 'false positives': 180.0, 'loss': 0.6743959, 'true negatives': 235.0, 'true positives': 247.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [16]
+Sizes: [[2, 2]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.59638554, 'false negatives': 132.0, 'false positives': 203.0, 'loss': 0.6727909, 'true negatives': 212.0, 'true positives': 283.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [32]
+Sizes: [[2, 2]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.586747, 'false negatives': 145.0, 'false positives': 198.0, 'loss': 0.6758664, 'true negatives': 217.0, 'true positives': 270.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [64]
+Sizes: [[2, 2]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.57831323, 'false negatives': 153.0, 'false positives': 197.0, 'loss': 0.6743569, 'true negatives': 218.0, 'true positives': 262.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [16]
+Sizes: [[5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.59638554, 'false negatives': 155.0, 'false positives': 180.0, 'loss': 0.6701475, 'true negatives': 235.0, 'true positives': 260.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [32]
+Sizes: [[5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5903614, 'false negatives': 160.0, 'false positives': 180.0, 'loss': 0.67549616, 'true negatives': 235.0, 'true positives': 255.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [64]
+Sizes: [[5, 5]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.5927711, 'false negatives': 152.0, 'false positives': 186.0, 'loss': 0.67201936, 'true negatives': 229.0, 'true positives': 263.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [16]
+Sizes: [[10, 10]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.58554214, 'false negatives': 173.0, 'false positives': 171.0, 'loss': 0.6748978, 'true negatives': 244.0, 'true positives': 242.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [32]
+Sizes: [[10, 10]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.58433735, 'false negatives': 176.0, 'false positives': 169.0, 'loss': 0.67436016, 'true negatives': 246.0, 'true positives': 239.0, 'global_step': 100000}
+
+ --- 
+
+Data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/
+HISTORY: 2
+Filters: [64]
+Sizes: [[10, 10]]
+Dense: 256
+Logits: 2
+{'accuracy': 0.57831323, 'false negatives': 171.0, 'false positives': 179.0, 'loss': 0.6756063, 'true negatives': 236.0, 'true positives': 244.0, 'global_step': 100000}
+
+ --- 
+
