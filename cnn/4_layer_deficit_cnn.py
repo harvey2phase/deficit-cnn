@@ -18,7 +18,7 @@ PROJECT_PATH = "/project/def-arutenbe/harveyw/summer-research/"
 
 def main():
 
-    history = 20
+    history = 16
 
     data_folder = "cnn_data/e4_age80/50_annk/prob_of_death_at_80/"
     bias = "unbiased_"
@@ -29,7 +29,7 @@ def main():
         [16, 64, 64, 128],
         [64, 64, 64, 128],
     ]
-    sizes = [5, 5, 5, 5]
+    size = [[5, 5], [5, 5], [5, 5], [5, 5]]
 
     pool_size = [2, 2]
     pool_stride = 2
@@ -60,7 +60,7 @@ def main():
                         set_data(data_folder, history, bias)
                         set_hype(
                             filters,
-                            sizes,
+                            size,
                             pool_size,
                             pool_stride,
                             steps,
