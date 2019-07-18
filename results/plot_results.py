@@ -63,20 +63,12 @@ def plot_file(results_name, his):
     false_positive = []
 
     dataSet = None
-    dataSet_table = [[]]
+    dataSet_list = []
 
     i = 0
     indices = len(results)
     while i < indices:
         if results[i] == "data":
-            if not dataSet == None:
-                #TODO
-                for i in range(len(dataSet_table)):
-                    if dataSet.isSameType(dataSet_table[i][0]):
-                        dataSet_table[i].append(dataSet)
-                        dataSet = None
-                if not dataSet == None:
-                    dataSet_Table.append([dataSet])
             i += 1
             dataSet = DataSet(results[i])
 
@@ -87,6 +79,8 @@ def plot_file(results_name, his):
         elif results[i] == "global_step":
             i += 1
             dataSet.steps = int(results[i])
+
+            dataSet_list.append(dataSet)
 
         elif results[i] == "filters":
             i += 1
@@ -99,7 +93,7 @@ def plot_file(results_name, his):
 
         elif results[i] == "sizes":
             i += 1
-            dataSet.filt_sizes = int(results[i])
+            dataSet.filt_sizes = [int(results[i])]
             i += 1
             while results[i].isdigit():
                 dataSet.filt_sizes.append(int(results[i]))
@@ -137,8 +131,8 @@ def plot_file(results_name, his):
                 dataSet.true_negative = int(float(results[i]))
         i += 1
 
-    print(len(dataSet_table))
-    print(len(dataSet_table[0]))
+    for dataSet in dataSet_list:
+        print(dataSet.filt_sizes)
 
     accuracy = np.array(accuracy)
     true_positive = np.array(true_positive)
