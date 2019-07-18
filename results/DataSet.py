@@ -34,13 +34,13 @@ class DataSet:
 
     def isSameType(self, dataSet):
         if (
-            not self.data == dataSet.data
-            or not self.history == dataSet.history
-            or not self.steps == dataSet.steps
-            or not self.filters == dataSet.filters
-            or not self.filt_sizes == dataSet.filt_sizes
-            or not self.dense == dataSet.dense
-            or not self.logits == dataSet.logits
+            self.data == dataSet.data
+            and self.history == dataSet.history
+            and self.steps == dataSet.steps
+            and self.filters == dataSet.filters
+            and self.filt_sizes == dataSet.filt_sizes
+            and self.dense == dataSet.dense
+            and self.logits == dataSet.logits
         ):
-            return False
-        return True
+            return True
+        return False

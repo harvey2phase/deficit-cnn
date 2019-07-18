@@ -128,6 +128,18 @@ def plot_file(results_name, his):
     for dataSet in dataSet_list:
         print(dataSet.filt_sizes)
 
+    #TODO: DOES NOT WORK
+    dataSet_table = [[dataSet_list[0]]]
+    for j in range(1, len(dataSet_list)):
+        for i in range(len(dataSet_table)):
+            if dataSet_list[j].isSameType(dataSet_table[i]):
+                dataSet_table[i].append(dataSet_list[j])
+                dataSet_list[j] = None
+        if not dataSet_list[j] == None:
+            dataSet_table.append([dataSet_list[j]])
+
+    print(len(dataSet_table))
+
 #-------------------------------------------------------------------------------
 # Supporting functions
 #-------------------------------------------------------------------------------
