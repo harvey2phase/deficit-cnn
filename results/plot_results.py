@@ -17,45 +17,33 @@ LAB = []
 #-------------------------------------------------------------------------------
 
 def main():
-    plot_file("10x|e5st|32_64f|5_5_5_5si|256d|2l", 10)
-    '''
-    for filename in os.listdir("."):
-        if filename[-4:] == ".txt":
-            filename = filename[:-4]
-            i = 0
-            his = ""
-            while filename[i].isdigit():
-                his += filename[i]
-                i += 1
-            plot_file(filename, int(his))
-
-    fig, ax = plt.subplots()
-    ax.scatter(HIS, AC)
-    for i, lab in enumerate(LAB):
-        ax.annotate(lab, (HIS[i], AC[i]))
-
-    plt.show()
-    '''
+    plot_file("new15.txt")
 
 #-------------------------------------------------------------------------------
 # Plot function
 #-------------------------------------------------------------------------------
 
-def plot_file(results_name, his):
+def plot_file(results_name):
+    results = tokenize_file(results_name)
+    dataSet_list = create_dataSet_list(results)
+    dataSet_table = create_dataSet_table(dataSet_list)
 
-    results_file = open(results_name + ".txt", "r")
-    results = []
+    for dataSet_list in dataSet_table:
+        print(len(dataSet_list))
 
-    for word in results_file.read().split():
-        word = word.replace(",", "").replace("[", "").replace("\'", "")
-        word = word.replace("]", "").replace("{", "").replace("}", "")
-        word = word.replace(":", "").replace("-", "").replace("/", "")
-        if not word == "":
-            results.append(word.lower())
+def create_dataSet_table(dataSet_list):
+    dataSet_table = []
+    for dataSet in dataSet_list:
+        for i in range(len(dataSet_table)):
+            if dataSet.isSameType(dataSet_table[i][0]):
+                dataSet_table[i].append(dataSet)
+                dataSet = None
+        if not dataSet == None:
+            dataSet_table.append([dataSet])
 
-    #for r in results:
-    #    print(r)
+    return dataSet_table
 
+def create_dataSet_list(results):
     dataSet = None
     dataSet_list = []
 
@@ -125,20 +113,20 @@ def plot_file(results_name, his):
                 dataSet.true_negative = int(float(results[i]))
         i += 1
 
-    for dataSet in dataSet_list:
-        print(dataSet.filt_sizes)
+    return dataSet_list
 
-    #TODO: DOES NOT WORK
-    dataSet_table = [[dataSet_list[0]]]
-    for j in range(1, len(dataSet_list)):
-        for i in range(len(dataSet_table)):
-            if dataSet_list[j].isSameType(dataSet_table[i]):
-                dataSet_table[i].append(dataSet_list[j])
-                dataSet_list[j] = None
-        if not dataSet_list[j] == None:
-            dataSet_table.append([dataSet_list[j]])
+def tokenize_file(results_name):
+    results_file = open(results_name, "r")
+    results = []
 
-    print(len(dataSet_table))
+    for word in results_file.read().split():
+        word = word.replace(",", "").replace("[", "").replace("\'", "")
+        word = word.replace("]", "").replace("{", "").replace("}", "")
+        word = word.replace(":", "").replace("-", "").replace("/", "")
+        if not word == "":
+            results.append(word.lower())
+
+    return results
 
 #-------------------------------------------------------------------------------
 # Supporting functions
