@@ -18,18 +18,18 @@ PROJECT_PATH = "/project/def-arutenbe/harveyw/summer-research/"
 
 def main():
 
-    history = 5
+    history = 15
 
     data_folder = "cnn_data/e4_age80/50_annk/prob_of_death_at_80/"
     bias = "unbiased_"
     output_filename = "results/new" + str(history) + ".txt"
 
     filtersez = [
-        [32, 64],
-        [64, 64],
-        [64, 128],
+        [16, 32, 64],
+        [32, 64, 128],
+        [32, 64, 64],
     ]
-    sizesez = [5, 5]
+    sizes = [5, 5, 5]
 
     pool_size = [2, 2]
     pool_stride = 2

@@ -4,6 +4,12 @@ import numpy as np
 import os
 import tensorflow as tf
 
+# 0: all messages are logged (default behavior)
+# 1: INFO messages are not printed
+# 2: INFO and WARNING messages are not printed
+# 3: INFO, WARNING, and ERROR messages are not printed
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
 PROJECT_PATH = "/project/def-arutenbe/harveyw/summer-research/"
 
 #-------------------------------------------------------------------------------
@@ -12,61 +18,56 @@ PROJECT_PATH = "/project/def-arutenbe/harveyw/summer-research/"
 
 def main():
 
+    history = 20
+
     data_folder = "cnn_data/e4_age80/50_annk/prob_of_death_at_80/"
-    output_filename = "results/graham_3.txt"
     bias = "unbiased_"
+    output_filename = "results/new" + str(history) + ".txt"
 
-    '''
-    history = 5
-    filters = [
-        [16, 32],
-        [32, 32],
-        [64, 32],
+    filtersez = [
+        [16, 32, 64, 128],
+        [16, 64, 64, 128],
+        [64, 64, 64, 128],
     ]
+    sizes = [5, 5, 5, 5]
+
     pool_size = [2, 2]
     pool_stride = 2
-    sizes = [
-        [[2, 2], [2, 2]],
-        [[5, 5], [5, 5]],
-        [[10, 10], [10, 10]]
-    ]
-    steps = 1 * 10 ** 5
-    dense = 256
-    logit = 2
-    '''
-    history = 2
-    filters = [
-        [16],
-        [32],
-        [64],
-    ]
-    #pool_size = [1, 2]
-    #pool_size = [1, 1]
-    pool_size = [2, 2]
-    pool_stride = 2
-    sizes = [
-        [[2, 2]],
-        [[5, 5]],
-        [[10, 10]]
-    ]
-    steps = 1 * 10 ** 5
-    dense = 256
-    logit = 2
 
+    stepsez = [
+        5 * 10 ** 4,
+        1 * 10 ** 5,
+        2 * 10 ** 5
+    ]
+
+    denses = [
+        128,
+        256,
+        512
+    ]
+    logitsez = [
+        2,
+        4,
+        8
+    ]
     for _ in range(100):
-        for size in sizes:
-            for filt in filters:
-                set_data(data_folder, history, bias)
-                set_hype(
-                    filt,
-                    size,
-                    pool_size,
-                    pool_stride,
-                    steps,
-                    dense,
-                    logit
-                )
-                run(output_filename)
+        for filters in filtersez:
+
+            for steps in stepsez:
+
+                for dense in denses:
+                    for logits in logitsez:
+                        set_data(data_folder, history, bias)
+                        set_hype(
+                            filters,
+                            sizes,
+                            pool_size,
+                            pool_stride,
+                            steps,
+                            dense,
+                            logits
+                        )
+                        run(output_filename)
 
 #-------------------------------------------------------------------------------
 # Global variables
@@ -333,14 +334,31 @@ def run(filename):
     ''' Record results '''
     results = open(PROJECT_PATH + filename, "a+")
 
-    results.write("Data: " + DATA_FOLDER + "\n")
-    results.write("HISTORY: " + str(HISTORY) + "\n")
-    results.write("Filters: " + str(CONV_FILTERS) + "\n")
-    results.write("Sizes: " + str(CONV_SIZES) + "\n")
-    results.write("Dense: " + str(DENSE_UNITS) + "\n")
-    results.write("Logits: " + str(LOGITS_UNITS)  + "\n")
-    results.write(str(eval_results))
-    results.write("\n\n --- \n\n")
+    results.write(
+        "data: " + DATA_FOLDER + "\t" +
+        "history: " + str(HISTORY) + "\t" +
+        "nodes: " + str(NODE_COUNT) + "\n"
+    )
+    results.write(
+        "filters: " + str(CONV_FILTERS) + "\t" +
+        "sizes: " + str(CONV_SIZES) + "\n"
+    )
+    results.write(
+        "pool: " + str(POOL_SIZE) + "\t" +
+        "stride: " + str(POOL_STRIDE) + "\n"
+    )
+    results.write(
+        "dense: " + str(DENSE_UNITS) + "\t" +
+        "logits: " + str(LOGITS_UNITS) + "\n"
+    )
+    results.write(
+        "steps: " + str(STEPS) + "\t" +
+        "lr: " + str(LEARNING_RATE) + "\t" +
+        "dr: " + str(DROPOUT_RATE) + "\t" +
+        "batch: " + str(BATCH_SIZE) + "\n"
+    )
+    results.write(str(eval_results) + "\n")
+    results.write("---\n")
 
     results.close()
 
