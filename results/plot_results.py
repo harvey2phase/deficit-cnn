@@ -24,9 +24,17 @@ def main():
 #-------------------------------------------------------------------------------
 
 def plot_file(results_name):
-    results = tokenize_file(results_name)
-    dataSet_list = create_dataSet_list(results)
-    dataSet_table = create_dataSet_table(dataSet_list)
+    #results = tokenize_file(results_name)
+    #dataSet_list = create_dataSet_list(results)
+    #dataSet_table = create_dataSet_table(dataSet_list)
+
+    dataSet_table = create_dataSet_table(
+        create_dataSet_list(
+            tokenize_file(
+                results_name
+            )
+        )
+    )
 
     for dataSet_list in dataSet_table:
         print(len(dataSet_list))
