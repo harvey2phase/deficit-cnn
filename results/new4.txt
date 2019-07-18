@@ -1,0 +1,119 @@
+data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/	history: 4	nodes: 50
+filters: [32, 64]	sizes: [[5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 128	logits: 2
+steps: 50000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.59156626, 'false negatives': 141.0, 'false positives': 198.0, 'loss': 0.6735664, 'true negatives': 217.0, 'true positives': 274.0, 'global_step': 50000}
+---
+data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/	history: 4	nodes: 50
+filters: [32, 64]	sizes: [[5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 128	logits: 4
+steps: 50000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.58433735, 'false negatives': 139.0, 'false positives': 206.0, 'loss': 0.6744905, 'true negatives': 209.0, 'true positives': 276.0, 'global_step': 50000}
+---
+data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/	history: 4	nodes: 50
+filters: [32, 64]	sizes: [[5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 128	logits: 8
+steps: 50000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.57710844, 'false negatives': 147.0, 'false positives': 204.0, 'loss': 0.6738606, 'true negatives': 211.0, 'true positives': 268.0, 'global_step': 50000}
+---
+data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/	history: 4	nodes: 50
+filters: [32, 64]	sizes: [[5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 256	logits: 2
+steps: 50000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.5831325, 'false negatives': 156.0, 'false positives': 190.0, 'loss': 0.67372906, 'true negatives': 225.0, 'true positives': 259.0, 'global_step': 50000}
+---
+data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/	history: 4	nodes: 50
+filters: [32, 64]	sizes: [[5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 256	logits: 4
+steps: 50000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.5891566, 'false negatives': 142.0, 'false positives': 199.0, 'loss': 0.6750752, 'true negatives': 216.0, 'true positives': 273.0, 'global_step': 50000}
+---
+data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/	history: 4	nodes: 50
+filters: [32, 64]	sizes: [[5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 256	logits: 8
+steps: 50000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.5795181, 'false negatives': 147.0, 'false positives': 202.0, 'loss': 0.6745303, 'true negatives': 213.0, 'true positives': 268.0, 'global_step': 50000}
+---
+data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/	history: 4	nodes: 50
+filters: [32, 64]	sizes: [[5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 512	logits: 2
+steps: 50000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.58433735, 'false negatives': 153.0, 'false positives': 192.0, 'loss': 0.6713172, 'true negatives': 223.0, 'true positives': 262.0, 'global_step': 50000}
+---
+data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/	history: 4	nodes: 50
+filters: [32, 64]	sizes: [[5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 512	logits: 4
+steps: 50000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.5795181, 'false negatives': 136.0, 'false positives': 213.0, 'loss': 0.67665476, 'true negatives': 202.0, 'true positives': 279.0, 'global_step': 50000}
+---
+data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/	history: 4	nodes: 50
+filters: [32, 64]	sizes: [[5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 512	logits: 8
+steps: 50000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.57831323, 'false negatives': 150.0, 'false positives': 200.0, 'loss': 0.6734028, 'true negatives': 215.0, 'true positives': 265.0, 'global_step': 50000}
+---
+data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/	history: 4	nodes: 50
+filters: [32, 64]	sizes: [[5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 128	logits: 2
+steps: 100000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.58072287, 'false negatives': 161.0, 'false positives': 187.0, 'loss': 0.66833544, 'true negatives': 228.0, 'true positives': 254.0, 'global_step': 100000}
+---
+data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/	history: 4	nodes: 50
+filters: [32, 64]	sizes: [[5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 128	logits: 4
+steps: 100000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.57710844, 'false negatives': 160.0, 'false positives': 191.0, 'loss': 0.6724802, 'true negatives': 224.0, 'true positives': 255.0, 'global_step': 100000}
+---
+data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/	history: 4	nodes: 50
+filters: [32, 64]	sizes: [[5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 128	logits: 8
+steps: 100000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.5831325, 'false negatives': 162.0, 'false positives': 184.0, 'loss': 0.67348605, 'true negatives': 231.0, 'true positives': 253.0, 'global_step': 100000}
+---
+data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/	history: 4	nodes: 50
+filters: [32, 64]	sizes: [[5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 256	logits: 2
+steps: 100000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.5795181, 'false negatives': 158.0, 'false positives': 191.0, 'loss': 0.6700483, 'true negatives': 224.0, 'true positives': 257.0, 'global_step': 100000}
+---
+data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/	history: 4	nodes: 50
+filters: [32, 64]	sizes: [[5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 256	logits: 4
+steps: 100000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.586747, 'false negatives': 175.0, 'false positives': 168.0, 'loss': 0.669676, 'true negatives': 247.0, 'true positives': 240.0, 'global_step': 100000}
+---
+data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/	history: 4	nodes: 50
+filters: [32, 64]	sizes: [[5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 256	logits: 8
+steps: 100000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.57228917, 'false negatives': 180.0, 'false positives': 175.0, 'loss': 0.67158306, 'true negatives': 240.0, 'true positives': 235.0, 'global_step': 100000}
+---
+data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/	history: 4	nodes: 50
+filters: [32, 64]	sizes: [[5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 512	logits: 2
+steps: 100000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.57710844, 'false negatives': 163.0, 'false positives': 188.0, 'loss': 0.66819733, 'true negatives': 227.0, 'true positives': 252.0, 'global_step': 100000}
+---
+data: cnn_data/e4_age80/50_annk/prob_of_death_at_80/	history: 4	nodes: 50
+filters: [32, 64]	sizes: [[5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 512	logits: 4
+steps: 100000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.5879518, 'false negatives': 172.0, 'false positives': 170.0, 'loss': 0.6689892, 'true negatives': 245.0, 'true positives': 243.0, 'global_step': 100000}
+---
