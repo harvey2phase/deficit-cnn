@@ -56,12 +56,6 @@ def plot_file(results_name, his):
     #for r in results:
     #    print(r)
 
-    accuracy = []
-    true_positive = []
-    false_negative = []
-    true_negative = []
-    false_positive = []
-
     dataSet = None
     dataSet_list = []
 
@@ -133,27 +127,6 @@ def plot_file(results_name, his):
 
     for dataSet in dataSet_list:
         print(dataSet.filt_sizes)
-
-    accuracy = np.array(accuracy)
-    true_positive = np.array(true_positive)
-    false_negative = np.array(false_negative)
-    true_negative = np.array(true_negative)
-    false_positive = np.array(false_positive)
-
-    HIS.append(his)
-    #AC.append(avg(accuracy))
-
-    while results_name[0] != "|":
-        results_name = results_name[1:]
-    LAB.append(str(len(accuracy)) + results_name)
-
-    #print("accuracy: ", accuracy)
-    #print("true positive: ", true_positive)
-    #print("false negative: ", false_negative)
-    #print("true negative: ", true_negative)
-    #print("false positive: ", false_positive)
-    #print("Sanity check: ", true_positive + false_negative)
-    #print("Sanity check: ", true_negative + false_positive)
 
 #-------------------------------------------------------------------------------
 # Supporting functions
