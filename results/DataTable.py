@@ -5,11 +5,11 @@ class DataTable:
 
     def __init__(self, param):
         if param == None:
-            self.dTable = [[]]
+            self.dTable = [DataList()]
         elif isinstance(param, DataList):
             self.dTable = [param]
         elif isinstance(param, DataSet):
-            self.dTable = [[param]]
+            self.dTable = [DataList(param)]
         else:
             sys.exit("DataList init error")
 
@@ -20,7 +20,7 @@ class DataTable:
         return string
 
     def isEmpty(self):
-        if self.dTable[0]:
+        if self.dTable[0].isEmpty:
             return True
         return False
 

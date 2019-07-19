@@ -22,3 +22,7 @@ class DataList:
     def getFirst():
         return dList[0]
 
+    def isEmpty():
+        if dList:
+            return True
+        return False
