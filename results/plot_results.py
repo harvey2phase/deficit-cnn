@@ -17,7 +17,7 @@ LAB = []
 #-------------------------------------------------------------------------------
 
 def main():
-    plot_file("new15.txt")
+    plot_file("new_format/5_assorted.txt")
 
 #-------------------------------------------------------------------------------
 # Plot function
@@ -36,18 +36,42 @@ def plot_file(results_name):
         )
     )
 
-    for dataSet_list in dataSet_table:
-        print(len(dataSet_list))
+    filename = results_name[: -4]
+    config = open(filename + "_configs.txt", "w+")
+    table_range = range(len(dataSet_table))
+    for i in table_range:
+        dataSet = dataSet_table[i][0]
+        '''
+        config.write(
+            str(i) + " - " +
+            "data: " + dataSet.data +
+            " | steps: " + dataSet.steps +
+            " | filters: " + dataSet.filters +
+            " | sizes: " + dataSet.filt_sizes +
+            " | dense: " + dataSet.dense +
+            " | logits: " + dataSet.logits + "\n"
+        )
+        '''
+
+        accuracy, history = 0, dataSet.history
+        for dataSet in dataSet_table[i]:
+            accuracy += dataSet.accuracy
+
+        plt.scatter(history, accuracy / len(dataSet_table[i]))
+    plt.show()
 
 def create_dataSet_table(dataSet_list):
-    dataSet_table = []
+    dataSet_table = None
     for dataSet in dataSet_list:
-        for i in range(len(dataSet_table)):
-            if dataSet.isSameType(dataSet_table[i][0]):
-                dataSet_table[i].append(dataSet)
-                dataSet = None
-        if not dataSet == None:
-            dataSet_table.append([dataSet])
+        if dataSet_table == None:
+            dataSet_table = [[dataSet]]
+        else:
+            for i in range(len(dataSet_table)):
+                if dataSet.isSameType(dataSet_table[i][0]):
+                    dataSet_table[i].append(dataSet)
+                    dataSet = None
+            if not dataSet == None:
+                dataSet_table.append([dataSet])
 
     return dataSet_table
 
