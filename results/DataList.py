@@ -19,10 +19,19 @@ class DataList:
             string += str(dataSet.accuracy) + ", "
         return string[: -2]
 
-    def getFirst():
-        return dList[0]
+    def getFirst(self):
+        return self.dList[0]
 
     def isEmpty():
-        if dList:
+        if self.dList:
             return True
         return False
+
+    def getAverageAccuracy(self):
+        totalAccuracy = 0
+        for dataSet in self.dList:
+            totalAccuracy += dataSet.accuracy
+        return totalAccuracy / len(self.dList)
+
+    def getHistory(self):
+        return self.dList[0].history

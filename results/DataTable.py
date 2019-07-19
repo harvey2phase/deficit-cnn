@@ -40,7 +40,7 @@ class DataTable:
     def add(self, dataList: DataList):
         self.dTable.append(dataList)
 
-    def getRow(self, row):
+    def getDataListAt(self, row):
         return self.dTable[row]
 
     def getDataSet(self, row, index):

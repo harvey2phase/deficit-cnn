@@ -19,7 +19,7 @@ LAB = []
 #-------------------------------------------------------------------------------
 
 def main():
-    plot_file("new_format/15_assorted.txt")
+    plot_file("new_format/5_assorted.txt")
 
 #-------------------------------------------------------------------------------
 # Plot function
@@ -39,29 +39,25 @@ def plot_file(results_name):
     print(dataList.accuracyToString())
     dataTable = create_dataTable(dataList)
 
-    #filename = results_name[: -4]
-    #config = open(filename + "_configs.txt", "w+")
-    #table_range = range(dataTable.size())
-    #for i in table_range:
-    #    dataSet = dataTable[i][0]
-    #    '''
-    #    config.write(
-    #        str(i) + " - " +
-    #        "data: " + dataSet.data +
-    #        " | steps: " + dataSet.steps +
-    #        " | filters: " + dataSet.filters +
-    #        " | sizes: " + dataSet.filt_sizes +
-    #        " | dense: " + dataSet.dense +
-    #        " | logits: " + dataSet.logits + "\n"
-    #    )
-    #    '''
+    filename = results_name[: -4]
+    config = open(filename + "_configs.txt", "w+")
+    table_range = range(dataTable.size())
+    for i in table_range:
+        dataList = dataTable.getDataListAt(i)
+        '''
+        config.write(
+            str(i) + " - " +
+            "data: " + dataSet.data +
+            " | steps: " + dataSet.steps +
+            " | filters: " + dataSet.filters +
+            " | sizes: " + dataSet.filt_sizes +
+            " | dense: " + dataSet.dense +
+            " | logits: " + dataSet.logits + "\n"
+        )
+        '''
 
-    #    accuracy, history = 0, dataSet.history
-    #    for dataSet in dataTable[i]:
-    #        accuracy += dataSet.accuracy
-
-    #    plt.scatter(history, accuracy / dataTable.getRow(i).size())
-    #plt.show()
+        plt.scatter(dataList.getHistory(), dataList.getAverageAccuracy())
+    plt.show()
 
 def create_dataTable(dataList):
     dataTable = DataTable(None)
