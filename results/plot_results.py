@@ -1,4 +1,4 @@
-from DataSet import DataSet
+from DataSet import DataSet, DataList, DataTable
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -17,7 +17,7 @@ LAB = []
 #-------------------------------------------------------------------------------
 
 def main():
-    plot_file("new_format/5_assorted.txt")
+    plot_file("new_format/15_assorted.txt")
 
 #-------------------------------------------------------------------------------
 # Plot function
@@ -28,56 +28,60 @@ def plot_file(results_name):
     #dataSet_list = create_dataSet_list(results)
     #dataSet_table = create_dataSet_table(dataSet_list)
 
-    dataSet_table = create_dataSet_table(
-        create_dataSet_list(
-            tokenize_file(
-                results_name
-            )
+    dataList = create_dataList(
+        tokenize_file(
+            results_name
         )
     )
 
-    filename = results_name[: -4]
-    config = open(filename + "_configs.txt", "w+")
-    table_range = range(len(dataSet_table))
-    for i in table_range:
-        dataSet = dataSet_table[i][0]
-        '''
-        config.write(
-            str(i) + " - " +
-            "data: " + dataSet.data +
-            " | steps: " + dataSet.steps +
-            " | filters: " + dataSet.filters +
-            " | sizes: " + dataSet.filt_sizes +
-            " | dense: " + dataSet.dense +
-            " | logits: " + dataSet.logits + "\n"
-        )
-        '''
+    print(dataList.accuracyToString())
+    #dataTable = create_dataTable(dataList)
 
-        accuracy, history = 0, dataSet.history
-        for dataSet in dataSet_table[i]:
-            accuracy += dataSet.accuracy
+    #filename = results_name[: -4]
+    #config = open(filename + "_configs.txt", "w+")
+    #table_range = range(dataTable.size())
+    #for i in table_range:
+    #    dataSet = dataTable[i][0]
+    #    '''
+    #    config.write(
+    #        str(i) + " - " +
+    #        "data: " + dataSet.data +
+    #        " | steps: " + dataSet.steps +
+    #        " | filters: " + dataSet.filters +
+    #        " | sizes: " + dataSet.filt_sizes +
+    #        " | dense: " + dataSet.dense +
+    #        " | logits: " + dataSet.logits + "\n"
+    #    )
+    #    '''
 
-        plt.scatter(history, accuracy / len(dataSet_table[i]))
-    plt.show()
+    #    accuracy, history = 0, dataSet.history
+    #    for dataSet in dataTable[i]:
+    #        accuracy += dataSet.accuracy
 
-def create_dataSet_table(dataSet_list):
-    dataSet_table = None
-    for dataSet in dataSet_list:
-        if dataSet_table == None:
-            dataSet_table = [[dataSet]]
+    #    plt.scatter(history, accuracy / dataTable.getRow(i).size())
+    #plt.show()
+
+def create_dataTable(dataList):
+    dataTable = None
+    #TODO: hacky dataList.dList
+    for dataSet in dataList.dList:
+        print(dataTable.accuracyToStrig())
+        print(dataSet.accuracy)
+        if dataTable == None:
+            dataTable = DataTable(dataSet)
         else:
-            for i in range(len(dataSet_table)):
-                if dataSet.isSameType(dataSet_table[i][0]):
-                    dataSet_table[i].append(dataSet)
+            for i in range(dataTable.size()):
+                if dataSet.isSameType(dataSettable.getDataSet(i, 0)):
+                    dataTable.getRow().add(dataSet)
                     dataSet = None
             if not dataSet == None:
-                dataSet_table.append([dataSet])
+                dataTable.add(DataList(dataSet))
 
-    return dataSet_table
+    return dataTable
 
-def create_dataSet_list(results):
+def create_dataList(results):
     dataSet = None
-    dataSet_list = []
+    dataList = DataList(None)
 
     i = 0
     indices = len(results)
@@ -94,7 +98,7 @@ def create_dataSet_list(results):
             i += 1
             dataSet.steps = int(results[i])
 
-            dataSet_list.append(dataSet)
+            dataList.add(dataSet)
 
         elif results[i] == "filters":
             i += 1
@@ -145,7 +149,7 @@ def create_dataSet_list(results):
                 dataSet.true_negative = int(float(results[i]))
         i += 1
 
-    return dataSet_list
+    return dataList
 
 def tokenize_file(results_name):
     results_file = open(results_name, "r")

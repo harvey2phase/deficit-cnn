@@ -44,3 +44,52 @@ class DataSet:
         ):
             return True
         return False
+
+class DataList:
+
+    dList = []
+
+    def __init__(self, param):
+        if param == None:
+            pass
+        elif isinstance(param, DataSet):
+            dList = [param]
+        else:
+            sys.exit("DataList init error")
+
+    def add(self, dataSet: DataSet):
+        self.dList.append(dataSet)
+
+    def accuracyToString(self):
+        string = ""
+        for dataSet in self.dList:
+            string += str(dataSet.accuracy) + ", "
+        return string[: -2]
+
+class DataTable:
+
+    def __init__(self, param):
+        if isinstance(param, DataList):
+            dTable = [param]
+        elif isinstance(param, DataSet):
+            dTable = [[param]]
+        else:
+            sys.exit("DataList init error")
+
+    def accuracyToString(self):
+        string = ""
+        for dataList in dTable:
+            string += dataList.accuracyToString + "\n"
+        return string
+
+    def size(self):
+        return len(dTable)
+
+    def add(self, dataList: DataList):
+        dTable.append(dataList)
+
+    def getRow(self, row):
+        return dTable[row]
+
+    def getDataSet(self, row, index):
+        return dTable[row][index]
