@@ -1,4 +1,6 @@
-from DataSet import DataSet, DataList, DataTable
+from DataSet import DataSet
+from DataList import DataList
+from DataTable import DataTable
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -35,7 +37,7 @@ def plot_file(results_name):
     )
 
     print(dataList.accuracyToString())
-    #dataTable = create_dataTable(dataList)
+    dataTable = create_dataTable(dataList)
 
     #filename = results_name[: -4]
     #config = open(filename + "_configs.txt", "w+")
@@ -62,12 +64,14 @@ def plot_file(results_name):
     #plt.show()
 
 def create_dataTable(dataList):
-    dataTable = None
+    dataTable = DataTable(None)
+
     #TODO: hacky dataList.dList
     for dataSet in dataList.dList:
-        print(dataTable.accuracyToStrig())
+        if not dataTable.isEmpty():
+            print(dataTable.accuracyToString())
         print(dataSet.accuracy)
-        if dataTable == None:
+        if dataTable.isEmpty():
             dataTable = DataTable(dataSet)
         else:
             for i in range(dataTable.size()):
