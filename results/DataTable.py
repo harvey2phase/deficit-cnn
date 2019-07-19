@@ -5,7 +5,7 @@ class DataTable:
 
     def __init__(self, param):
         if param == None:
-            self.dTable = [DataList()]
+            self.dTable = [DataList(None)]
         elif isinstance(param, DataList):
             self.dTable = [param]
         elif isinstance(param, DataSet):
