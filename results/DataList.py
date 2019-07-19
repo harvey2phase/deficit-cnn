@@ -35,3 +35,6 @@ class DataList:
 
     def getHistory(self):
         return self.dList[0].history
+
+    def getDataSetAt(i):
+        return dList[i]

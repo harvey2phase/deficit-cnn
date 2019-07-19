@@ -26,9 +26,6 @@ def main():
 #-------------------------------------------------------------------------------
 
 def plot_file(results_name):
-    #results = tokenize_file(results_name)
-    #dataSet_list = create_dataSet_list(results)
-    #dataSet_table = create_dataSet_table(dataSet_list)
 
     dataList = create_dataList(
         tokenize_file(
@@ -38,10 +35,11 @@ def plot_file(results_name):
 
     print(dataList.accuracyToString())
     dataTable = create_dataTable(dataList)
+    print(dataTable.getSize())
 
     filename = results_name[: -4]
     config = open(filename + "_configs.txt", "w+")
-    table_range = range(dataTable.size())
+    table_range = range(dataTable.getSize())
     for i in table_range:
         dataList = dataTable.getDataListAt(i)
         '''

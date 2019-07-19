@@ -24,7 +24,7 @@ class DataTable:
             return True
         return False
 
-    def size(self):
+    def getSize(self):
         return len(self.dTable)
 
     def add(self, dataSet: DataSet):
