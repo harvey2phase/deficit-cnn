@@ -39,22 +39,8 @@ def plot_file(results_name):
     '''
     filename = results_name[: -4]
     config = open(filename + "_configs.txt", "w+")
-    table_range = range(dataTable.getSize())
-    for i in table_range:
-        dataList = dataTable.getDataListAt(i)
-        config.write(
-            str(i) + " - " +
-            "data: " + dataSet.data +
-            " | steps: " + dataSet.steps +
-            " | filters: " + dataSet.filters +
-            " | sizes: " + dataSet.filt_sizes +
-            " | dense: " + dataSet.dense +
-            " | logits: " + dataSet.logits + "\n"
-        )
-
-        plt.scatter(dataList.getHistory(), dataList.getAverageAccuracy())
-    plt.show()
     '''
+    print(dataTable.getConfigs())
 
 def create_dataTable(dataList):
     dataTable = DataTable(None)

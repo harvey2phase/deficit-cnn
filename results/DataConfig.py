@@ -19,6 +19,10 @@ class DataConfig:
         self.dense = dense
         self.logits = logits
 
+    #---------------------------------------------------------------------------
+    # Checks
+    #---------------------------------------------------------------------------
+
     def isEqual(self, dataConfig):
         if (
             self.data == dataConfig.data
@@ -54,3 +58,14 @@ class DataConfig:
         if not self.logits == None:
             print("l")
             return False
+
+    #---------------------------------------------------------------------------
+    # toStrnig Method
+    #---------------------------------------------------------------------------
+
+    def toString(self):
+        return (
+            "data: " + self.data + " | steps: " + self.steps +
+            " | filters: " + self.filters + " | sizes: " + self.filt_sizes +
+            " | dense: " + self.dense + " | logits: " + self.logits
+        )

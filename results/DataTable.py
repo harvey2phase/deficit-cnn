@@ -35,6 +35,13 @@ class DataTable:
             dataList.scatterPlot()
         plt.show()
 
+    def getConfigs():
+        configs = ""
+        for dataList in dTable:
+            configs += dataList.getConfig()
+        return configs
+
+
     #---------------------------------------------------------------------------
     # Checks
     #---------------------------------------------------------------------------
