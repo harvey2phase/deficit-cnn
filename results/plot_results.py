@@ -33,7 +33,6 @@ def plot_file(results_name):
         )
     )
 
-    print(dataList.accuracyToString())
     dataTable = create_dataTable(dataList)
     print(dataTable.getSize())
 
@@ -59,6 +58,7 @@ def plot_file(results_name):
 
 def create_dataTable(dataList):
     dataTable = DataTable(None)
+    indices = range(dataList.getSize())
 
     #TODO: hacky dataList.dList
     for dataSet in dataList.dList:
