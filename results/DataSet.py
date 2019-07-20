@@ -27,8 +27,6 @@ class DataSet:
         self.false_negative = false_negative
         self.true_negative = true_negative
         self.false_positiv = false_positive
-    def __init__(self, data):
-        self.data = data
 
     def isSameType(self, dataSet):
         if (

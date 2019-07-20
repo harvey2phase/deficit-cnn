@@ -1,5 +1,6 @@
 from DataSet import DataSet
 
+import sys
 
 class DataList:
     def __init__(self, param):
@@ -13,19 +14,19 @@ class DataList:
     def add(self, dataSet: DataSet):
         self.dList.append(dataSet)
 
-    def accuracyToString(self):
-        string = ""
-        for dataSet in self.dList:
-            string += str(dataSet.accuracy) + ", "
-        return string[: -2]
+    def isEmpty(self):
+        if self.dList:
+            #print("DataList is not empty")
+            return False
+        #print("DataList is empty")
+        return True
+
+    #---------------------------------------------------------------------------
+    # Get methods
+    #---------------------------------------------------------------------------
 
     def getFirst(self):
         return self.dList[0]
-
-    def isEmpty():
-        if self.dList:
-            return True
-        return False
 
     def getAverageAccuracy(self):
         totalAccuracy = 0
@@ -36,5 +37,19 @@ class DataList:
     def getHistory(self):
         return self.dList[0].history
 
-    def getDataSetAt(i):
-        return dList[i]
+    def getDataSetAt(self, i):
+        return self.dList[i]
+
+    def getSize(self):
+        return len(self.dList)
+
+    #---------------------------------------------------------------------------
+    # toString methods
+    #---------------------------------------------------------------------------
+
+    def accuracyToString(self):
+        string = ""
+        for dataSet in self.dList:
+            string += str(dataSet.accuracy) + ", "
+        return string[: -2]
+

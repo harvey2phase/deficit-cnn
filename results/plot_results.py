@@ -36,12 +36,12 @@ def plot_file(results_name):
     dataTable = create_dataTable(dataList)
     print(dataTable.getSize())
 
+    '''
     filename = results_name[: -4]
     config = open(filename + "_configs.txt", "w+")
     table_range = range(dataTable.getSize())
     for i in table_range:
         dataList = dataTable.getDataListAt(i)
-        '''
         config.write(
             str(i) + " - " +
             "data: " + dataSet.data +
@@ -51,29 +51,41 @@ def plot_file(results_name):
             " | dense: " + dataSet.dense +
             " | logits: " + dataSet.logits + "\n"
         )
-        '''
 
         plt.scatter(dataList.getHistory(), dataList.getAverageAccuracy())
     plt.show()
+    '''
 
 def create_dataTable(dataList):
     dataTable = DataTable(None)
     indices = range(dataList.getSize())
 
+    print(dataTable.getSize())
+    dataTable.add(dataList.getDataSetAt(0))
+    dataTable.add(dataList.getDataSetAt(1))
+    '''
+    for i in indices:
+        dataTable.add(dataList.getDataSetAt(i))
+    '''
+    '''
     #TODO: hacky dataList.dList
-    for dataSet in dataList.dList:
-        if not dataTable.isEmpty():
-            print(dataTable.accuracyToString())
-        print(dataSet.accuracy)
-        if dataTable.isEmpty():
-            dataTable = DataTable(dataSet)
-        else:
-            for i in range(dataTable.size()):
-                if dataSet.isSameType(dataSettable.getDataSet(i, 0)):
-                    dataTable.getRow().add(dataSet)
-                    dataSet = None
-            if not dataSet == None:
-                dataTable.add(DataList(dataSet))
+    #for i in indices:
+    #for dataSet in dataList.dList:
+    #    if not dataTable.isEmpty():
+    #        print(dataTable.accuracyToString())
+    #    #print(dataSet.accuracy)
+    #    if dataTable.isEmpty():
+    #        dataTable = DataTable(dataSet)
+    #    else:
+    #        for i in range(dataTable.size()):
+    #            if dataSet.isSameType(dataSettable.getDataSet(i, 0)):
+    #                dataTable.getRow().add(dataSet)
+    #                dataSet = None
+    #        if not dataSet == None:
+    #            dataTable.add(DataList(dataSet))
+
+    #print(dataTable.accuracyToString())
+    '''
 
     return dataTable
 
