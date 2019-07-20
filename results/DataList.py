@@ -1,8 +1,10 @@
 from DataSet import DataSet
 
 import sys
+import matplotlib.pyplot as plt
 
 class DataList:
+
     def __init__(self, param):
         if param == None:
             self.dList = []
@@ -13,6 +15,17 @@ class DataList:
 
     def add(self, dataSet: DataSet):
         self.dList.append(dataSet)
+
+    #---------------------------------------------------------------------------
+    # Checks
+    #---------------------------------------------------------------------------
+
+    def scatterPlot(self):
+        plt.scatter(self.getFirst().history, self.getAverageAccuracy())
+
+    #---------------------------------------------------------------------------
+    # Checks
+    #---------------------------------------------------------------------------
 
     def isEmpty(self):
         if self.dList:
@@ -44,7 +57,7 @@ class DataList:
         return len(self.dList)
 
     #---------------------------------------------------------------------------
-    # toString methods
+    # toString method
     #---------------------------------------------------------------------------
 
     def accuracyToString(self):

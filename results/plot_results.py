@@ -19,22 +19,21 @@ LAB = []
 #-------------------------------------------------------------------------------
 
 def main():
-    plot_file("new_format/5_assorted.txt")
+    plot_file("new_format/assorted.txt")
 
 #-------------------------------------------------------------------------------
 # Plot function
 #-------------------------------------------------------------------------------
 
 def plot_file(results_name):
+    tokenized_list = tokenize_file(results_name)
+    tokenized_file = open(results_name[:-4] + "_tokenized.txt", "w+")
+    for token in tokenized_list:
+        tokenized_file.write(token + "\n")
+    tokenized_file.close()
 
-    dataList = create_dataList(
-        tokenize_file(
-            results_name
-        )
-    )
-
-    dataTable = create_dataTable(dataList)
-    print(dataTable.getSize())
+    dataTable = create_dataTable(create_dataList(tokenized_list))
+    dataTable.scatterPlot()
 
     '''
     filename = results_name[: -4]
@@ -60,32 +59,8 @@ def create_dataTable(dataList):
     dataTable = DataTable(None)
     indices = range(dataList.getSize())
 
-    print(dataTable.getSize())
-    dataTable.add(dataList.getDataSetAt(0))
-    dataTable.add(dataList.getDataSetAt(1))
-    '''
     for i in indices:
         dataTable.add(dataList.getDataSetAt(i))
-    '''
-    '''
-    #TODO: hacky dataList.dList
-    #for i in indices:
-    #for dataSet in dataList.dList:
-    #    if not dataTable.isEmpty():
-    #        print(dataTable.accuracyToString())
-    #    #print(dataSet.accuracy)
-    #    if dataTable.isEmpty():
-    #        dataTable = DataTable(dataSet)
-    #    else:
-    #        for i in range(dataTable.size()):
-    #            if dataSet.isSameType(dataSettable.getDataSet(i, 0)):
-    #                dataTable.getRow().add(dataSet)
-    #                dataSet = None
-    #        if not dataSet == None:
-    #            dataTable.add(DataList(dataSet))
-
-    #print(dataTable.accuracyToString())
-    '''
 
     return dataTable
 
@@ -95,68 +70,95 @@ def create_dataList(results):
 
     i = 0
     indices = len(results)
+    data, history, steps = None, None, None
+    filters, filt_sizes, dense, logits = None, None, None, None
+    accuracy = None
+    true_positive, false_negative = None, None
+    true_negative, false_positive = None, None
     while i < indices:
         if results[i] == "data":
             i += 1
-            dataSet = DataSet(results[i])
+            data = results[i]
 
         elif results[i] == "history":
             i += 1
-            dataSet.history = int(results[i])
-
-        elif results[i] == "global_step":
-            i += 1
-            dataSet.steps = int(results[i])
-
-            dataList.add(dataSet)
+            history = int(results[i])
 
         elif results[i] == "filters":
             i += 1
-            dataSet.filters = [int(results[i])]
+            filters = [int(results[i])]
             i += 1
             while results[i].isdigit():
-                dataSet.filters.append(int(results[i]))
+                filters.append(int(results[i]))
                 i += 1
             i -= 1
 
         elif results[i] == "sizes":
             i += 1
-            dataSet.filt_sizes = [int(results[i])]
+            filt_sizes = [int(results[i])]
             i += 1
             while results[i].isdigit():
-                dataSet.filt_sizes.append(int(results[i]))
+                filt_sizes.append(int(results[i]))
                 i += 1
             i -= 1
 
         elif results[i] == "dense":
             i += 1
-            dataSet.dense = int(results[i])
+            dense = int(results[i])
 
         elif results[i] == "logits":
             i += 1
-            dataSet.logits = int(results[i])
+            logits = int(results[i])
 
         elif results[i] == "accuracy":
             i += 1
-            dataSet.accuracy = float(results[i])
+            accuracy = float(results[i])
 
         elif results[i] == "false":
             i += 1
             if results[i] == "negatives":
                 i += 1
-                dataSet.false_negative = int(float(results[i]))
+                false_negative = int(float(results[i]))
             elif results[i] == "positives":
                 i += 1
-                dataSet.false_positive = int(float(results[i]))
+                false_positive = int(float(results[i]))
 
         elif results[i] == "true":
             i += 1
             if results[i] == "positives":
                 i += 1
-                dataSet.true_positive = int(float(results[i]))
+                true_positive = int(float(results[i]))
             elif results[i] == "negatives":
                 i += 1
-                dataSet.true_negative = int(float(results[i]))
+                true_negative = int(float(results[i]))
+
+        elif results[i] == "global_step":
+            i += 1
+            steps = int(results[i])
+
+        elif results[i] == "---":
+            dataList.add(
+                DataSet(
+                    data,
+                    history,
+                    steps,
+                    filters,
+                    filt_sizes,
+                    dense,
+                    logits,
+                    accuracy,
+                    true_positive,
+                    false_negative,
+                    true_negative,
+                    false_positive
+                )
+            )
+            data, history, steps = None, None, None
+            filters, filt_sizes, dense, logits = None, None, None, None
+            accuracy = None
+            true_positive, false_negative = None, None
+            true_negative, false_positive = None, None
+
         i += 1
 
     return dataList
@@ -168,7 +170,7 @@ def tokenize_file(results_name):
     for word in results_file.read().split():
         word = word.replace(",", "").replace("[", "").replace("\'", "")
         word = word.replace("]", "").replace("{", "").replace("}", "")
-        word = word.replace(":", "").replace("-", "").replace("/", "")
+        word = word.replace(":", "").replace("/", "")
         if not word == "":
             results.append(word.lower())
 

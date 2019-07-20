@@ -2,6 +2,7 @@ from DataSet import DataSet
 from DataList import DataList
 
 import sys
+import matplotlib.pyplot as plt
 
 class DataTable:
 
@@ -20,11 +21,28 @@ class DataTable:
         else:
             sys.exit("DataList init error")
 
-    def accuracyToString(self):
-        string = ""
+    def add(self, dataSet: DataSet):
+        if self.isEmpty():
+            self.dTable.append(DataList(dataSet))
+        else:
+            for dataList in self.dTable:
+                if dataList.getFirst().isSameType(dataSet):
+                    dataList.add(dataSet)
+                    return
+            self.dTable.append(DataList(dataSet))
+
+    #---------------------------------------------------------------------------
+    # Extended functions
+    #---------------------------------------------------------------------------
+
+    def scatterPlot(self):
         for dataList in self.dTable:
-            string += dataList.accuracyToString() + "\n"
-        return string
+            dataList.scatterPlot()
+        plt.show()
+
+    #---------------------------------------------------------------------------
+    # Checks
+    #---------------------------------------------------------------------------
 
     def isEmpty(self):
         if not self.dTable:
@@ -35,23 +53,34 @@ class DataTable:
             return True
         return False
 
+    #---------------------------------------------------------------------------
+    # Get methods
+    #---------------------------------------------------------------------------
+
     def getSize(self):
         return len(self.dTable)
 
-    def add(self, dataSet: DataSet):
+    def getCount(self):
         if self.isEmpty():
-            #print(self.dTable)
-            self.dTable.append(DataList(dataSet))
-            #print(self.dTable)
-        else:
-            for dataList in self.dTable:
-                if dataList.getFirst().isSameType(DataSet):
-                    dataList.add(para)
-                    return
-            self.dTable.append(DataList(param))
+            return 0
+        count = 0
+        for dataList in self.dTable:
+            count += dataList.getSize()
+        return count
 
     def getDataListAt(self, row):
         return self.dTable[row]
 
     def getDataSet(self, row, index):
         return self.dTable[row][index]
+
+    #---------------------------------------------------------------------------
+    # toString method
+    #---------------------------------------------------------------------------
+
+    def accuracyToString(self):
+        string = ""
+        for dataList in self.dTable:
+            string += dataList.accuracyToString() + "\n"
+        return string
+
