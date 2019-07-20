@@ -9,11 +9,6 @@ class DataTable:
     def __init__(self, param):
         if param == None:
             self.dTable = []
-            #print(self.dTable[0].dList)
-            #if self.dTable[0].dList == []:
-            #    print("empty!")
-            #if self.dTable[0].isEmpty():
-            #    print("empty!")
         elif isinstance(param, DataList):
             self.dTable = [param]
         elif isinstance(param, DataSet):
@@ -48,8 +43,6 @@ class DataTable:
         if not self.dTable:
             return True
         elif self.dTable[0].isEmpty():
-            #print(self.dTable[0].accuracyToString())
-            #print("Table is empty")
             return True
         return False
 
