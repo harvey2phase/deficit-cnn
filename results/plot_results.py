@@ -1,3 +1,4 @@
+from DataConfig import DataConfig
 from DataSet import DataSet
 from DataList import DataList
 from DataTable import DataTable
@@ -139,13 +140,15 @@ def create_dataList(results):
         elif results[i] == "---":
             dataList.add(
                 DataSet(
-                    data,
-                    history,
-                    steps,
-                    filters,
-                    filt_sizes,
-                    dense,
-                    logits,
+                    DataConfig(
+                        data,
+                        history,
+                        steps,
+                        filters,
+                        filt_sizes,
+                        dense,
+                        logits
+                    ),
                     accuracy,
                     true_positive,
                     false_negative,

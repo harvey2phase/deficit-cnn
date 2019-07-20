@@ -21,7 +21,7 @@ class DataList:
     #---------------------------------------------------------------------------
 
     def scatterPlot(self):
-        plt.scatter(self.getFirst().history, self.getAverageAccuracy())
+        plt.scatter(self.getHistory(), self.getAverageAccuracy())
 
     #---------------------------------------------------------------------------
     # Checks
@@ -29,9 +29,7 @@ class DataList:
 
     def isEmpty(self):
         if self.dList:
-            #print("DataList is not empty")
             return False
-        #print("DataList is empty")
         return True
 
     #---------------------------------------------------------------------------
@@ -48,7 +46,7 @@ class DataList:
         return totalAccuracy / len(self.dList)
 
     def getHistory(self):
-        return self.dList[0].history
+        return self.getFirst().dataConfig.history
 
     def getDataSetAt(self, i):
         return self.dList[i]

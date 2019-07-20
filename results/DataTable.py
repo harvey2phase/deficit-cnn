@@ -26,7 +26,7 @@ class DataTable:
             self.dTable.append(DataList(dataSet))
         else:
             for dataList in self.dTable:
-                if dataList.getFirst().isSameType(dataSet):
+                if dataList.getFirst().isSameConfig(dataSet.dataConfig):
                     dataList.add(dataSet)
                     return
             self.dTable.append(DataList(dataSet))
