@@ -9,8 +9,6 @@ class DataTable:
     def __init__(self, param):
         if param == None:
             self.dTable = []
-        elif isinstance(param, DataList):
-            self.dTable = [param]
         elif isinstance(param, DataSet):
             self.dTable = [DataList(param)]
         else:
@@ -35,12 +33,24 @@ class DataTable:
             dataList.scatterPlot()
         plt.show()
 
-    def getConfigs():
+    def getConfigs(self):
         configs = ""
-        for dataList in dTable:
-            configs += dataList.getConfig()
-        return configs
+        histories = []
+        counts = []
+        for dataList in self.dTable:
+            history = dataList.getHistory()
+            if not history in histories:
+                histories.append(history)
+                counts.append(1)
+            else:
+                counts[histories.index(history)] += 1
 
+            configs += (
+                str(history) + "." +
+                str(counts[histories.index(history)]) + " | " +
+                dataList.configToString() + "\n"
+            )
+        return configs
 
     #---------------------------------------------------------------------------
     # Checks

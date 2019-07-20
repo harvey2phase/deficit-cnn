@@ -39,9 +39,6 @@ class DataList:
     def getFirst(self):
         return self.dList[0]
 
-    def getConfig(self):
-        return self.getFirst().config.toString()
-
     def getAverageAccuracy(self):
         totalAccuracy = 0
         for dataSet in self.dList:
@@ -66,4 +63,7 @@ class DataList:
         for dataSet in self.dList:
             string += str(dataSet.accuracy) + ", "
         return string[: -2]
+
+    def configToString(self):
+        return self.getFirst().dataConfig.toString()
 

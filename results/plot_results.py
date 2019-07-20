@@ -34,13 +34,12 @@ def plot_file(results_name):
     tokenized_file.close()
 
     dataTable = create_dataTable(create_dataList(tokenized_list))
-    dataTable.scatterPlot()
+    #dataTable.scatterPlot()
 
-    '''
     filename = results_name[: -4]
     config = open(filename + "_configs.txt", "w+")
-    '''
-    print(dataTable.getConfigs())
+    config.write(dataTable.getConfigs())
+    config.close()
 
 def create_dataTable(dataList):
     dataTable = DataTable(None)

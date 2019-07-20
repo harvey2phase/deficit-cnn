@@ -65,7 +65,11 @@ class DataConfig:
 
     def toString(self):
         return (
-            "data: " + self.data + " | steps: " + self.steps +
-            " | filters: " + self.filters + " | sizes: " + self.filt_sizes +
-            " | dense: " + self.dense + " | logits: " + self.logits
+            "history: " + str(self.history) +
+            " | steps: " + str(self.steps) +
+            " | filters: " + str(self.filters) +
+            " | sizes: " + str(self.filt_sizes) +
+            " | dense: " + str(self.dense) +
+            " | logits: " + str(self.logits) +
+            " | data: " + str(self.data)
         )
