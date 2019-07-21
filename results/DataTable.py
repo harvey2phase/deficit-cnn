@@ -45,7 +45,8 @@ class DataTable:
     def scatterPlot(self, ax, results_name):
         for dataList in self.dTable:
             dataList.scatterPlot(ax)
-        plt.savefig(results_name + ".png", dpi = 400)
+        plt.show()
+        #plt.savefig(results_name + ".png", dpi = 400)
 
     def getConfigs(self):
         configs = ""
