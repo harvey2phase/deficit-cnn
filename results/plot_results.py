@@ -28,7 +28,9 @@ def main():
 
 def plot_file(results_name):
     tokenized_list = tokenize_file(results_name)
-    tokenized_file = open(results_name[:-4] + "_tokenized.txt", "w+")
+
+    results_name = results_name[: -4]
+    tokenized_file = open(results_name + "_tokenized.txt", "w+")
     for token in tokenized_list:
         tokenized_file.write(token + "\n")
     tokenized_file.close()
@@ -36,10 +38,9 @@ def plot_file(results_name):
     dataTable = create_dataTable(create_dataList(tokenized_list))
 
     fig, ax = plt.subplots()
-    dataTable.scatterPlot(ax)
+    dataTable.scatterPlot(ax, results_name)
 
-    filename = results_name[: -4]
-    config = open(filename + "_configs.txt", "w+")
+    config = open(results_name  + "_configs.txt", "w+")
     config.write(dataTable.getConfigs())
     config.close()
 

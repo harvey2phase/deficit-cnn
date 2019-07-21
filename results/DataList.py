@@ -23,13 +23,14 @@ class DataList:
     def scatterPlot(self, ax):
         his, acc = self.getHistory(), self.getAverageAccuracy()
         if self.getSize() < 2:
-            ax.scatter(his, acc, c = 'r')
+            c = 'r'
         elif self.getSize() < 6:
-            ax.scatter(his, acc, c = 'b')
+            c = 'b'
         elif self.getSize() < 11:
-            ax.scatter(his, acc, c = 'g')
+            c = 'g'
         else:
-            ax.scatter(his, acc, c = 'k')
+            c = 'k'
+        ax.scatter(his, acc, c = c)
         ax.annotate(self.getFirst().dataConfig.name, (his, acc))
 
 

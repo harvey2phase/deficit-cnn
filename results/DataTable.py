@@ -42,23 +42,15 @@ class DataTable:
     # Extended functions
     #---------------------------------------------------------------------------
 
-    def scatterPlot(self, ax):
+    def scatterPlot(self, ax, results_name):
         for dataList in self.dTable:
             dataList.scatterPlot(ax)
-        plt.savefig("new_image.png", dpi = 400)
+        plt.savefig(results_name + ".png", dpi = 400)
 
     def getConfigs(self):
         configs = ""
-        #histories = []
-        #counts = []
-        # TODO
         for dataList in self.dTable:
-
-            configs += (
-                #str(history) + "." +
-                #str(counts[histories.index(history)]) +
-                dataList.configToString() + "\n"
-            )
+            configs += (dataList.configToString() + "\n")
         return configs
 
     #---------------------------------------------------------------------------
