@@ -14,11 +14,25 @@ class DataTable:
         else:
             sys.exit("DataList init error")
 
-    def add(self, dataSet: DataSet):
+    def add(self, dataSet: DataSet, histories, counts):
         if self.isEmpty():
+            histories.append(dataSet.dataConfig.history)
+            counts.append(1)
+            dataSet.dataConfig.name = str(dataSet.dataConfig.history) + ".1"
             self.dTable.append(DataList(dataSet))
         else:
+            # TODO
             for dataList in self.dTable:
+                history = dataList.getHistory()
+                if not history in histories:
+                    histories.append(history)
+                    counts.append(1)
+                else:
+                    counts[histories.index(history)] += 1
+                dataSet.dataConfig.name = (
+                    str(history) + "." +
+                    str(counts[histories.index(history)])
+                )
                 if dataList.getFirst().isSameConfig(dataSet.dataConfig):
                     dataList.add(dataSet)
                     return
@@ -35,19 +49,14 @@ class DataTable:
 
     def getConfigs(self):
         configs = ""
-        histories = []
-        counts = []
+        #histories = []
+        #counts = []
+        # TODO
         for dataList in self.dTable:
-            history = dataList.getHistory()
-            if not history in histories:
-                histories.append(history)
-                counts.append(1)
-            else:
-                counts[histories.index(history)] += 1
 
             configs += (
-                str(history) + "." +
-                str(counts[histories.index(history)]) + " | " +
+                #str(history) + "." +
+                #str(counts[histories.index(history)]) +
                 dataList.configToString() + "\n"
             )
         return configs

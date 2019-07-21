@@ -45,8 +45,10 @@ def create_dataTable(dataList):
     dataTable = DataTable(None)
     indices = range(dataList.getSize())
 
+    histories = []
+    counts = []
     for i in indices:
-        dataTable.add(dataList.getDataSetAt(i))
+        dataTable.add(dataList.getDataSetAt(i), histories, counts)
 
     return dataTable
 

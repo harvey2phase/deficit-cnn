@@ -19,6 +19,8 @@ class DataConfig:
         self.dense = dense
         self.logits = logits
 
+        self.name = "default"
+
     #---------------------------------------------------------------------------
     # Checks
     #---------------------------------------------------------------------------
@@ -65,7 +67,8 @@ class DataConfig:
 
     def toString(self):
         return (
-            "history: " + str(self.history) +
+            self.name +
+            " | history: " + str(self.history) +
             " | steps: " + str(self.steps) +
             " | filters: " + str(self.filters) +
             " | sizes: " + str(self.filt_sizes) +
