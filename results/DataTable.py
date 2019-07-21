@@ -51,7 +51,7 @@ class DataTable:
         count = 0
         skip = 2
         for dataList in self.dTable:
-            if count / skip   == 0:
+            if count / skip == 0:
                 dataList.scatterPlot(ax)
         plt.show()
         #plt.savefig(results_name + ".png", dpi = 400)
