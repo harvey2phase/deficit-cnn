@@ -16,10 +16,7 @@ class DataTable:
 
     def add(self, dataSet: DataSet, histories, counts):
         if self.isEmpty():
-            histories.append(dataSet.dataConfig.history)
-            counts.append(1)
-            dataSet.dataConfig.name = str(dataSet.dataConfig.history) + ".1"
-            self.dTable.append(DataList(dataSet))
+            self.addDataList(dataSet, histories, counts)
         else:
             # TODO
             for dataList in self.dTable:
@@ -37,6 +34,12 @@ class DataTable:
                     dataList.add(dataSet)
                     return
             self.dTable.append(DataList(dataSet))
+
+    def addDataList(self, dataSet, histories, counts):
+        histories.append(dataSet.dataConfig.history)
+        counts.append(1)
+        dataSet.dataConfig.name = str(dataSet.dataConfig.history) + ".1"
+        self.dTable.append(DataList(dataSet))
 
     #---------------------------------------------------------------------------
     # Extended functions
