@@ -33,7 +33,7 @@ class DataTable:
                 if dataList.getFirst().isSameConfig(dataSet.dataConfig):
                     dataList.add(dataSet)
                     return
-            self.dTable.append(DataList(dataSet))
+            self.addDataList(dataSet, histories, counts)
 
     def addDataList(self, dataSet, histories, counts):
         histories.append(dataSet.dataConfig.history)
