@@ -15,8 +15,8 @@ MATRIX_LENGTH_RANGE = range(100)
 
 def main():
     transform_and_write(
-        "../raw_data/matrices/e4/100_annk/dot",
-        "../raw_data/matrices/e4/100_annk/line",
+        "../raw_data/matrices/e4/200_annk/dot",
+        "../raw_data/matrices/e4/200_annk/line",
         dot_to_line_matrix,
         None
     )
