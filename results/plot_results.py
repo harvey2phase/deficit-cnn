@@ -34,7 +34,9 @@ def plot_file(results_name):
     tokenized_file.close()
 
     dataTable = create_dataTable(create_dataList(tokenized_list))
-    dataTable.scatterPlot()
+
+    fig, ax = plt.subplots()
+    dataTable.scatterPlot(ax)
 
     filename = results_name[: -4]
     config = open(filename + "_configs.txt", "w+")

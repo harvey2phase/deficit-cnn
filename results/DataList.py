@@ -20,15 +20,17 @@ class DataList:
     # Checks
     #---------------------------------------------------------------------------
 
-    def scatterPlot(self):
+    def scatterPlot(self, ax):
+        his, acc = self.getHistory(), self.getAverageAccuracy()
         if self.getSize() < 2:
-            plt.scatter(self.getHistory(), self.getAverageAccuracy(), c = 'r')
+            ax.scatter(his, acc, c = 'r')
         elif self.getSize() < 6:
-            plt.scatter(self.getHistory(), self.getAverageAccuracy(), c = 'b')
+            ax.scatter(his, acc, c = 'b')
         elif self.getSize() < 11:
-            plt.scatter(self.getHistory(), self.getAverageAccuracy(), c = 'g')
+            ax.scatter(his, acc, c = 'g')
         else:
-            plt.scatter(self.getHistory(), self.getAverageAccuracy(), c = 'k')
+            ax.scatter(his, acc, c = 'k')
+        ax.annotat(self.getFirst().dataConfig.name, (his, acc))
 
 
     #---------------------------------------------------------------------------

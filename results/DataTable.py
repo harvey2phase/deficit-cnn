@@ -42,9 +42,9 @@ class DataTable:
     # Extended functions
     #---------------------------------------------------------------------------
 
-    def scatterPlot(self):
+    def scatterPlot(self, ax):
         for dataList in self.dTable:
-            dataList.scatterPlot()
+            dataList.scatterPlot(ax)
         plt.savefig("new_image.png", dpi = 400)
 
     def getConfigs(self):
