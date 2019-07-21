@@ -11,4 +11,4 @@
 module load cuda cudnn
 module load python/3.6
 source tensorflow/bin/activate
-python3 ../cnn/1_layer_deficit_cnn.py
+python3 ../cnn/4_layer_deficit_cnn.py
