@@ -20,7 +20,7 @@ LAB = []
 #-------------------------------------------------------------------------------
 
 def main():
-    plot_file("new_format/assorted.txt")
+    plot_file("new_format/2_4_8_16_assorted.txt")
 
 #-------------------------------------------------------------------------------
 # Plot function
@@ -34,7 +34,7 @@ def plot_file(results_name):
     tokenized_file.close()
 
     dataTable = create_dataTable(create_dataList(tokenized_list))
-    #dataTable.scatterPlot()
+    dataTable.scatterPlot()
 
     filename = results_name[: -4]
     config = open(filename + "_configs.txt", "w+")

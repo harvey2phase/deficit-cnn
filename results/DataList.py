@@ -21,7 +21,15 @@ class DataList:
     #---------------------------------------------------------------------------
 
     def scatterPlot(self):
-        plt.scatter(self.getHistory(), self.getAverageAccuracy())
+        if self.getSize() < 2:
+            plt.scatter(self.getHistory(), self.getAverageAccuracy(), c = 'r')
+        elif self.getSize() < 6:
+            plt.scatter(self.getHistory(), self.getAverageAccuracy(), c = 'b')
+        elif self.getSize() < 11:
+            plt.scatter(self.getHistory(), self.getAverageAccuracy(), c = 'g')
+        else:
+            plt.scatter(self.getHistory(), self.getAverageAccuracy(), c = 'k')
+
 
     #---------------------------------------------------------------------------
     # Checks
