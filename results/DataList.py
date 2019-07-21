@@ -76,5 +76,8 @@ class DataList:
         return string[: -2]
 
     def configToString(self):
-        return self.getFirst().dataConfig.toString()
+        configs = ""
+        for dataSet in self.dList:
+            configs += dataSet.dataConfig.toString() + "\n"
+        return configs + "\n"
 
