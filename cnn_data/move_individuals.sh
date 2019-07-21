@@ -1,6 +1,6 @@
 in_dir="e4_age80/200_annk/cohort1/5y_dead"
-out_dir="e4_age80/200_annk/cohort1/5y_unbiased_eval_ind"
-num_to_move=415
+out_dir="e4_age80/200_annk/cohort1/5y_unbiased_train_ind"
+num_to_move=878
 
 ls $in_dir | sort -R | tail -$num_to_move | while read file; do
 
