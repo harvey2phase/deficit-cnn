@@ -12,6 +12,7 @@ class DataList:
             self.dList = [param]
         else:
             sys.exit("DataList init error")
+        self.name = "default"
 
     def add(self, dataSet: DataSet):
         self.dList.append(dataSet)
@@ -31,7 +32,7 @@ class DataList:
         else:
             c = 'k'
         ax.scatter(his, acc, c = c)
-        ax.annotate(self.getFirst().dataConfig.name, (his, acc))
+        ax.annotate(self.name, (his, acc))
 
 
     #---------------------------------------------------------------------------
@@ -76,7 +77,7 @@ class DataList:
         return string[: -2]
 
     def configToString(self):
-        configs = ""
+        configs = self.name +  "\n"
         for dataSet in self.dList:
             configs += dataSet.dataConfig.toString() + "\n"
         return configs + "\n"

@@ -29,22 +29,30 @@ class DataTable:
         if not history in histories:
             histories.append(dataSet.dataConfig.history)
             counts.append(1)
-            dataSet.dataConfig.name = str(dataSet.dataConfig.history) + ".1"
+
+            dataList = DataList(dataSet)
+            dataList.name = str(dataSet.dataConfig.history) + ".1"
+
         else:
             counts[histories.index(history)] += 1
-            dataSet.dataConfig.name = (
+            dataList = DataList(dataSet)
+            dataList.name = (
                 str(history) + "." +
                 str(counts[histories.index(history)])
             )
-        self.dTable.append(DataList(dataSet))
+
+        self.dTable.append(dataList)
 
     #---------------------------------------------------------------------------
     # Extended functions
     #---------------------------------------------------------------------------
 
     def scatterPlot(self, ax, results_name):
+        count = 0
+        skip = 2
         for dataList in self.dTable:
-            dataList.scatterPlot(ax)
+            if count / skip   == 0:
+                dataList.scatterPlot(ax)
         plt.show()
         #plt.savefig(results_name + ".png", dpi = 400)
 
