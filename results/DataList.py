@@ -30,7 +30,7 @@ class DataList:
             ax.scatter(his, acc, c = 'g')
         else:
             ax.scatter(his, acc, c = 'k')
-        ax.annotat(self.getFirst().dataConfig.name, (his, acc))
+        ax.annotate(self.getFirst().dataConfig.name, (his, acc))
 
 
     #---------------------------------------------------------------------------
