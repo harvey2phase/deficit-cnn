@@ -18,15 +18,15 @@ import os.path
 # Constants
 #-------------------------------------------------------------------------------
 
-NODE_COUNT = 100
+NODE_COUNT = 200
 YEAR_COUNT = 120
 
 DAMAGED = 1
 REPAIRED = -1
 
 DATA_DIR = "../raw_data/model_data/e4_by_decade/"
-NODE_FILE_DIR = "../raw_data/nodes/100_annk.txt"
-MATRIX_OUT_DIR = "../raw_data/matrices/e4/100_annk/dot/"
+NODE_FILE_DIR = "../raw_data/nodes/200_annk.txt"
+MATRIX_OUT_DIR = "../raw_data/matrices/e4/200_annk/dot/"
 #IMAGE_OUT_DIR = "images/e4/dot/50_annk/"
 
 DEATH_DECADE_RANGE = range(2, 12)

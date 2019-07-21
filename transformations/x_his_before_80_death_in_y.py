@@ -7,11 +7,11 @@ from transforms import transform
 #-------------------------------------------------------------------------------
 
 def main():
-    get_one_data_set(
-        "../cnn_data/e4_age80/50_annk/prob_of_death_at_80/",
-        "8",
-        "5"
-    )
+    #get_one_data_set(
+    #    "../cnn_data/e4_age80/50_annk/prob_of_death_at_80/",
+    #    "8",
+    #    "5"
+    #)
 
     get_one_data_set(
         "../cnn_data/e4_age80/50_annk/prob_of_death_at_80/",
