@@ -16,29 +16,26 @@ class DataTable:
 
     def add(self, dataSet: DataSet, histories, counts):
         if self.isEmpty():
-            self.addDataList(dataSet, histories, counts)
+            history = dataSet.dataConfig.history
         else:
-            # TODO
             for dataList in self.dTable:
-                history = dataList.getHistory()
-                if not history in histories:
-                    histories.append(history)
-                    counts.append(1)
-                else:
-                    counts[histories.index(history)] += 1
-                dataSet.dataConfig.name = (
-                    str(history) + "." +
-                    str(counts[histories.index(history)])
-                )
                 if dataList.getFirst().isSameConfig(dataSet.dataConfig):
                     dataList.add(dataSet)
                     return
-            self.addDataList(dataSet, histories, counts)
+            history = dataList.getHistory()
+        self.addDataList(dataSet, history, histories, counts)
 
-    def addDataList(self, dataSet, histories, counts):
-        histories.append(dataSet.dataConfig.history)
-        counts.append(1)
-        dataSet.dataConfig.name = str(dataSet.dataConfig.history) + ".1"
+    def addDataList(self, dataSet, history, histories, counts):
+        if not history in histories:
+            histories.append(dataSet.dataConfig.history)
+            counts.append(1)
+            dataSet.dataConfig.name = str(dataSet.dataConfig.history) + ".1"
+        else:
+            counts[histories.index(history)] += 1
+            dataSet.dataConfig.name = (
+                str(history) + "." +
+                str(counts[histories.index(history)])
+            )
         self.dTable.append(DataList(dataSet))
 
     #---------------------------------------------------------------------------

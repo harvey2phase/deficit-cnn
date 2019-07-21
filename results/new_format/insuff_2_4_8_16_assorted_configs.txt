@@ -1,384 +1,384 @@
 2.1 | history: 2 | steps: 50000 | filters: [32] | sizes: [5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
 2.2 | history: 2 | steps: 50000 | filters: [32] | sizes: [5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.4 | history: 2 | steps: 50000 | filters: [32] | sizes: [5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.7 | history: 2 | steps: 50000 | filters: [32] | sizes: [5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.11 | history: 2 | steps: 50000 | filters: [32] | sizes: [5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.16 | history: 2 | steps: 50000 | filters: [32] | sizes: [5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.22 | history: 2 | steps: 50000 | filters: [32] | sizes: [5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.29 | history: 2 | steps: 50000 | filters: [32] | sizes: [5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.37 | history: 2 | steps: 50000 | filters: [32] | sizes: [5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.46 | history: 2 | steps: 100000 | filters: [32] | sizes: [5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.56 | history: 2 | steps: 100000 | filters: [32] | sizes: [5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.67 | history: 2 | steps: 100000 | filters: [32] | sizes: [5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.79 | history: 2 | steps: 100000 | filters: [32] | sizes: [5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.92 | history: 2 | steps: 100000 | filters: [32] | sizes: [5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.106 | history: 2 | steps: 100000 | filters: [32] | sizes: [5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.121 | history: 2 | steps: 100000 | filters: [32] | sizes: [5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.137 | history: 2 | steps: 100000 | filters: [32] | sizes: [5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.154 | history: 2 | steps: 100000 | filters: [32] | sizes: [5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.172 | history: 2 | steps: 200000 | filters: [32] | sizes: [5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.191 | history: 2 | steps: 200000 | filters: [32] | sizes: [5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.211 | history: 2 | steps: 200000 | filters: [32] | sizes: [5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.232 | history: 2 | steps: 200000 | filters: [32] | sizes: [5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.254 | history: 2 | steps: 200000 | filters: [32] | sizes: [5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.277 | history: 2 | steps: 200000 | filters: [32] | sizes: [5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.301 | history: 2 | steps: 200000 | filters: [32] | sizes: [5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.326 | history: 2 | steps: 200000 | filters: [32] | sizes: [5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.352 | history: 2 | steps: 200000 | filters: [32] | sizes: [5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.379 | history: 2 | steps: 50000 | filters: [64] | sizes: [5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.407 | history: 2 | steps: 50000 | filters: [64] | sizes: [5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.436 | history: 2 | steps: 50000 | filters: [64] | sizes: [5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.466 | history: 2 | steps: 50000 | filters: [64] | sizes: [5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.497 | history: 2 | steps: 50000 | filters: [64] | sizes: [5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.529 | history: 2 | steps: 50000 | filters: [64] | sizes: [5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.562 | history: 2 | steps: 50000 | filters: [64] | sizes: [5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.596 | history: 2 | steps: 50000 | filters: [64] | sizes: [5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.631 | history: 2 | steps: 50000 | filters: [64] | sizes: [5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.667 | history: 2 | steps: 100000 | filters: [64] | sizes: [5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.704 | history: 2 | steps: 100000 | filters: [64] | sizes: [5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.742 | history: 2 | steps: 100000 | filters: [64] | sizes: [5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.781 | history: 2 | steps: 100000 | filters: [64] | sizes: [5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.821 | history: 2 | steps: 100000 | filters: [64] | sizes: [5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.862 | history: 2 | steps: 100000 | filters: [64] | sizes: [5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.904 | history: 2 | steps: 100000 | filters: [64] | sizes: [5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.947 | history: 2 | steps: 100000 | filters: [64] | sizes: [5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.991 | history: 2 | steps: 100000 | filters: [64] | sizes: [5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.1036 | history: 2 | steps: 200000 | filters: [64] | sizes: [5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.1082 | history: 2 | steps: 200000 | filters: [64] | sizes: [5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.1129 | history: 2 | steps: 200000 | filters: [64] | sizes: [5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.1177 | history: 2 | steps: 200000 | filters: [64] | sizes: [5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.1226 | history: 2 | steps: 200000 | filters: [64] | sizes: [5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.1276 | history: 2 | steps: 200000 | filters: [64] | sizes: [5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.1327 | history: 2 | steps: 200000 | filters: [64] | sizes: [5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.1379 | history: 2 | steps: 200000 | filters: [64] | sizes: [5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.1432 | history: 2 | steps: 200000 | filters: [64] | sizes: [5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.1486 | history: 2 | steps: 50000 | filters: [128] | sizes: [5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.1541 | history: 2 | steps: 50000 | filters: [128] | sizes: [5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.1597 | history: 2 | steps: 50000 | filters: [128] | sizes: [5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.1654 | history: 2 | steps: 50000 | filters: [128] | sizes: [5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.1712 | history: 2 | steps: 50000 | filters: [128] | sizes: [5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.1771 | history: 2 | steps: 50000 | filters: [128] | sizes: [5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.1831 | history: 2 | steps: 50000 | filters: [128] | sizes: [5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.1892 | history: 2 | steps: 50000 | filters: [128] | sizes: [5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.1954 | history: 2 | steps: 50000 | filters: [128] | sizes: [5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.2017 | history: 2 | steps: 100000 | filters: [128] | sizes: [5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.2081 | history: 2 | steps: 100000 | filters: [128] | sizes: [5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.2146 | history: 2 | steps: 100000 | filters: [128] | sizes: [5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.2212 | history: 2 | steps: 100000 | filters: [128] | sizes: [5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.2279 | history: 2 | steps: 100000 | filters: [128] | sizes: [5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.2347 | history: 2 | steps: 100000 | filters: [128] | sizes: [5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.2416 | history: 2 | steps: 100000 | filters: [128] | sizes: [5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.2486 | history: 2 | steps: 100000 | filters: [128] | sizes: [5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.2557 | history: 2 | steps: 100000 | filters: [128] | sizes: [5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.2629 | history: 2 | steps: 200000 | filters: [128] | sizes: [5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.2702 | history: 2 | steps: 200000 | filters: [128] | sizes: [5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.2776 | history: 2 | steps: 200000 | filters: [128] | sizes: [5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.2851 | history: 2 | steps: 200000 | filters: [128] | sizes: [5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.2927 | history: 2 | steps: 200000 | filters: [128] | sizes: [5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.3004 | history: 2 | steps: 200000 | filters: [128] | sizes: [5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.3082 | history: 2 | steps: 200000 | filters: [128] | sizes: [5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.3161 | history: 2 | steps: 200000 | filters: [128] | sizes: [5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.3241 | history: 2 | steps: 200000 | filters: [128] | sizes: [5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-2.10615 | history: 4 | steps: 50000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.3 | history: 2 | steps: 50000 | filters: [32] | sizes: [5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.4 | history: 2 | steps: 50000 | filters: [32] | sizes: [5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.5 | history: 2 | steps: 50000 | filters: [32] | sizes: [5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.6 | history: 2 | steps: 50000 | filters: [32] | sizes: [5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.7 | history: 2 | steps: 50000 | filters: [32] | sizes: [5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.8 | history: 2 | steps: 50000 | filters: [32] | sizes: [5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.9 | history: 2 | steps: 50000 | filters: [32] | sizes: [5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.10 | history: 2 | steps: 100000 | filters: [32] | sizes: [5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.11 | history: 2 | steps: 100000 | filters: [32] | sizes: [5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.12 | history: 2 | steps: 100000 | filters: [32] | sizes: [5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.13 | history: 2 | steps: 100000 | filters: [32] | sizes: [5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.14 | history: 2 | steps: 100000 | filters: [32] | sizes: [5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.15 | history: 2 | steps: 100000 | filters: [32] | sizes: [5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.16 | history: 2 | steps: 100000 | filters: [32] | sizes: [5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.17 | history: 2 | steps: 100000 | filters: [32] | sizes: [5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.18 | history: 2 | steps: 100000 | filters: [32] | sizes: [5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.19 | history: 2 | steps: 200000 | filters: [32] | sizes: [5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.20 | history: 2 | steps: 200000 | filters: [32] | sizes: [5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.21 | history: 2 | steps: 200000 | filters: [32] | sizes: [5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.22 | history: 2 | steps: 200000 | filters: [32] | sizes: [5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.23 | history: 2 | steps: 200000 | filters: [32] | sizes: [5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.24 | history: 2 | steps: 200000 | filters: [32] | sizes: [5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.25 | history: 2 | steps: 200000 | filters: [32] | sizes: [5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.26 | history: 2 | steps: 200000 | filters: [32] | sizes: [5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.27 | history: 2 | steps: 200000 | filters: [32] | sizes: [5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.28 | history: 2 | steps: 50000 | filters: [64] | sizes: [5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.29 | history: 2 | steps: 50000 | filters: [64] | sizes: [5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.30 | history: 2 | steps: 50000 | filters: [64] | sizes: [5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.31 | history: 2 | steps: 50000 | filters: [64] | sizes: [5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.32 | history: 2 | steps: 50000 | filters: [64] | sizes: [5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.33 | history: 2 | steps: 50000 | filters: [64] | sizes: [5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.34 | history: 2 | steps: 50000 | filters: [64] | sizes: [5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.35 | history: 2 | steps: 50000 | filters: [64] | sizes: [5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.36 | history: 2 | steps: 50000 | filters: [64] | sizes: [5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.37 | history: 2 | steps: 100000 | filters: [64] | sizes: [5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.38 | history: 2 | steps: 100000 | filters: [64] | sizes: [5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.39 | history: 2 | steps: 100000 | filters: [64] | sizes: [5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.40 | history: 2 | steps: 100000 | filters: [64] | sizes: [5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.41 | history: 2 | steps: 100000 | filters: [64] | sizes: [5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.42 | history: 2 | steps: 100000 | filters: [64] | sizes: [5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.43 | history: 2 | steps: 100000 | filters: [64] | sizes: [5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.44 | history: 2 | steps: 100000 | filters: [64] | sizes: [5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.45 | history: 2 | steps: 100000 | filters: [64] | sizes: [5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.46 | history: 2 | steps: 200000 | filters: [64] | sizes: [5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.47 | history: 2 | steps: 200000 | filters: [64] | sizes: [5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.48 | history: 2 | steps: 200000 | filters: [64] | sizes: [5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.49 | history: 2 | steps: 200000 | filters: [64] | sizes: [5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.50 | history: 2 | steps: 200000 | filters: [64] | sizes: [5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.51 | history: 2 | steps: 200000 | filters: [64] | sizes: [5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.52 | history: 2 | steps: 200000 | filters: [64] | sizes: [5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.53 | history: 2 | steps: 200000 | filters: [64] | sizes: [5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.54 | history: 2 | steps: 200000 | filters: [64] | sizes: [5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.55 | history: 2 | steps: 50000 | filters: [128] | sizes: [5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.56 | history: 2 | steps: 50000 | filters: [128] | sizes: [5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.57 | history: 2 | steps: 50000 | filters: [128] | sizes: [5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.58 | history: 2 | steps: 50000 | filters: [128] | sizes: [5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.59 | history: 2 | steps: 50000 | filters: [128] | sizes: [5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.60 | history: 2 | steps: 50000 | filters: [128] | sizes: [5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.61 | history: 2 | steps: 50000 | filters: [128] | sizes: [5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.62 | history: 2 | steps: 50000 | filters: [128] | sizes: [5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.63 | history: 2 | steps: 50000 | filters: [128] | sizes: [5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.64 | history: 2 | steps: 100000 | filters: [128] | sizes: [5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.65 | history: 2 | steps: 100000 | filters: [128] | sizes: [5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.66 | history: 2 | steps: 100000 | filters: [128] | sizes: [5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.67 | history: 2 | steps: 100000 | filters: [128] | sizes: [5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.68 | history: 2 | steps: 100000 | filters: [128] | sizes: [5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.69 | history: 2 | steps: 100000 | filters: [128] | sizes: [5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.70 | history: 2 | steps: 100000 | filters: [128] | sizes: [5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.71 | history: 2 | steps: 100000 | filters: [128] | sizes: [5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.72 | history: 2 | steps: 100000 | filters: [128] | sizes: [5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.73 | history: 2 | steps: 200000 | filters: [128] | sizes: [5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.74 | history: 2 | steps: 200000 | filters: [128] | sizes: [5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.75 | history: 2 | steps: 200000 | filters: [128] | sizes: [5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.76 | history: 2 | steps: 200000 | filters: [128] | sizes: [5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.77 | history: 2 | steps: 200000 | filters: [128] | sizes: [5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.78 | history: 2 | steps: 200000 | filters: [128] | sizes: [5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.79 | history: 2 | steps: 200000 | filters: [128] | sizes: [5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.80 | history: 2 | steps: 200000 | filters: [128] | sizes: [5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.81 | history: 2 | steps: 200000 | filters: [128] | sizes: [5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+2.82 | history: 4 | steps: 50000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
 4.1 | history: 4 | steps: 50000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.3 | history: 4 | steps: 50000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.6 | history: 4 | steps: 50000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.10 | history: 4 | steps: 50000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.15 | history: 4 | steps: 50000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.21 | history: 4 | steps: 50000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.28 | history: 4 | steps: 50000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.36 | history: 4 | steps: 50000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.45 | history: 4 | steps: 100000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.55 | history: 4 | steps: 100000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.66 | history: 4 | steps: 100000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.78 | history: 4 | steps: 100000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.91 | history: 4 | steps: 100000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.105 | history: 4 | steps: 100000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.120 | history: 4 | steps: 100000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.136 | history: 4 | steps: 100000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.153 | history: 4 | steps: 100000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.171 | history: 4 | steps: 200000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.190 | history: 4 | steps: 200000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.210 | history: 4 | steps: 200000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.231 | history: 4 | steps: 200000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.253 | history: 4 | steps: 200000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.276 | history: 4 | steps: 200000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.300 | history: 4 | steps: 200000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.325 | history: 4 | steps: 200000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.351 | history: 4 | steps: 200000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.378 | history: 4 | steps: 50000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.406 | history: 4 | steps: 50000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.435 | history: 4 | steps: 50000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.465 | history: 4 | steps: 50000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.496 | history: 4 | steps: 50000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.528 | history: 4 | steps: 50000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.561 | history: 4 | steps: 50000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.595 | history: 4 | steps: 50000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.630 | history: 4 | steps: 50000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.666 | history: 4 | steps: 100000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.703 | history: 4 | steps: 100000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.741 | history: 4 | steps: 100000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.780 | history: 4 | steps: 100000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.820 | history: 4 | steps: 100000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.861 | history: 4 | steps: 100000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.903 | history: 4 | steps: 100000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.946 | history: 4 | steps: 100000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.990 | history: 4 | steps: 100000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.1035 | history: 4 | steps: 200000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.1081 | history: 4 | steps: 200000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.1128 | history: 4 | steps: 200000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.1176 | history: 4 | steps: 200000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.1225 | history: 4 | steps: 200000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.1275 | history: 4 | steps: 200000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.1326 | history: 4 | steps: 200000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.1378 | history: 4 | steps: 200000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.1431 | history: 4 | steps: 200000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.1485 | history: 4 | steps: 50000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.1540 | history: 4 | steps: 50000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.1596 | history: 4 | steps: 50000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.1653 | history: 4 | steps: 50000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.1711 | history: 4 | steps: 50000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.1770 | history: 4 | steps: 50000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.1830 | history: 4 | steps: 50000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.1891 | history: 4 | steps: 50000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.1953 | history: 4 | steps: 50000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.2016 | history: 4 | steps: 100000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.2080 | history: 4 | steps: 100000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.2145 | history: 4 | steps: 100000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.2211 | history: 4 | steps: 100000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.2278 | history: 4 | steps: 100000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.2346 | history: 4 | steps: 100000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.2415 | history: 4 | steps: 100000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.2485 | history: 4 | steps: 100000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.2556 | history: 4 | steps: 100000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.2628 | history: 4 | steps: 200000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.2701 | history: 4 | steps: 200000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.2775 | history: 4 | steps: 200000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-4.4920 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.2 | history: 4 | steps: 50000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.3 | history: 4 | steps: 50000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.4 | history: 4 | steps: 50000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.5 | history: 4 | steps: 50000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.6 | history: 4 | steps: 50000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.7 | history: 4 | steps: 50000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.8 | history: 4 | steps: 50000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.9 | history: 4 | steps: 100000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.10 | history: 4 | steps: 100000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.11 | history: 4 | steps: 100000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.12 | history: 4 | steps: 100000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.13 | history: 4 | steps: 100000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.14 | history: 4 | steps: 100000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.15 | history: 4 | steps: 100000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.16 | history: 4 | steps: 100000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.17 | history: 4 | steps: 100000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.18 | history: 4 | steps: 200000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.19 | history: 4 | steps: 200000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.20 | history: 4 | steps: 200000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.21 | history: 4 | steps: 200000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.22 | history: 4 | steps: 200000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.23 | history: 4 | steps: 200000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.24 | history: 4 | steps: 200000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.25 | history: 4 | steps: 200000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.26 | history: 4 | steps: 200000 | filters: [32, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.27 | history: 4 | steps: 50000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.28 | history: 4 | steps: 50000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.29 | history: 4 | steps: 50000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.30 | history: 4 | steps: 50000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.31 | history: 4 | steps: 50000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.32 | history: 4 | steps: 50000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.33 | history: 4 | steps: 50000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.34 | history: 4 | steps: 50000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.35 | history: 4 | steps: 50000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.36 | history: 4 | steps: 100000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.37 | history: 4 | steps: 100000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.38 | history: 4 | steps: 100000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.39 | history: 4 | steps: 100000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.40 | history: 4 | steps: 100000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.41 | history: 4 | steps: 100000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.42 | history: 4 | steps: 100000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.43 | history: 4 | steps: 100000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.44 | history: 4 | steps: 100000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.45 | history: 4 | steps: 200000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.46 | history: 4 | steps: 200000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.47 | history: 4 | steps: 200000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.48 | history: 4 | steps: 200000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.49 | history: 4 | steps: 200000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.50 | history: 4 | steps: 200000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.51 | history: 4 | steps: 200000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.52 | history: 4 | steps: 200000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.53 | history: 4 | steps: 200000 | filters: [64, 64] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.54 | history: 4 | steps: 50000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.55 | history: 4 | steps: 50000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.56 | history: 4 | steps: 50000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.57 | history: 4 | steps: 50000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.58 | history: 4 | steps: 50000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.59 | history: 4 | steps: 50000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.60 | history: 4 | steps: 50000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.61 | history: 4 | steps: 50000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.62 | history: 4 | steps: 50000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.63 | history: 4 | steps: 100000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.64 | history: 4 | steps: 100000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.65 | history: 4 | steps: 100000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.66 | history: 4 | steps: 100000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.67 | history: 4 | steps: 100000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.68 | history: 4 | steps: 100000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.69 | history: 4 | steps: 100000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.70 | history: 4 | steps: 100000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.71 | history: 4 | steps: 100000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.72 | history: 4 | steps: 200000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.73 | history: 4 | steps: 200000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.74 | history: 4 | steps: 200000 | filters: [64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+4.75 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
 8.1 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.3 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.6 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.10 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.15 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.21 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.28 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.36 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.45 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.55 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.66 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.78 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.91 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.114 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.129 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.156 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.185 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.203 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.236 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.271 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.292 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.349 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.372 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.416 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.462 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.488 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.538 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.566 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.620 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.650 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.708 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.740 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.802 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.867 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.902 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.971 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.1042 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.1116 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.1192 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.1232 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.1312 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.1354 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.1438 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.1482 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.1570 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.1616 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.1708 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.1756 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.1852 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.1902 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.2002 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.2054 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.2107 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.2161 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.2267 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.2323 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.2380 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.2438 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.2551 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.2611 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.2672 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.2734 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.2797 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.2919 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.2984 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.3110 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.3177 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.3307 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.3440 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.3510 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.3647 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.3787 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.3860 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.4074 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.4149 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.4371 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.4448 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.4602 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.4681 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.4839 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.4920 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.5082 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.5165 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.5331 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.5416 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.5586 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.5673 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.5847 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.6024 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.6114 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.6385 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.6477 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.6663 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.6757 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.6947 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.7043 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.7237 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.7335 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.7533 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.7633 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.7835 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.7937 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.8143 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.8247 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.8457 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.8563 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.8670 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.8778 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.8887 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.8997 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.9215 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.9327 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.9440 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.9554 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.9669 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.9785 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.9902 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.10020 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.10251 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.10371 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.10606 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.10844 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.10967 | history: 8 | steps: 100000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.11209 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.11454 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.11580 | history: 8 | steps: 100000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.11829 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.12080 | history: 8 | steps: 100000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.12334 | history: 8 | steps: 100000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.12718 | history: 8 | steps: 100000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.12979 | history: 8 | steps: 100000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-8.16600 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.2 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.3 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.4 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.5 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.6 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.7 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.8 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.9 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.10 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.11 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.12 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.13 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.14 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.15 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.16 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.17 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.18 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.19 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.20 | history: 8 | steps: 50000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.21 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.22 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.23 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.24 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.25 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.26 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.27 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.28 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.29 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.30 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.31 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.32 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.33 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.34 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.35 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.36 | history: 8 | steps: 100000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.37 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.38 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.39 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.40 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.41 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.42 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.43 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.44 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.45 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.46 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.47 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.48 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.49 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.50 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.51 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.52 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.53 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.54 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.55 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.56 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.57 | history: 8 | steps: 200000 | filters: [16, 32, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.58 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.59 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.60 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.61 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.62 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.63 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.64 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.65 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.66 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.67 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.68 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.69 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.70 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.71 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.72 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.73 | history: 8 | steps: 50000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.74 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.75 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.76 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.77 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.78 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.79 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.80 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.81 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.82 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.83 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.84 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.85 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.86 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.87 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.88 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.89 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.90 | history: 8 | steps: 100000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.91 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.92 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.93 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.94 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.95 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.96 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.97 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.98 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.99 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.100 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.101 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.102 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.103 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.104 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.105 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.106 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.107 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.108 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.109 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.110 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.111 | history: 8 | steps: 200000 | filters: [32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.112 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.113 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.114 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.115 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.116 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.117 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.118 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.119 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.120 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.121 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.122 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.123 | history: 8 | steps: 100000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.124 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.125 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.126 | history: 8 | steps: 100000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.127 | history: 8 | steps: 50000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.128 | history: 8 | steps: 100000 | filters: [32, 64, 64] | sizes: [5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.129 | history: 8 | steps: 100000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.130 | history: 8 | steps: 100000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.131 | history: 8 | steps: 100000 | filters: [32, 64, 64] | sizes: [5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+8.132 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
 16.1 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.3 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.6 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.10 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.15 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.21 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.28 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.36 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.45 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.55 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.66 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.78 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.91 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.105 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.120 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.136 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.153 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.171 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.190 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.210 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.231 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.253 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.276 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.300 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.325 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.351 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.378 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.406 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.435 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.465 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.496 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.528 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.561 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.595 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.630 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.666 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.703 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.741 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.780 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.820 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.861 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.903 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.946 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.990 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.1035 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.1081 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.1128 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.1176 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.1225 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.1275 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.1326 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.1378 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.1431 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.1485 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.1540 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.1596 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.1653 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.1711 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.1770 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.1830 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.1891 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.1953 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.2016 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.2080 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.2145 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.2211 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.2278 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.2346 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.2415 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.2485 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.2556 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.2628 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.2701 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.2775 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.2850 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.2926 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.3003 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.3081 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.3160 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.3240 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.3321 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.3403 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.3486 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.3570 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.3655 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.3741 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.3828 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.3916 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.4005 | history: 16 | steps: 200000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.4095 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.4186 | history: 16 | steps: 200000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.4278 | history: 16 | steps: 200000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.4371 | history: 16 | steps: 200000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.4465 | history: 16 | steps: 200000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
-16.4560 | history: 16 | steps: 200000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.2 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.3 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.4 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.5 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.6 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.7 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.8 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.9 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.10 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.11 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.12 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.13 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.14 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.15 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.16 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.17 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.18 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.19 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.20 | history: 16 | steps: 50000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.21 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.22 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.23 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.24 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.25 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.26 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.27 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.28 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.29 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.30 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.31 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.32 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.33 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.34 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.35 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.36 | history: 16 | steps: 100000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.37 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.38 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.39 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.40 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.41 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.42 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.43 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.44 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.45 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.46 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.47 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.48 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.49 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.50 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.51 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.52 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.53 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.54 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.55 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.56 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.57 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.58 | history: 16 | steps: 200000 | filters: [16, 32, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.59 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.60 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.61 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.62 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.63 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.64 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.65 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.66 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.67 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.68 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.69 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.70 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.71 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.72 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.73 | history: 16 | steps: 50000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.74 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.75 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.76 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.77 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.78 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.79 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.80 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.81 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.82 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.83 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.84 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.85 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 256 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.86 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.87 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.88 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.89 | history: 16 | steps: 200000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.90 | history: 16 | steps: 100000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 512 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.91 | history: 16 | steps: 200000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.92 | history: 16 | steps: 200000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 2 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.93 | history: 16 | steps: 200000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.94 | history: 16 | steps: 200000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 4 | data: cnn_datae4_age8050_annkprob_of_death_at_80
+16.95 | history: 16 | steps: 200000 | filters: [16, 64, 64, 128] | sizes: [5, 5, 5, 5, 5, 5, 5, 5] | dense: 128 | logits: 8 | data: cnn_datae4_age8050_annkprob_of_death_at_80
