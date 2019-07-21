@@ -48,11 +48,13 @@ class DataTable:
     #---------------------------------------------------------------------------
 
     def scatterPlot(self, ax, results_name):
-        count = 0
-        skip = 2
+        #count = 0
+        #skip = 3
+        #investigate = ["2.82", "4.75"]
         for dataList in self.dTable:
-            if count / skip == 0:
-                dataList.scatterPlot(ax)
+            #if dataList.name in investigate:
+            dataList.scatterPlot(ax)
+            #count += 1
         plt.show()
         #plt.savefig(results_name + ".png", dpi = 400)
 
