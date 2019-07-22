@@ -14,8 +14,8 @@ def main():
     #)
 
     get_one_data_set(
-        "../cnn_data/e4_age80/50_annk/prob_of_death_at_80/",
-        "16",
+        "../cnn_data/e4_age80/200_annk/cohort1/",
+        "5",
         "5"
     )
 
