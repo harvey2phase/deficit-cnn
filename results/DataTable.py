@@ -55,8 +55,8 @@ class DataTable:
             #if dataList.name in investigate:
             dataList.scatterPlot(ax)
             #count += 1
-        plt.show()
-        #plt.savefig(results_name + ".png", dpi = 400)
+        #plt.show()
+        plt.savefig(results_name + ".png", dpi = 400)
 
     def getConfigs(self):
         configs = ""
