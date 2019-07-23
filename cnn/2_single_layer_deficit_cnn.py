@@ -18,25 +18,18 @@ PROJECT_PATH = "/project/def-arutenbe/harveyw/summer-research/"
 
 def main():
 
-    history = 5
+    history = 8
 
     data_folder = "cnn_data/e4_age80/50_annk/prob_of_death_at_80/"
     bias = "unbiased_"
     output_filename = "results/new" + str(history) + ".txt"
 
-    test_2_layer_cnn(data_folder, bias, output_filname)
-
-#-------------------------------------------------------------------------------
-# CNN parameter tests
-#-------------------------------------------------------------------------------
-
-def test_2_layer_cnn(data_folder, bias, output_filname):
     filtersez = [
-        [32, 64],
-        [64, 64],
-        [64, 128],
+        [16, 32, 64, 128],
+        [16, 64, 64, 128],
+        [64, 64, 64, 128],
     ]
-    sizes = [5, 5]
+    size = [5, 5, 5]
 
     pool_size = [2, 2]
     pool_stride = 2
@@ -57,7 +50,6 @@ def test_2_layer_cnn(data_folder, bias, output_filname):
         4,
         8
     ]
-
     for _ in range(100):
         for filters in filtersez:
 
@@ -68,7 +60,7 @@ def test_2_layer_cnn(data_folder, bias, output_filname):
                         set_data(data_folder, history, bias)
                         set_hype(
                             filters,
-                            sizes,
+                            size,
                             pool_size,
                             pool_stride,
                             steps,
@@ -76,6 +68,76 @@ def test_2_layer_cnn(data_folder, bias, output_filname):
                             logits
                         )
                         run(output_filename)
+
+#-------------------------------------------------------------------------------
+# Global variables
+#-------------------------------------------------------------------------------
+
+''' Data  '''
+HISTORY = None
+NODE_COUNT = 50
+
+TRAIN_SET = None
+TRAIN_LABELS = None
+EVAL_SET = None
+EVAL_LABELS = None
+
+''' Hyperparameters '''
+CONV_FILTERS = None
+CONV_SIZES = None
+CONV_COUNT = None
+
+POOL_SIZE = None
+POOL_STRIDE = None
+
+DENSE_UNITS = None
+LOGITS_UNITS = None
+
+STEPS = None
+LEARNING_RATE = 10 ** -4
+DROPOUT_RATE = 0.4
+BATCH_SIZE = 100
+
+#-------------------------------------------------------------------------------
+# Setters for global variables
+#-------------------------------------------------------------------------------
+
+def set_data(data_folder, history, bias):
+    global DATA_FOLDER
+    global HISTORY
+    global TRAIN_SET
+    global TRAIN_LABELS
+    global EVAL_SET
+    global EVAL_LABELS
+
+    DATA_FOLDER = data_folder
+    HISTORY = history
+    history = str(history)
+
+    # Shape: [training_size, NODE_COUNT * HISTORY]
+    TRAIN_SET = DATA_FOLDER + bias + history + "x5y_train_set.txt"
+    TRAIN_LABELS = DATA_FOLDER + bias + history + "x5y_train_labels.txt"
+    EVAL_SET = DATA_FOLDER + bias + history + "x5y_eval_set.txt"
+    EVAL_LABELS = DATA_FOLDER + bias + history + "x5y_eval_labels.txt"
+
+def set_hype(filters, filter_sizes, pool, pool_stride, steps, dense, logits):
+    global CONV_FILTERS
+    global CONV_SIZES
+    global CONV_COUNT
+    global POOL_SIZE
+    global POOL_STRIDE
+    global STEPS
+    global DENSE_UNITS
+    global LOGITS_UNITS
+
+    CONV_FILTERS = filters
+    CONV_SIZES = filter_sizes
+    CONV_COUNT = len(CONV_FILTERS)
+    POOL_SIZE = pool
+    POOL_STRIDE = pool_stride
+    STEPS = steps
+    DENSE_UNITS = dense
+    LOGITS_UNITS = logits
 
 #-------------------------------------------------------------------------------
 # CNN Model
@@ -116,6 +178,7 @@ def deficit_cnn_model(features, labels, mode):
         length = int(length / 2)
         width = int(width / 2)
 
+
     ''' Flatten tensor into a batch of vectors '''
     pool2_flat = tf.reshape(layer, [-1, CONV_FILTERS[i] * length * width])
 
@@ -136,6 +199,7 @@ def deficit_cnn_model(features, labels, mode):
         rate = DROPOUT_RATE,
         training = mode == tf.estimator.ModeKeys.TRAIN
     )
+
 
     ''' Logits layer '''
     # Input Tensor Shape: [batch_size, 1024]
@@ -298,74 +362,5 @@ def run(filename):
 
     results.close()
 
-#-------------------------------------------------------------------------------
-# Global variables
-#-------------------------------------------------------------------------------
-
-''' Data  '''
-HISTORY = None
-NODE_COUNT = 50
-
-TRAIN_SET = None
-TRAIN_LABELS = None
-EVAL_SET = None
-EVAL_LABELS = None
-
-''' Hyperparameters '''
-CONV_FILTERS = None
-CONV_SIZES = None
-CONV_COUNT = None
-
-POOL_SIZE = None
-POOL_STRIDE = None
-
-DENSE_UNITS = None
-LOGITS_UNITS = None
-
-STEPS = None
-LEARNING_RATE = 10 ** -4
-DROPOUT_RATE = 0.4
-BATCH_SIZE = 100
-
-#-------------------------------------------------------------------------------
-# Setters for global variables
-#-------------------------------------------------------------------------------
-
-def set_data(data_folder, history, bias):
-    global DATA_FOLDER
-    global HISTORY
-    global TRAIN_SET
-    global TRAIN_LABELS
-    global EVAL_SET
-    global EVAL_LABELS
-
-    DATA_FOLDER = data_folder
-    HISTORY = history
-    history = str(history)
-
-    # Shape: [training_size, NODE_COUNT * HISTORY]
-    TRAIN_SET = DATA_FOLDER + bias + history + "x5y_train_set.txt"
-    TRAIN_LABELS = DATA_FOLDER + bias + history + "x5y_train_labels.txt"
-    EVAL_SET = DATA_FOLDER + bias + history + "x5y_eval_set.txt"
-    EVAL_LABELS = DATA_FOLDER + bias + history + "x5y_eval_labels.txt"
-
-def set_hype(filters, filter_sizes, pool, pool_stride, steps, dense, logits):
-    global CONV_FILTERS
-    global CONV_SIZES
-    global CONV_COUNT
-    global POOL_SIZE
-    global POOL_STRIDE
-    global STEPS
-    global DENSE_UNITS
-    global LOGITS_UNITS
-
-    CONV_FILTERS = filters
-    CONV_SIZES = filter_sizes
-    CONV_COUNT = len(CONV_FILTERS)
-    POOL_SIZE = pool
-    POOL_STRIDE = pool_stride
-    STEPS = steps
-    DENSE_UNITS = dense
-    LOGITS_UNITS = logits
 
 main()
