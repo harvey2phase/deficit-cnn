@@ -38,7 +38,7 @@ def plot_file(results_name):
     dataTable = create_dataTable(create_dataList(tokenized_list))
 
     fig, ax = plt.subplots()
-    dataTable.scatterPlot(ax, results_name, "show")
+    dataTable.scatterPlot(ax, results_name, "save")
 
     config = open(results_name  + "_configs.txt", "w+")
     config.write(dataTable.getConfigs())

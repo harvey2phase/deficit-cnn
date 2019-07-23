@@ -47,7 +47,7 @@ class DataTable:
     # Extended functions
     #---------------------------------------------------------------------------
 
-    def scatterPlot(self, ax, results_name):
+    def scatterPlot(self, ax, results_name, display_mode):
         #count = 0
         #skip = 3
         #investigate = ["2.82", "4.75"]
@@ -55,8 +55,10 @@ class DataTable:
             #if dataList.name in investigate:
             dataList.scatterPlot(ax)
             #count += 1
-        #plt.show()
-        plt.savefig(results_name + ".png", dpi = 400)
+        if display_mode == "show":
+            plt.show()
+        else:
+            plt.savefig(results_name + ".png", dpi = 400)
 
     def getConfigs(self):
         configs = ""
