@@ -50,7 +50,7 @@ class DataTable:
     def scatterPlot(self, ax, results_name, display_mode):
         #count = 0
         #skip = 3
-        #investigate = ["2.82", "4.75"]
+        #investigate = ["16.66", "16.6", "16.95"]
         for dataList in self.dTable:
             #if dataList.name in investigate:
             dataList.scatterPlot(ax)
@@ -63,6 +63,7 @@ class DataTable:
     def getConfigs(self):
         configs = ""
         for dataList in self.dTable:
+            configs += dataList.name + "\n"
             configs += (dataList.configToString() + "\n")
         return configs
 

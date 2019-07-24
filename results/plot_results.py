@@ -20,7 +20,8 @@ LAB = []
 #-------------------------------------------------------------------------------
 
 def main():
-    plot_file("new_format/16_assorted.txt")
+    plot_file("new_format/2_4_8_16_assorted.txt")
+    #plot_file("new_format/2_4_8_16_assorted.txt")
 
 #-------------------------------------------------------------------------------
 # Plot function
