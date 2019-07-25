@@ -97,6 +97,25 @@ class DataTable:
         else:
             plt.savefig(results_name + "_filters.png", dpi = 400)
 
+    def plotSteps(self, ax, results_name, display_mode):
+        for dataList in self.dTable:
+            steps = str(dataList.getFirst().dataConfig.steps)
+            label = ""
+            if steps == "200000":
+                c = "b"
+            elif steps == "100000":
+                c = "g"
+            elif steps == "50000":
+                c = "r"
+            else:
+                c = "k"
+                label = steps
+            dataList.scatterPlot(ax, colour = c, label = label)
+        if display_mode == "show":
+            plt.show()
+        else:
+            plt.savefig(results_name + "_steps.png", dpi = 400)
+
     def getConfigs(self):
         configs = ""
         for dataList in self.dTable:
