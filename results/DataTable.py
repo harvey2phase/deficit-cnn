@@ -52,9 +52,9 @@ class DataTable:
             if dataList.getSize() < 2:
                 c = 'r'
             elif dataList.getSize() < 6:
-                c = 'b'
-            elif dataList.getSize() < 11:
                 c = 'g'
+            elif dataList.getSize() < 11:
+                c = 'b'
             else:
                 c = 'k'
 
