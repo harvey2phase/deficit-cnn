@@ -23,14 +23,14 @@ def main():
         history = 4,
         nodes = 200,
         bias = "unbiased_",
-        output_filname = "results/200annk/4assorted.txt"
+        output_filename = "results/200annk/4assorted.txt"
     )
 
 #-------------------------------------------------------------------------------
 # CNN parameter tests
 #-------------------------------------------------------------------------------
 
-def test_2_layer_cnn(data_folder, history, nodes, bias, output_filname):
+def test_2_layer_cnn(data_folder, history, nodes, bias, output_filename):
 
     filtersez = [
         [32, 64],
@@ -70,7 +70,7 @@ def test_2_layer_cnn(data_folder, history, nodes, bias, output_filname):
 
                     for dense in denses:
                         for logits in logitsez:
-                            set_data(data_folder, node, history, bias)
+                            set_data(data_folder, nodes, history, bias)
                             set_hype(
                                 filters,
                                 sizes,
