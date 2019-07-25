@@ -37,7 +37,10 @@ def test_2_layer_cnn(data_folder, history, bias, output_filname):
         [64, 64],
         [64, 128],
     ]
-    sizes = [5, 5]
+    sizesez = [
+        [5, 5],
+        [[5, 5], [5, 5]]
+    ]
 
     pool_size = [2, 2]
     pool_stride = 2
@@ -61,22 +64,23 @@ def test_2_layer_cnn(data_folder, history, bias, output_filname):
 
     for _ in range(100):
         for filters in filtersez:
+            sizes in sizesez:
 
-            for steps in stepsez:
+                for steps in stepsez:
 
-                for dense in denses:
-                    for logits in logitsez:
-                        set_data(data_folder, node, history, bias)
-                        set_hype(
-                            filters,
-                            sizes,
-                            pool_size,
-                            pool_stride,
-                            steps,
-                            dense,
-                            logits
-                        )
-                        run(output_filename)
+                    for dense in denses:
+                        for logits in logitsez:
+                            set_data(data_folder, node, history, bias)
+                            set_hype(
+                                filters,
+                                sizes,
+                                pool_size,
+                                pool_stride,
+                                steps,
+                                dense,
+                                logits
+                            )
+                            run(output_filename)
 
 #-------------------------------------------------------------------------------
 # CNN Model
