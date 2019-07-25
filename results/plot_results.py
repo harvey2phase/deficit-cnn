@@ -40,8 +40,8 @@ def plot_file(results_name):
     fig, ax = plt.subplots()
 
     # TODO: bug prevents calling all at the same time
-    dataTable.plotLogits(ax, results_name, "save")
-    #dataTable.plotDense(ax, results_name, "save")
+    #dataTable.plotLogits(ax, results_name, "save")
+    dataTable.plotDense(ax, results_name, "save")
     #dataTable.plotSizes(ax, results_name, "save")
     #dataTable.plotSteps(ax, results_name, "save")
     #dataTable.plotFilters(ax, results_name, "save")

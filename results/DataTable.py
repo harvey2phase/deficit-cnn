@@ -144,6 +144,7 @@ class DataTable:
         plt.clf()
 
     def plotDense(self, ax, results_name, display_mode):
+        plt.title("b - 512, g - 256, r - 128")
         for dataList in self.dTable:
             dense = str(dataList.getFirst().dataConfig.dense)
             anno = ""
@@ -164,6 +165,7 @@ class DataTable:
         plt.clf()
 
     def plotLogits(self, ax, results_name, display_mode):
+        plt.title("b - 2, g - 4, r - 8")
         for dataList in self.dTable:
             logits = str(dataList.getFirst().dataConfig.logits)
             anno = ""
