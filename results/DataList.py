@@ -21,10 +21,10 @@ class DataList:
     # Checks
     #---------------------------------------------------------------------------
 
-    def scatterPlot(self, ax, colour, label = ""):
+    def scatterPlot(self, ax, colour, anno = ""):
         his, acc = self.getHistory(), self.getAverageAccuracy()
         ax.scatter(his, acc, c = colour)
-        ax.annotate(label, (his, acc))
+        ax.annotate(anno, (his, acc))
 
 
     #---------------------------------------------------------------------------

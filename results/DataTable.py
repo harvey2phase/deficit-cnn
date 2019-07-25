@@ -44,7 +44,7 @@ class DataTable:
         self.dTable.append(dataList)
 
     #---------------------------------------------------------------------------
-    # Extended functions
+    # Plot functions
     #---------------------------------------------------------------------------
 
     def plotCountWithConfigName(self, ax, results_name, display_mode):
@@ -115,6 +115,56 @@ class DataTable:
             plt.show()
         else:
             plt.savefig(results_name + "_steps.png", dpi = 400)
+
+    def plotSizes(self, ax, results_name, display_mode):
+        for dataList in self.dTable:
+            sizes = str(dataList.getFirst().dataConfig.filt_sizes)
+            anno = ""
+            if sizes == "[5, 5]":
+                c = "b"
+            elif sizes == "[5, 5, 5, 5, 5, 5, 5, 5]":
+                c = "g"
+            elif sizes == "[5, 5, 5, 5, 5, 5]":
+                c = "m"
+            elif sizes == "[5, 5, 5, 5]":
+                c = "r"
+            elif sizes == "[5, 5, 5]":
+                c = "y"
+            else:
+                c = "k"
+                anno = sizes
+            dataList.scatterPlot(ax, colour = c, anno = anno)
+        if display_mode == "show":
+            plt.show()
+        else:
+            plt.savefig(results_name + "_sizes.png", dpi = 400)
+
+    def plotDense(self, ax, results_name, display_mode):
+        for dataList in self.dTable:
+            dense = str(dataList.getFirst().dataConfig.dense)
+            anno = ""
+            if dense == "[5, 5]":
+                c = "b"
+            elif dense == "[5, 5, 5, 5, 5, 5, 5, 5]":
+                c = "g"
+            elif dense == "[5, 5, 5, 5, 5, 5]":
+                c = "m"
+            elif dense == "[5, 5, 5, 5]":
+                c = "r"
+            elif dense == "[5, 5, 5]":
+                c = "y"
+            else:
+                c = "k"
+                anno = dense
+            dataList.scatterPlot(ax, colour = c, anno = anno)
+        if display_mode == "show":
+            plt.show()
+        else:
+            plt.savefig(results_name + "_dense.png", dpi = 400)
+
+    #---------------------------------------------------------------------------
+    # Extended functions
+    #---------------------------------------------------------------------------
 
     def getConfigs(self):
         configs = ""
