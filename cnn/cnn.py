@@ -18,27 +18,29 @@ PROJECT_PATH = "/project/def-arutenbe/harveyw/summer-research/"
 
 def main():
 
-    history = 5
-
-    data_folder = "cnn_data/e4_age80/50_annk/prob_of_death_at_80/"
-    bias = "unbiased_"
-    output_filename = "results/new" + str(history) + ".txt"
-
-    test_2_layer_cnn(data_folder, bias, output_filname)
+    test_2_layer_cnn(
+        data_folder = "cnn_data/e4_age80/50_annk/prob_of_death_at_80/",
+        history = 4,
+        nodes = 200,
+        bias = "unbiased_",
+        output_filname = "results/200annk/4assorted.txt"
+    )
 
 #-------------------------------------------------------------------------------
 # CNN parameter tests
 #-------------------------------------------------------------------------------
 
-def test_2_layer_cnn(data_folder, bias, output_filname):
-    node = 200
+def test_2_layer_cnn(data_folder, history, nodes, bias, output_filname):
 
     filtersez = [
         [32, 64],
         [64, 64],
         [64, 128],
     ]
-    sizes = [5, 5]
+    sizesez = [
+        [5, 5],
+        [[5, 5], [5, 5]]
+    ]
 
     pool_size = [2, 2]
     pool_stride = 2
@@ -62,22 +64,23 @@ def test_2_layer_cnn(data_folder, bias, output_filname):
 
     for _ in range(100):
         for filters in filtersez:
+            for sizes in sizesez:
 
-            for steps in stepsez:
+                for steps in stepsez:
 
-                for dense in denses:
-                    for logits in logitsez:
-                        set_data(data_folder, node, history, bias)
-                        set_hype(
-                            filters,
-                            sizes,
-                            pool_size,
-                            pool_stride,
-                            steps,
-                            dense,
-                            logits
-                        )
-                        run(output_filename)
+                    for dense in denses:
+                        for logits in logitsez:
+                            set_data(data_folder, node, history, bias)
+                            set_hype(
+                                filters,
+                                sizes,
+                                pool_size,
+                                pool_stride,
+                                steps,
+                                dense,
+                                logits
+                            )
+                            run(output_filename)
 
 #-------------------------------------------------------------------------------
 # CNN Model
@@ -89,14 +92,11 @@ def deficit_cnn_model(features, labels, mode):
     # Reshape X to 4-D tensor: [batch_size, width, height, channels]
     layer = tf.reshape(features, [-1, NODE, HISTORY, 1])
 
-    # Image length and width
     length = NODE
     width = HISTORY
     for i in range(CONV_COUNT):
 
         ''' Convolutional Layer '''
-        # Computes 32 features using a 5x5 filter with ReLU activation.
-        #   Padding is added to preserve width and height.
         # Output Tensor Shape: [batch_size, length, width, filter size]
         layer = tf.layers.conv2d(
             inputs = layer,
@@ -107,7 +107,6 @@ def deficit_cnn_model(features, labels, mode):
         )
 
         ''' Pooling Layer '''
-        # Max pooling layer with a 2x2 filter and stride of 2
         # Output Tensor Shape: [batch_size, length / 2, width / 2 , filter size]
         layer = tf.layers.max_pooling2d(
             inputs = layer,
@@ -122,6 +121,7 @@ def deficit_cnn_model(features, labels, mode):
     pool2_flat = tf.reshape(layer, [-1, CONV_FILTERS[i] * length * width])
 
     ''' Dense Layer '''
+    # TODO update comment
     # Densely connected layer with 1024 neurons
     # Tensor Shape: [batch_size, 1024]
     dense = tf.layers.dense(
@@ -131,6 +131,7 @@ def deficit_cnn_model(features, labels, mode):
     )
 
     ''' Add dropout operation '''
+    # TODO update comment
     # 0.6 probability that element will be kept
     # Tensor Shape: [batch_size, 1024]
     dropout = tf.layers.dropout(
