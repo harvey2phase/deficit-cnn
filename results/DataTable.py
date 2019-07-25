@@ -63,6 +63,7 @@ class DataTable:
             plt.show()
         else:
             plt.savefig(results_name + "_count.png", dpi = 400)
+        plt.clf()
 
     def plotFilters(self, ax, results_name, display_mode):
         for dataList in self.dTable:
@@ -96,6 +97,7 @@ class DataTable:
             plt.show()
         else:
             plt.savefig(results_name + "_filters.png", dpi = 400)
+        plt.clf()
 
     def plotSteps(self, ax, results_name, display_mode):
         for dataList in self.dTable:
@@ -115,6 +117,7 @@ class DataTable:
             plt.show()
         else:
             plt.savefig(results_name + "_steps.png", dpi = 400)
+        plt.clf()
 
     def plotSizes(self, ax, results_name, display_mode):
         for dataList in self.dTable:
@@ -138,6 +141,7 @@ class DataTable:
             plt.show()
         else:
             plt.savefig(results_name + "_sizes.png", dpi = 400)
+        plt.clf()
 
     def plotDense(self, ax, results_name, display_mode):
         for dataList in self.dTable:
@@ -157,6 +161,27 @@ class DataTable:
             plt.show()
         else:
             plt.savefig(results_name + "_dense.png", dpi = 400)
+        plt.clf()
+
+    def plotLogits(self, ax, results_name, display_mode):
+        for dataList in self.dTable:
+            logits = str(dataList.getFirst().dataConfig.logits)
+            anno = ""
+            if logits == "2":
+                c = "b"
+            elif logits == "4":
+                c = "g"
+            elif logits == "8":
+                c = "r"
+            else:
+                c = "k"
+                anno = logits
+            dataList.scatterPlot(ax, colour = c, anno = anno)
+        if display_mode == "show":
+            plt.show()
+        else:
+            plt.savefig(results_name + "_logits.png", dpi = 400)
+        plt.clf()
 
     #---------------------------------------------------------------------------
     # Extended functions
