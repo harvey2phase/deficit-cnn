@@ -64,7 +64,7 @@ def test_2_layer_cnn(data_folder, history, bias, output_filname):
 
     for _ in range(100):
         for filters in filtersez:
-            sizes in sizesez:
+            for sizes in sizesez:
 
                 for steps in stepsez:
 
