@@ -21,18 +21,10 @@ class DataList:
     # Checks
     #---------------------------------------------------------------------------
 
-    def scatterPlot(self, ax):
+    def scatterPlot(self, ax, colour, label = ""):
         his, acc = self.getHistory(), self.getAverageAccuracy()
-        if self.getSize() < 2:
-            c = 'r'
-        elif self.getSize() < 6:
-            c = 'b'
-        elif self.getSize() < 11:
-            c = 'g'
-        else:
-            c = 'k'
-        ax.scatter(his, acc, c = c)
-        ax.annotate(self.name, (his, acc))
+        ax.scatter(his, acc, c = colour)
+        ax.annotate(label, (his, acc))
 
 
     #---------------------------------------------------------------------------

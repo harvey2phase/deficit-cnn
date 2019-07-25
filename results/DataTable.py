@@ -47,18 +47,55 @@ class DataTable:
     # Extended functions
     #---------------------------------------------------------------------------
 
-    def scatterPlot(self, ax, results_name, display_mode):
-        #count = 0
-        #skip = 3
-        #investigate = ["16.66", "16.6", "16.95"]
+    def plotCountWithConfigName(self, ax, results_name, display_mode):
         for dataList in self.dTable:
-            #if dataList.name in investigate:
-            dataList.scatterPlot(ax)
-            #count += 1
+            if dataList.getSize() < 2:
+                c = 'r'
+            elif dataList.getSize() < 6:
+                c = 'b'
+            elif dataList.getSize() < 11:
+                c = 'g'
+            else:
+                c = 'k'
+
+            dataList.scatterPlot(ax, colour = c, label = dataList.name)
         if display_mode == "show":
             plt.show()
         else:
-            plt.savefig(results_name + ".png", dpi = 400)
+            plt.savefig(results_name + "_count.png", dpi = 400)
+
+    def plotFilters(self, ax, results_name, display_mode):
+        for dataList in self.dTable:
+            filters = str(dataList.getFirst().dataConfig.filters)
+            label = ""
+            if (
+                filters == "[16, 64, 64, 128]"
+                or filters == "[32, 64, 128]"
+                or filters == "[64, 128]"
+                or filters == "[128]"
+            ):
+                c = "b"
+            elif (
+                filters == "[16, 32, 64, 128]"
+                or filters == "[32, 64, 64]"
+                or filters == "[64, 64]"
+                or filters == "[64]"
+            ):
+                c = "g"
+            elif (
+                filters == "[16, 32, 64]"
+                or filters == "[32, 64]"
+                or filters == "[32]"
+            ):
+                c = "r"
+            else:
+                c = "k"
+                label = filters
+            dataList.scatterPlot(ax, colour = c, label = label)
+        if display_mode == "show":
+            plt.show()
+        else:
+            plt.savefig(results_name + "_filters.png", dpi = 400)
 
     def getConfigs(self):
         configs = ""

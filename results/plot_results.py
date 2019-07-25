@@ -20,8 +20,7 @@ LAB = []
 #-------------------------------------------------------------------------------
 
 def main():
-    plot_file("new_format/2_4_8_16_assorted.txt")
-    #plot_file("new_format/2_4_8_16_assorted.txt")
+    plot_file("50annk/2_4_8_16_assorted.txt")
 
 #-------------------------------------------------------------------------------
 # Plot function
@@ -39,7 +38,8 @@ def plot_file(results_name):
     dataTable = create_dataTable(create_dataList(tokenized_list))
 
     fig, ax = plt.subplots()
-    dataTable.scatterPlot(ax, results_name, "save")
+    dataTable.plotFilters(ax, results_name, "save")
+    dataTable.plotCountWithConfigName(ax, results_name, "save")
 
     config = open(results_name  + "_configs.txt", "w+")
     config.write(dataTable.getConfigs())
