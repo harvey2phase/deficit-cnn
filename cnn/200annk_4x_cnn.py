@@ -18,11 +18,11 @@ PROJECT_PATH = "/project/def-arutenbe/harveyw/summer-research/"
 
 def main():
 
-    history = 5
+    history = 4
 
     data_folder = "cnn_data/e4_age80/50_annk/prob_of_death_at_80/"
     bias = "unbiased_"
-    output_filename = "results/new" + str(history) + ".txt"
+    output_filename = "results/200annk" + str(history) + "x.txt"
 
     test_2_layer_cnn(data_folder, bias, output_filname)
 
