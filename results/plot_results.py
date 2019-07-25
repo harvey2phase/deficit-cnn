@@ -38,7 +38,8 @@ def plot_file(results_name):
     dataTable = create_dataTable(create_dataList(tokenized_list))
 
     fig, ax = plt.subplots()
-    dataTable.plotSizes(ax, results_name, "save")
+    dataTable.plotDense(ax, results_name, "save")
+    #dataTable.plotSizes(ax, results_name, "save")
     #dataTable.plotSteps(ax, results_name, "save")
     #dataTable.plotFilters(ax, results_name, "save")
     #dataTable.plotCountWithConfigName(ax, results_name, "save")

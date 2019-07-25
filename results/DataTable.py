@@ -143,16 +143,12 @@ class DataTable:
         for dataList in self.dTable:
             dense = str(dataList.getFirst().dataConfig.dense)
             anno = ""
-            if dense == "[5, 5]":
+            if dense == "512":
                 c = "b"
-            elif dense == "[5, 5, 5, 5, 5, 5, 5, 5]":
+            elif dense == "256":
                 c = "g"
-            elif dense == "[5, 5, 5, 5, 5, 5]":
-                c = "m"
-            elif dense == "[5, 5, 5, 5]":
+            elif dense == "128":
                 c = "r"
-            elif dense == "[5, 5, 5]":
-                c = "y"
             else:
                 c = "k"
                 anno = dense
