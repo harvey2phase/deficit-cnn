@@ -33,13 +33,13 @@ def main():
 def test_2_layer_cnn(data_folder, history, nodes, bias, output_filename):
 
     filtersez = [
-        [64, 128],
-        [64, 64],
         [32, 64],
+        [64, 128],
+        [64, 64]
     ]
     sizesez = [
-        [5, 5]
         [[5, 5], [5, 5]],
+        [5, 5]
     ]
 
     pool_size = [2, 2]
@@ -47,8 +47,8 @@ def test_2_layer_cnn(data_folder, history, nodes, bias, output_filename):
 
     stepsez = [
         1 * 10 ** 5,
-        2 * 10 ** 5
-        5 * 10 ** 4,
+        2 * 10 ** 5,
+        5 * 10 ** 4
     ]
 
     denses = [
