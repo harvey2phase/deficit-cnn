@@ -68,33 +68,43 @@ class DataTable:
         plt.clf()
 
     def plotFilters(self, ax, results_name, display_mode):
+        plt.title("b > g > y > r | m - \"128, 64, 32\"")
         for dataList in self.dTable:
             filters = str(dataList.getFirst().dataConfig.filters)
             label = ""
             if (
-                filters == "[16, 64, 64, 128]"
-                or filters == "[32, 64, 128]"
+                filters == "[64, 64, 64, 128]"
+                or filters == "[64, 64, 128]"
                 or filters == "[64, 128]"
                 or filters == "[128]"
             ):
                 c = "b"
             elif (
-                filters == "[16, 32, 64, 128]"
-                or filters == "[32, 64, 64]"
+                filters == "[16, 64, 64, 128]"
+                or filters == "[32, 64, 128]"
                 or filters == "[64, 64]"
                 or filters == "[64]"
             ):
                 c = "g"
             elif (
-                filters == "[16, 32, 64]"
+                filters == "[16, 32, 64, 128]"
+                or filters == "[32, 64, 64]"
                 or filters == "[32, 64]"
                 or filters == "[32]"
             ):
+                c = "y"
+            elif (
+                filters == "[16, 32, 64]"
+            ):
                 c = "r"
+            elif (
+                filters == "[128, 64, 32]"
+            ):
+                c = "m"
             else:
                 c = "k"
                 label = filters
-            dataList.scatterPlot(ax, colour = c, label = label)
+            dataList.scatterPlot(ax, colour = c, anno = label)
 
         if display_mode == "show":
             plt.show()
@@ -115,7 +125,7 @@ class DataTable:
             else:
                 c = "k"
                 label = steps
-            dataList.scatterPlot(ax, colour = c, label = label)
+            dataList.scatterPlot(ax, colour = c, anno = label)
 
         plt.title("b - 200000, g - 100000, r - 50000")
         if display_mode == "show":
