@@ -95,6 +95,7 @@ class DataTable:
                 c = "k"
                 label = filters
             dataList.scatterPlot(ax, colour = c, label = label)
+
         if display_mode == "show":
             plt.show()
         else:
@@ -115,6 +116,8 @@ class DataTable:
                 c = "k"
                 label = steps
             dataList.scatterPlot(ax, colour = c, label = label)
+
+        plt.title("b - 200000, g - 100000, r - 50000")
         if display_mode == "show":
             plt.show()
         else:
@@ -139,6 +142,7 @@ class DataTable:
                 c = "k"
                 anno = sizes
             dataList.scatterPlot(ax, colour = c, anno = anno)
+
         if display_mode == "show":
             plt.show()
         else:
