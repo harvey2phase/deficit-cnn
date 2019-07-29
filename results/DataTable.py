@@ -58,7 +58,7 @@ class DataTable:
             else:
                 c = 'k'
 
-            dataList.scatterPlot(ax, colour = c, label = dataList.name)
+            dataList.scatterPlot(ax, colour = c, anno = dataList.name)
         if display_mode == "show":
             plt.show()
         else:
