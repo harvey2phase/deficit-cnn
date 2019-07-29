@@ -59,6 +59,8 @@ class DataTable:
                 c = 'k'
 
             dataList.scatterPlot(ax, colour = c, anno = dataList.name)
+
+        plt.title("b - 11, g - 6, r - 2")
         if display_mode == "show":
             plt.show()
         else:
