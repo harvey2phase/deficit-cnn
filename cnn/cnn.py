@@ -19,7 +19,7 @@ PROJECT_PATH = "/project/def-arutenbe/harveyw/summer-research/"
 def main():
 
     test_2_layer_cnn(
-        data_folder = "cnn_data/e4_age80/50_annk/prob_of_death_at_80/",
+        data_folder = "cnn_data/e4_age80/200_annk/cohort1/",
         history = 4,
         nodes = 200,
         bias = "unbiased_",
@@ -38,8 +38,8 @@ def test_2_layer_cnn(data_folder, history, nodes, bias, output_filename):
         [64, 128],
     ]
     sizesez = [
-        [5, 5],
-        [[5, 5], [5, 5]]
+        [[5, 5], [5, 5]],
+        [5, 5]
     ]
 
     pool_size = [2, 2]
