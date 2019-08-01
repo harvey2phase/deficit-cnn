@@ -1,6 +1,7 @@
 from DataSet import DataSet
 
 import sys
+import numpy as np
 import matplotlib.pyplot as plt
 
 class DataList:
@@ -17,12 +18,45 @@ class DataList:
     def add(self, dataSet: DataSet):
         self.dList.append(dataSet)
 
+
+    #---------------------------------------------------------------------------
+    # Stats calculation
+    #---------------------------------------------------------------------------
+
+    def getStdDevAccuracy(self):
+        mean = self.getAverageAccuracy()
+        diff_squared_sum = 0
+        for dataSet in self.dList:
+            diff_squared_sum += (dataSet.accuracy - mean) ** 2
+        return np.sqrt(diff_squared_sum / (self.getSize() - 1))
+
+    def getAverageAccuracy(self):
+        totalAccuracy = 0
+        for dataSet in self.dList:
+            totalAccuracy += dataSet.accuracy
+        return totalAccuracy / len(self.dList)
+
     #---------------------------------------------------------------------------
     # Plots
     #---------------------------------------------------------------------------
 
     def plotWithError(self):
+        std_dev = self.getStdDevAccuracy()
         plt.scatter(self.getHistory(), self.getAverageAccuracy())
+        plt.errorbar(
+            self.getHistory(),
+            self.getAverageAccuracy(),
+            yerr = std_dev,
+            ecolor = "r",
+            capsize = 8
+        )
+        plt.errorbar(
+            self.getHistory(),
+            self.getAverageAccuracy(),
+            yerr = std_dev / self.getSize(),
+            ecolor = "b",
+            capsize = 5
+        )
 
     def scatterPlot(self, ax, colour, anno = ""):
         his, acc = self.getHistory(), self.getAverageAccuracy()
@@ -45,12 +79,6 @@ class DataList:
 
     def getFirst(self):
         return self.dList[0]
-
-    def getAverageAccuracy(self):
-        totalAccuracy = 0
-        for dataSet in self.dList:
-            totalAccuracy += dataSet.accuracy
-        return totalAccuracy / len(self.dList)
 
     def getHistory(self):
         return self.getFirst().dataConfig.history
