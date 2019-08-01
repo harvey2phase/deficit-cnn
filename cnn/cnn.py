@@ -18,13 +18,13 @@ PROJECT_PATH = "/project/def-arutenbe/harveyw/summer-research/"
 
 def main():
 
-    data_folder = "cnn_data/e4_age80/cohort1/",
+    data_folder = "cnn_data/e4_age80/cohort1/"
     node = 50
     bias = "unbiased_"
 
-    pool = [2, 2],
-    pool_stride = 2,
-    steps = 2 * 10 ** 5,
+    pool = [2, 2]
+    pool_stride = 2
+    steps = 2 * 10 ** 5
     dense = 256
     logits = 2
 
