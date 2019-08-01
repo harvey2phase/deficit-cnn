@@ -28,15 +28,15 @@ def main():
     dense = 256
     logits = 2
 
-    set_data(data_folder, node, history = 4, bias)
+    set_data(data_folder = data_folder, node = node, history = 4, bias = bias)
     set_hype(
         filters = [128, 128],
         filter_sizes = [[5, 5], [5, 5]],
-        pool,
-        pool_stride,
-        steps,
-        dense,
-        logits
+        pool = pool,
+        pool_stride = pool_stride,
+        steps = steps,
+        dense = dense,
+        logits = logits
     )
     for _ in range(100):
         run("results/4x.txt")
