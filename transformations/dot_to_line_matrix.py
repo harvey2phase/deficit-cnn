@@ -7,7 +7,7 @@ import numpy as np
 #-------------------------------------------------------------------------------
 
 MATRIX_WIDTH_RANGE = range(1, 120) # Ignore t=1, since all nodes start at 0
-MATRIX_LENGTH_RANGE = range(100)
+MATRIX_LENGTH_RANGE = range(50)
 
 #-------------------------------------------------------------------------------
 # main
@@ -15,8 +15,8 @@ MATRIX_LENGTH_RANGE = range(100)
 
 def main():
     transform_and_write(
-        "../raw_data/matrices/e4/200_annk/dot",
-        "../raw_data/matrices/e4/200_annk/line",
+        "../raw_data/matrices/e4/50_annk/dot",
+        "../raw_data/matrices/e4/50_annk/line",
         dot_to_line_matrix,
         None
     )

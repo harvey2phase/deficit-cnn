@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import os
 
 
-DECADE_RANGE = range(8, 9)
+DECADE_RANGE = range(10, 12)
 YEAR_RANGE = range(10)
 
 #-------------------------------------------------------------------------------
