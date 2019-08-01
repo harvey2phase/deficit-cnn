@@ -18,8 +18,11 @@ class DataList:
         self.dList.append(dataSet)
 
     #---------------------------------------------------------------------------
-    # Checks
+    # Plots
     #---------------------------------------------------------------------------
+
+    def plotWithError(self):
+        plt.scatter(self.getHistory(), self.getAverageAccuracy())
 
     def scatterPlot(self, ax, colour, anno = ""):
         his, acc = self.getHistory(), self.getAverageAccuracy()

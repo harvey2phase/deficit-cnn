@@ -20,7 +20,7 @@ LAB = []
 #-------------------------------------------------------------------------------
 
 def main():
-    plot_file("50annk/2_4_8_16_assorted.txt")
+    plot_file("4x.txt")
 
 #-------------------------------------------------------------------------------
 # Plot function
@@ -37,14 +37,16 @@ def plot_file(results_name):
 
     dataTable = create_dataTable(create_dataList(tokenized_list))
 
-    fig, ax = plt.subplots()
+    dataTable.plotWithError()
+
+    #fig, ax = plt.subplots()
 
     # TODO: bug prevents calling all at the same time
     #dataTable.plotLogits(ax, results_name, "save")
     #dataTable.plotDense(ax, results_name, "save")
     #dataTable.plotSizes(ax, results_name, "save")
     #dataTable.plotSteps(ax, results_name, "save")
-    dataTable.plotFilters(ax, results_name, "save")
+    #dataTable.plotFilters(ax, results_name, "save")
     #dataTable.plotCountWithConfigName(ax, results_name, "save")
 
     config = open(results_name  + "_configs.txt", "w+")

@@ -22,8 +22,7 @@ class DataTable:
                 if dataList.getFirst().isSameConfig(dataSet.dataConfig):
                     dataList.add(dataSet)
                     return
-            history = dataList.getHistory()
-        self.addDataList(dataSet, history, histories, counts)
+        self.addDataList(dataSet, dataList.getHistory(), histories, counts)
 
     def addDataList(self, dataSet, history, histories, counts):
         if not history in histories:
@@ -46,6 +45,17 @@ class DataTable:
     #---------------------------------------------------------------------------
     # Plot functions
     #---------------------------------------------------------------------------
+
+    def plotWithError(self, display_mode):
+
+        for dataList in self.dTable:
+            dataList.plotWithError()
+
+        if display_mode == "show":
+            plt.show()
+        else:
+            plt.savefig(results_name + "_count.png", dpi = 400)
+        plt.clf()
 
     def plotCountWithConfigName(self, ax, results_name, display_mode):
         for dataList in self.dTable:
