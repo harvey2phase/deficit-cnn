@@ -7,3 +7,6 @@ in classifying the data of a
 to predict mortality. I have been working on this project in
 [Dr. Andrew Rutenberg](http://fizz.phys.dal.ca/~adr/index.php?TreeIndex=0)'s lab.
 This repo was made public on July 29, 2019.
+
+The execution of the CNN tests was made possible by Compute Canada's
+[Graham](https://docs.computecanada.ca/wiki/Graham) cluster.
