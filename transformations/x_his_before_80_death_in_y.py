@@ -7,11 +7,6 @@ from transforms import transform
 #-------------------------------------------------------------------------------
 
 def main():
-    #get_one_data_set(
-    #    "../cnn_data/e4_age80/50_annk/prob_of_death_at_80/",
-    #    "8",
-    #    "5"
-    #)
 
     get_one_data_set(
         "../cnn_data/e4_age80/cohort1/",
@@ -72,7 +67,10 @@ def x_years_before_80_dead_in_y_years(input_folder, filename, params):
     matrix = np.loadtxt(input_folder + filename)
 
     truncated = matrix[:, 80 - x : 80]
-    death_age = int(filename[0] + filename[1], 10)
+    if filename[2].isdigit():
+        death_age = int(filename[0] + filename[1] + filename[2], 10)
+    else:
+        death_age = int(filename[0] + filename[1], 10)
 
     matrix_file = open(matrix_filename, "a+")
     for row in truncated:
