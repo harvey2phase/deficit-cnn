@@ -20,13 +20,13 @@ LAB = []
 #-------------------------------------------------------------------------------
 
 def main():
-    plot_file("4x.txt")
+    plot_file("hyp_param_tests/50annk/2_4_8_16_assorted.txt", "show")
 
 #-------------------------------------------------------------------------------
 # Plot function
 #-------------------------------------------------------------------------------
 
-def plot_file(results_name):
+def plot_file(results_name, display_mode):
     tokenized_list = tokenize_file(results_name)
 
     results_name = results_name[: -4]
@@ -37,7 +37,7 @@ def plot_file(results_name):
 
     dataTable = create_dataTable(create_dataList(tokenized_list))
 
-    dataTable.plotWithError()
+    dataTable.plotWithError(display_mode)
 
     #fig, ax = plt.subplots()
 

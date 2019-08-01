@@ -22,7 +22,8 @@ class DataTable:
                 if dataList.getFirst().isSameConfig(dataSet.dataConfig):
                     dataList.add(dataSet)
                     return
-        self.addDataList(dataSet, dataList.getHistory(), histories, counts)
+            history = dataList.getHistory()
+        self.addDataList(dataSet, history, histories, counts)
 
     def addDataList(self, dataSet, history, histories, counts):
         if not history in histories:
