@@ -18,69 +18,28 @@ PROJECT_PATH = "/project/def-arutenbe/harveyw/summer-research/"
 
 def main():
 
-    test_2_layer_cnn(
-        data_folder = "cnn_data/e4_age80/200_annk/cohort1/",
-        history = 4,
-        nodes = 200,
-        bias = "unbiased_",
-        output_filename = "results/200annk/4assorted.txt"
+    data_folder = "cnn_data/e4_age80/cohort1/",
+    node = 50
+    bias = "unbiased_"
+
+    pool = [2, 2],
+    pool_stride = 2,
+    steps = 2 * 10 ** 5,
+    dense = 256
+    logits = 2
+
+    set_data(data_folder, node, history = 4, bias)
+    set_hype(
+        filters = [128, 128],
+        filter_sizes = [[5, 5], [5, 5]],
+        pool,
+        pool_stride,
+        steps,
+        dense,
+        logits
     )
-
-#-------------------------------------------------------------------------------
-# CNN parameter tests
-#-------------------------------------------------------------------------------
-
-def test_2_layer_cnn(data_folder, history, nodes, bias, output_filename):
-
-    filtersez = [
-        [32, 64],
-        [64, 128],
-        [64, 64]
-    ]
-    sizesez = [
-        [[5, 5], [5, 5]],
-        [5, 5]
-    ]
-
-    pool_size = [2, 2]
-    pool_stride = 2
-
-    stepsez = [
-        1 * 10 ** 5,
-        2 * 10 ** 5,
-        5 * 10 ** 4
-    ]
-
-    denses = [
-        128,
-        256,
-        512
-    ]
-    logitsez = [
-        2,
-        4,
-        8
-    ]
-
     for _ in range(100):
-        for filters in filtersez:
-            for sizes in sizesez:
-
-                for steps in stepsez:
-
-                    for dense in denses:
-                        for logits in logitsez:
-                            set_data(data_folder, nodes, history, bias)
-                            set_hype(
-                                filters,
-                                sizes,
-                                pool_size,
-                                pool_stride,
-                                steps,
-                                dense,
-                                logits
-                            )
-                            run(output_filename)
+        run("results/4x.txt")
 
 #-------------------------------------------------------------------------------
 # CNN Model
@@ -300,6 +259,72 @@ def run(filename):
     results.write("---\n")
 
     results.close()
+
+#-------------------------------------------------------------------------------
+# CNN parameter tests
+#-------------------------------------------------------------------------------
+
+'''
+Sample call:
+test_2_layer_cnn(
+    data_folder = "cnn_data/e4_age80/200_annk/cohort1/",
+    history = 4,
+    nodes = 200,
+    bias = "unbiased_",
+    output_filename = "results/200annk/4assorted.txt"
+)
+'''
+def test_2_layer_cnn(data_folder, history, nodes, bias, output_filename):
+
+    filtersez = [
+        [32, 64],
+        [64, 128],
+        [64, 64]
+    ]
+    sizesez = [
+        [[5, 5], [5, 5]],
+        [5, 5]
+    ]
+
+    pool_size = [2, 2]
+    pool_stride = 2
+
+    stepsez = [
+        1 * 10 ** 5,
+        2 * 10 ** 5,
+        5 * 10 ** 4
+    ]
+
+    denses = [
+        128,
+        256,
+        512
+    ]
+    logitsez = [
+        2,
+        4,
+        8
+    ]
+
+    for _ in range(100):
+        for filters in filtersez:
+            for sizes in sizesez:
+
+                for steps in stepsez:
+
+                    for dense in denses:
+                        for logits in logitsez:
+                            set_data(data_folder, nodes, history, bias)
+                            set_hype(
+                                filters,
+                                sizes,
+                                pool_size,
+                                pool_stride,
+                                steps,
+                                dense,
+                                logits
+                            )
+                            run(output_filename)
 
 #-------------------------------------------------------------------------------
 # Global variables
