@@ -30,7 +30,7 @@ def main():
 
     set_data(data_folder = data_folder, node = node, history = 16, bias = bias)
     set_hype(
-        filters = [128, 128, 128, 128],
+        filters = [16, 32, 64, 128],
         filter_sizes = [[5, 5], [5, 5], [5, 5], [5, 5]],
         pool = pool,
         pool_stride = pool_stride,
@@ -39,7 +39,7 @@ def main():
         logits = logits
     )
     for _ in range(100):
-        run("results/16x.txt")
+        run("results/test2/16x.txt")
 
 #-------------------------------------------------------------------------------
 # CNN Model
