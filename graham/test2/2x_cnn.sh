@@ -10,5 +10,5 @@
 
 module load cuda cudnn
 module load python/3.6
-source tensorflow/bin/activate
+source ../tensorflow/bin/activate
 python3 ../../cnn/test2/2x_cnn.py
