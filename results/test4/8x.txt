@@ -1,0 +1,7 @@
+data: cnn_data/e4_age80/cohort1/	history: 8	nodes: 50
+filters: [128, 64, 32]	sizes: [[5, 5], [5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 256	logits: 2
+steps: 200000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.7015, 'false negatives': 278.0, 'false positives': 319.0, 'loss': 0.5659874, 'true negatives': 681.0, 'true positives': 722.0, 'global_step': 200000}
+---
