@@ -20,7 +20,7 @@ LAB = []
 #-------------------------------------------------------------------------------
 
 def main():
-    plot_file("temp.txt", "show")
+    plot_file("test1/all.txt", "save")
 
 #-------------------------------------------------------------------------------
 # Plot function
@@ -37,7 +37,7 @@ def plot_file(results_name, display_mode):
 
     dataTable = create_dataTable(create_dataList(tokenized_list))
 
-    dataTable.plotWithError(display_mode)
+    dataTable.plotWithError(results_name, display_mode)
 
     #fig, ax = plt.subplots()
 

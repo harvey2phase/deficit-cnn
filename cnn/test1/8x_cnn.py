@@ -39,7 +39,7 @@ def main():
         logits = logits
     )
     for _ in range(100):
-        run("results/8x.txt")
+        run("results/test1/8x.txt")
 
 #-------------------------------------------------------------------------------
 # CNN Model

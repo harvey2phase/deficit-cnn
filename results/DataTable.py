@@ -47,7 +47,9 @@ class DataTable:
     # Plot functions
     #---------------------------------------------------------------------------
 
-    def plotWithError(self, display_mode):
+    def plotWithError(self, results_name, display_mode):
+        plt.ylabel("accuracy")
+        plt.xlabel("history (number of years)")
 
         for dataList in self.dTable:
             dataList.plotWithError()
