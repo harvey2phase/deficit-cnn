@@ -40,22 +40,37 @@ class DataList:
     # Plots
     #---------------------------------------------------------------------------
 
-    def plotWithError(self):
+    def scatterWithError(self, x_list, y_list):
         std_dev = self.getStdDevAccuracy()
-        plt.scatter(self.getHistory(), self.getAverageAccuracy())
+        history = self.getHistory()
+        accuracy = self.getAverageAccuracy()
+
+        x_list.append(history)
+        y_list.append(accuracy)
+
+        plt.scatter(history, accuracy, c = "k")
+        if history == 2:
+            dev_label = "standard deviation"
+            err_label = "standard eror of the mean"
+        else:
+            dev_label = ""
+            err_label = ""
+
         plt.errorbar(
-            self.getHistory(),
-            self.getAverageAccuracy(),
+            history,
+            accuracy,
             yerr = std_dev,
             ecolor = "r",
-            capsize = 8
+            capsize = 8,
+            label = dev_label
         )
         plt.errorbar(
-            self.getHistory(),
-            self.getAverageAccuracy(),
-            yerr = std_dev / self.getSize(),
+            history,
+            accuracy,
+            yerr = std_dev / np.sqrt(self.getSize()),
             ecolor = "b",
-            capsize = 5
+            capsize = 5,
+            label = err_label
         )
 
     def scatterPlot(self, ax, colour, anno = ""):

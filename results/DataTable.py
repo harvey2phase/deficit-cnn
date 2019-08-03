@@ -48,11 +48,15 @@ class DataTable:
     #---------------------------------------------------------------------------
 
     def plotWithError(self, results_name, display_mode):
+        x_list, y_list = [], []
+        for dataList in self.dTable:
+            dataList.scatterWithError(x_list, y_list)
+
+        plt.plot(x_list, y_list)
+        plt.title(results_name[:-4])
         plt.ylabel("accuracy")
         plt.xlabel("history (number of years)")
-
-        for dataList in self.dTable:
-            dataList.plotWithError()
+        plt.legend()
 
         if display_mode == "show":
             plt.show()

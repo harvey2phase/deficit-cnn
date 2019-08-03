@@ -21,6 +21,7 @@ LAB = []
 
 def main():
     plot_file("test1/all.txt", "save")
+    plot_file("test2/all.txt", "save")
 
 #-------------------------------------------------------------------------------
 # Plot function
@@ -40,14 +41,6 @@ def plot_file(results_name, display_mode):
     dataTable.plotWithError(results_name, display_mode)
 
     #fig, ax = plt.subplots()
-
-    # TODO: bug prevents calling all at the same time
-    #dataTable.plotLogits(ax, results_name, "save")
-    #dataTable.plotDense(ax, results_name, "save")
-    #dataTable.plotSizes(ax, results_name, "save")
-    #dataTable.plotSteps(ax, results_name, "save")
-    #dataTable.plotFilters(ax, results_name, "save")
-    #dataTable.plotCountWithConfigName(ax, results_name, "save")
 
     config = open(results_name  + "_configs.txt", "w+")
     config.write(dataTable.getConfigs())
