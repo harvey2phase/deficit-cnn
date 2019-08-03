@@ -1349,3 +1349,52 @@ dense: 256	logits: 2
 steps: 200000	lr: 0.0001	dr: 0.4	batch: 100
 {'accuracy': 0.7055, 'false negatives': 276.0, 'false positives': 313.0, 'loss': 0.5667416, 'true negatives': 687.0, 'true positives': 724.0, 'global_step': 200000}
 ---
+data: cnn_data/e4_age80/cohort1/	history: 8	nodes: 50
+filters: [16, 32, 64]	sizes: [[5, 5], [5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 256	logits: 2
+steps: 200000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.6995, 'false negatives': 277.0, 'false positives': 324.0, 'loss': 0.56843114, 'true negatives': 676.0, 'true positives': 723.0, 'global_step': 200000}
+---
+data: cnn_data/e4_age80/cohort1/	history: 8	nodes: 50
+filters: [16, 32, 64]	sizes: [[5, 5], [5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 256	logits: 2
+steps: 200000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.699, 'false negatives': 278.0, 'false positives': 324.0, 'loss': 0.56794673, 'true negatives': 676.0, 'true positives': 722.0, 'global_step': 200000}
+---
+data: cnn_data/e4_age80/cohort1/	history: 8	nodes: 50
+filters: [16, 32, 64]	sizes: [[5, 5], [5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 256	logits: 2
+steps: 200000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.703, 'false negatives': 275.0, 'false positives': 319.0, 'loss': 0.5672382, 'true negatives': 681.0, 'true positives': 725.0, 'global_step': 200000}
+---
+data: cnn_data/e4_age80/cohort1/	history: 8	nodes: 50
+filters: [16, 32, 64]	sizes: [[5, 5], [5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 256	logits: 2
+steps: 200000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.7025, 'false negatives': 274.0, 'false positives': 321.0, 'loss': 0.56645405, 'true negatives': 679.0, 'true positives': 726.0, 'global_step': 200000}
+---
+data: cnn_data/e4_age80/cohort1/	history: 8	nodes: 50
+filters: [16, 32, 64]	sizes: [[5, 5], [5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 256	logits: 2
+steps: 200000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.704, 'false negatives': 277.0, 'false positives': 315.0, 'loss': 0.56627214, 'true negatives': 685.0, 'true positives': 723.0, 'global_step': 200000}
+---
+data: cnn_data/e4_age80/cohort1/	history: 8	nodes: 50
+filters: [16, 32, 64]	sizes: [[5, 5], [5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 256	logits: 2
+steps: 200000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.7015, 'false negatives': 272.0, 'false positives': 325.0, 'loss': 0.568354, 'true negatives': 675.0, 'true positives': 728.0, 'global_step': 200000}
+---
+data: cnn_data/e4_age80/cohort1/	history: 8	nodes: 50
+filters: [16, 32, 64]	sizes: [[5, 5], [5, 5], [5, 5]]
+pool: [2, 2]	stride: 2
+dense: 256	logits: 2
+steps: 200000	lr: 0.0001	dr: 0.4	batch: 100
+{'accuracy': 0.705, 'false negatives': 274.0, 'false positives': 316.0, 'loss': 0.5668036, 'true negatives': 684.0, 'true positives': 726.0, 'global_step': 200000}
+---
