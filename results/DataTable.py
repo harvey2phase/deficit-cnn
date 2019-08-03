@@ -57,7 +57,7 @@ class DataTable:
         if display_mode == "show":
             plt.show()
         else:
-            plt.savefig(results_name + "_count.png", dpi = 400)
+            plt.savefig(results_name + ".png", dpi = 400)
         plt.clf()
 
     def plotCountWithConfigName(self, ax, results_name, display_mode):
