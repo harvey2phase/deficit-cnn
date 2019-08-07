@@ -1,5 +1,7 @@
 # Deficit CNN
 
+MORE DETAIL AND DOCUMENTATION TO COME.
+
 ## About and Acknowledgment
 This is an ongoing project exploring the application of a convolutional neural
 network (CNN) in classifying the data of a
@@ -10,8 +12,6 @@ This repo was made public on July 29, 2019.
 
 The execution of the CNN tests was made possible by Compute Canada's
 [Graham](https://docs.computecanada.ca/wiki/Graham) cluster.
-
-MORE DETAIL AND DOCUMENTATION TO COME.
 
 
 
