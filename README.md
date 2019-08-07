@@ -21,4 +21,11 @@ The execution of the CNN tests was made possible by Compute Canada's
 Can the CNN predict whether a model individual will reach mortality in 5 years
 at age 80? Does the accurcy of the predict improve given more history of 
 individuals' health trajectory?
+
 ![alt text](https://github.com/harvey2phase/deficit-cnn/blob/master/results/config0.png)
+
+How does accuracy change with different configurations?
+![alt text](https://github.com/harvey2phase/deficit-cnn/blob/master/results/config1.png)
+![alt text](https://github.com/harvey2phase/deficit-cnn/blob/master/results/config2.png)
+![alt text](https://github.com/harvey2phase/deficit-cnn/blob/master/results/config3.png)
+![alt text](https://github.com/harvey2phase/deficit-cnn/blob/master/results/config4.png)
