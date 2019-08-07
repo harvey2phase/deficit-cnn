@@ -48,10 +48,10 @@ class DataList:
         x_list.append(history)
         y_list.append(accuracy)
 
-        plt.scatter(history, accuracy, c = "k")
+        plt.scatter(history, accuracy)
         if history == 2:
             dev_label = "standard deviation"
-            err_label = "standard eror of the mean"
+            err_label = "standard error of the mean"
         else:
             dev_label = ""
             err_label = ""
