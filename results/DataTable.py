@@ -47,6 +47,17 @@ class DataTable:
     # Plot functions
     #---------------------------------------------------------------------------
 
+    def plotROC(self, results_name, display_mode, img_name = ""):
+        img_name += "_roc"
+        for dataList in self.dTable:
+            dataList.scatterROC()
+        plt.legend()
+        if display_mode == "show":
+            plt.show()
+        else:
+            plt.savefig(img_name + ".png", dpi = 400)
+        plt.clf()
+
     def plotWithError(self, results_name, display_mode, img_name = ""):
         x_list, y_list = [], []
         for dataList in self.dTable:

@@ -36,9 +36,34 @@ class DataList:
             totalAccuracy += dataSet.accuracy
         return totalAccuracy / len(self.dList)
 
+    def getMeanTP(self):
+        totalTP = 0
+        for dataSet in self.dList:
+            totalTP += dataSet.true_positive
+        return totalTP / len(self.dList)
+
+    def getMeanFP(self):
+        totalFP = 0
+        for dataSet in self.dList:
+            totalFP += dataSet.false_positive
+        return totalFP / len(self.dList)
+
+    def getStdDevTP(self, meanTP):
+        diff_squared_sum = 0
+        for dataSet in self.dList:
+            diff_squared_sum += (dataSet.true_positive - meanTP) ** 2
+        return np.sqrt(diff_squared_sum / (self.getSize() - 1))
+
     #---------------------------------------------------------------------------
     # Plots
     #---------------------------------------------------------------------------
+
+    def scatterROC(self):
+        meanTP = self.getMeanTP()
+        meanFP = self.getMeanFP()
+        #stdDevTP = self.getStdDevTP(meanTP)
+
+        plt.scatter(meanFP, meanTP, label = self.name)
 
     def scatterWithError(self, x_list, y_list):
         std_dev = self.getStdDevAccuracy()
