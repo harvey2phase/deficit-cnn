@@ -47,13 +47,27 @@ class DataTable:
     # Plot functions
     #---------------------------------------------------------------------------
 
-    def plotWithError(self, results_name, display_mode):
+    def plotROC(self, results_name, display_mode, img_name = ""):
+        img_name += "_roc"
+        for dataList in self.dTable:
+            dataList.scatterROC()
+        plt.legend()
+        if display_mode == "show":
+            plt.show()
+        else:
+            plt.savefig(img_name + ".png", dpi = 400)
+        plt.clf()
+
+    def plotWithError(self, results_name, display_mode, img_name = ""):
         x_list, y_list = [], []
         for dataList in self.dTable:
             dataList.scatterWithError(x_list, y_list)
 
         plt.plot(x_list, y_list)
-        plt.title(results_name[:-4])
+        plt.title(
+            "Classification of mortality within 5 years at age 80 " +
+            "with given history"
+        )
         plt.ylabel("accuracy")
         plt.xlabel("history (number of years)")
         plt.legend()
@@ -61,7 +75,7 @@ class DataTable:
         if display_mode == "show":
             plt.show()
         else:
-            plt.savefig(results_name + ".png", dpi = 400)
+            plt.savefig(img_name + ".png", dpi = 400)
         plt.clf()
 
     def plotCountWithConfigName(self, ax, results_name, display_mode):

@@ -20,13 +20,20 @@ LAB = []
 #-------------------------------------------------------------------------------
 
 def main():
+<<<<<<< HEAD
     plot_file("test0/all.txt", "save")
+=======
+    plot_file("test1/all.txt", "show", img_name = "test1")
+    #plot_file("test2/all.txt", "save", img_name = "test2")
+    #plot_file("test3/all.txt", "save", img_name = "test3")
+    #plot_file("test4/all.txt", "save", img_name = "test4")
+>>>>>>> 6e495fc9ad90486b5fc3b71ac30fc34242714b15
 
 #-------------------------------------------------------------------------------
 # Plot function
 #-------------------------------------------------------------------------------
 
-def plot_file(results_name, display_mode):
+def plot_file(results_name, display_mode, img_name = ""):
     tokenized_list = tokenize_file(results_name)
 
     results_name = results_name[: -4]
@@ -37,7 +44,8 @@ def plot_file(results_name, display_mode):
 
     dataTable = create_dataTable(create_dataList(tokenized_list))
 
-    dataTable.plotWithError(results_name, display_mode)
+    dataTable.plotWithError(results_name, display_mode, img_name = img_name)
+    dataTable.plotROC(results_name, display_mode, img_name = img_name)
 
     #fig, ax = plt.subplots()
 

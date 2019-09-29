@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #SBATCH --gres=gpu:1
-#SBATCH --mem=3G
+#SBATCH --mem=2G
 #SBATCH --cpus-per-task=6
-#SBATCH --time=0-30:00
+#SBATCH --time=0-5:00
 
 #SBATCH --mail-user=harvey@dal.ca
 #SBATCH --mail-type=ALL

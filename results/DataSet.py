@@ -9,14 +9,14 @@ class DataSet:
         true_positive,
         false_negative,
         true_negative,
-        false_positive
+        false_positivee
     ):
         self.dataConfig = dataConfig
         self.accuracy = accuracy
         self.true_positive = true_positive
         self.false_negative = false_negative
         self.true_negative = true_negative
-        self.false_positiv = false_positive
+        self.false_positive = false_positivee
         if not self.isNotNone:
             sys.exit("DataSet init error. None input detected.")
 
@@ -42,7 +42,7 @@ class DataSet:
         if not self.true_negative == None:
             print("tn")
             return False
-        if not self.false_positiv == None:
+        if not self.false_positive == None:
             print("fp")
             return False
         return True

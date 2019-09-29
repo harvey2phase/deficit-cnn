@@ -38,7 +38,7 @@ def main():
         logits = logits
     )
 
-    histories = [2, 8, 4, 16]
+    histories = [16, 4, 2, 8]
     for _ in range(100):
         for history in histories:
             set_data(
