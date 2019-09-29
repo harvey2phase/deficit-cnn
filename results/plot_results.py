@@ -20,10 +20,7 @@ LAB = []
 #-------------------------------------------------------------------------------
 
 def main():
-    plot_file("test1/all.txt", "save")
-    plot_file("test2/all.txt", "save")
-    plot_file("test3/all.txt", "save")
-    plot_file("test4/all.txt", "save")
+    plot_file("test0/all.txt", "save")
 
 #-------------------------------------------------------------------------------
 # Plot function
