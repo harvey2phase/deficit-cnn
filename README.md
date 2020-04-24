@@ -1,17 +1,15 @@
 # Deficit CNN
 
-MORE DETAIL AND DOCUMENTATION TO COME.
-
-## About and Acknowledgment
-This is an ongoing project exploring the application of a convolutional neural
-network (CNN) in classifying the data of a
+## About
+I investivated, using a convolutional neural
+network (CNN), the classification of simulation data from a
 [human aging model](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.98.032302)
-to predict mortality. I have been working on this project with
+to predict mortality. I worked on this project part-time with
 [Dr. Andrew Rutenberg](http://fizz.phys.dal.ca/~adr/index.php?TreeIndex=0).
 This repo was made public on July 29, 2019.
 
 The execution of the CNN tests was made possible by Compute Canada's
-[Graham](https://docs.computecanada.ca/wiki/Graham) cluster.
+[Graham](https://docs.computecanada.ca/wiki/Graham) and Cedar clusters.
 
 
 
