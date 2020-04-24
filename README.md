@@ -1,10 +1,9 @@
 # Deficit CNN
 
-## About
 I investigated, using a convolutional neural
 network (CNN), the classification of simulation data from a
 [human aging model](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.98.032302)
-to predict mortality. I worked on this project part-time with
+to predict mortality. I worked on this project part-time with theoretical physicist
 [Dr. Andrew Rutenberg](http://fizz.phys.dal.ca/~adr/index.php?TreeIndex=0).
 This repo was made public on July 29, 2019.
 
